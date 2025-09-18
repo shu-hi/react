@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  nginx:
+      image: nginx:latest
+      container_name: nginx-react
+      ports:
+        - "80:80"
+      networks:
+      - app-network
+      volumes:
+        - /home/ubuntu/react/nginx.conf:/etc/nginx/conf.d/default.conf
+networks:
+  app-network:
+    external: true

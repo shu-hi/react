@@ -1,0 +1,44 @@
+nohup: 入力を無視します
+
+> my-app@0.1.0 dev
+> next dev --turbopack
+
+   ▲ Next.js 15.5.3 (Turbopack)
+   - Local:        http://localhost:3000
+   - Network:      http://10.0.1.42:3000
+
+ ✓ Starting...
+ ✓ Ready in 1268ms
+ ○ Compiling /_not-found/page ...
+ ✓ Compiled /_not-found/page in 3.9s
+ GET /react 404 in 4407ms
+ GET /react/react 404 in 137ms
+ ⚠ Cross origin request detected from 54.65.233.242 to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
+Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
+ GET /_next/webpack-hmr 404 in 148ms
+ GET /react 404 in 132ms
+ ✓ Compiled / in 432ms
+ GET / 200 in 606ms
+ GET / 200 in 132ms
+ GET /react/next.svg 404 in 270ms
+ GET /react/vercel.svg 404 in 480ms
+ GET /react/globe.svg 404 in 420ms
+ GET /react/window.svg 404 in 428ms
+ GET /react/file.svg 404 in 433ms
+ GET /react/next.svg 404 in 111ms
+ GET / 200 in 114ms
+ GET /react/next.svg 404 in 144ms
+ GET /react/window.svg 404 in 443ms
+ GET /react/file.svg 404 in 418ms
+ GET /react/globe.svg 404 in 404ms
+ GET /react/vercel.svg 404 in 443ms
+ GET /react/next.svg 404 in 151ms
+ ✓ Compiled in 126ms
+ ✓ Compiled / in 37ms
+ GET / 200 in 396ms
+ GET / 200 in 128ms
+ GET / 200 in 120ms
+ GET /vue 404 in 115ms
+ GET /_next/webpack-hmr 404 in 138ms
+ ✓ Compiled /favicon.ico in 303ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 620ms
