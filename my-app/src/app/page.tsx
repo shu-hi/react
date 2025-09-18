@@ -97,6 +97,12 @@ export default function Home() {
           />
           Go to nextjs.org →
         </a>
+        <a
+          href="/add_table"
+          className="text-blue-600 hover:underline"
+        >
+          form
+        </a>
       </footer>
     </div>
   );

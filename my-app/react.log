@@ -42,3 +42,47 @@ Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allow
  GET /_next/webpack-hmr 404 in 138ms
  ✓ Compiled /favicon.ico in 303ms
  GET /favicon.ico?favicon.0b3bf435.ico 200 in 620ms
+ GET / 200 in 124ms
+ GET / 200 in 118ms
+ GET /_next/webpack-hmr 404 in 96ms
+ ✓ Compiled in 168ms
+ ✓ Compiled / in 33ms
+ GET / 200 in 388ms
+ GET /bi 404 in 99ms
+ GET /_next/webpack-hmr 404 in 101ms
+ GET /bi 404 in 114ms
+ GET /_next/webpack-hmr 404 in 95ms
+ GET /bi 404 in 133ms
+ GET /_next/webpack-hmr 404 in 99ms
+ GET /bi 404 in 98ms
+ ✓ Compiled /bi in 300ms
+ GET /bi 200 in 652ms
+ GET /bi 200 in 359ms
+ GET /_next/webpack-hmr 404 in 163ms
+ GET /bi 200 in 100ms
+ GET /data 404 in 114ms
+ GET /_next/webpack-hmr 404 in 102ms
+ GET / 200 in 151ms
+ GET /bi 200 in 110ms
+ GET /_next/webpack-hmr 404 in 91ms
+ GET /bi 200 in 378ms
+ GET /_next/webpack-hmr 404 in 114ms
+ GET /bi 200 in 146ms
+ GET /bi 200 in 121ms
+ GET /bi 200 in 121ms
+ GET /bi 200 in 114ms
+ GET /_next/webpack-hmr 404 in 129ms
+ GET /bi 200 in 376ms
+ GET /_next/webpack-hmr 404 in 157ms
+ GET /bi 200 in 377ms
+ GET /bi 200 in 396ms
+ GET /_next/webpack-hmr 404 in 132ms
+ GET /bi 200 in 386ms
+ GET /bi 200 in 125ms
+ GET /_next/webpack-hmr 404 in 125ms
+ ✓ Compiled in 155ms
+ GET /bi 404 in 351ms
+ ✓ Compiled / in 27ms
+ GET / 200 in 356ms
+ ✓ Compiled /add_table in 278ms
+ GET /add_table 200 in 386ms
