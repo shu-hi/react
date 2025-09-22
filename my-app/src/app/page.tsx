@@ -101,7 +101,7 @@ export default function Home() {
           href="/edit_table"
           className="text-blue-600 hover:underline"
         >
-          form
+          edit table
         </a>
       </footer>
     </div>

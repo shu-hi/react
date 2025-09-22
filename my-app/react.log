@@ -87,3 +87,385 @@ Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allow
  GET /favicon.ico?favicon.0b3bf435.ico 200 in 261ms
  GET /playground 200 in 136ms
  GET /favicon.ico?favicon.0b3bf435.ico 200 in 252ms
+ GET /playground 200 in 122ms
+ GET /_next/webpack-hmr 404 in 140ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 287ms
+ ✓ Compiled in 157ms
+ GET /playground 200 in 412ms
+ GET /_next/webpack-hmr 404 in 141ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 282ms
+ GET /edit_table 200 in 114ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 265ms
+ GET /edit_table 200 in 376ms
+ GET /_next/webpack-hmr 404 in 138ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 303ms
+ GET /playground 200 in 112ms
+ GET /_next/webpack-hmr 404 in 117ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 268ms
+ GET /edit_table 200 in 102ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 257ms
+ GET /playground 200 in 103ms
+ GET /_next/webpack-hmr 404 in 111ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 265ms
+ GET /edit_table 200 in 103ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 257ms
+ GET /edit_table 200 in 101ms
+ GET /edit_table 200 in 340ms
+ GET /_next/webpack-hmr 404 in 158ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 298ms
+ GET /edit_table 200 in 386ms
+ GET /_next/webpack-hmr 404 in 124ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 273ms
+ GET /edit_table 200 in 103ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 268ms
+ GET /edit_table 200 in 354ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 258ms
+ GET /edit_table 200 in 135ms
+ GET /_next/webpack-hmr 404 in 120ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 285ms
+ GET /edit_table 200 in 121ms
+ GET /_next/webpack-hmr 404 in 124ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 280ms
+ GET /playground 200 in 144ms
+ GET /_next/webpack-hmr 404 in 133ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 294ms
+ GET /playground 200 in 363ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 270ms
+ GET /playground 200 in 123ms
+ GET /_next/webpack-hmr 404 in 125ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 289ms
+ GET /edit/table 404 in 110ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 256ms
+ GET /edit_table 200 in 119ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 270ms
+ GET /edit_table 200 in 126ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 272ms
+ GET /playground 200 in 347ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 254ms
+ GET /playground 200 in 363ms
+ GET /_next/webpack-hmr 404 in 128ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 279ms
+ GET /edit_table 200 in 121ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 258ms
+ GET /edit_table 200 in 117ms
+ GET /_next/webpack-hmr 404 in 141ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 280ms
+ GET /playground 200 in 114ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 261ms
+ GET /playground 200 in 116ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 269ms
+ GET /playground 200 in 124ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 260ms
+ GET /playground 200 in 363ms
+ GET /_next/webpack-hmr 404 in 128ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 281ms
+ ✓ Compiled /bi in 275ms
+ ⨯ ./src/app/bi/page.tsx:3:1
+Module not found: Can't resolve './app.css'
+[0m [90m 1 |[39m [32m"use client"[39m[33m;[39m
+ [90m 2 |[39m [36mimport[39m [33mReact[39m[33m,[39m { useState } [36mfrom[39m [32m'react'[39m[33m;[39m
+[31m[1m>[22m[39m[90m 3 |[39m [36mimport[39m [32m'./app.css'[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 4 |[39m
+ [90m 5 |[39m [90m// Itemの型定義[39m
+ [90m 6 |[39m type [33mItem[39m [33m=[39m {[0m
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/bi/page.tsx [Client Component Browser]
+    ./src/app/bi/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/bi/page.tsx [Client Component SSR]
+    ./src/app/bi/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ ○ Compiling /_error ...
+ ✓ Compiled /_error in 1680ms
+ GET /bi 500 in 2222ms
+ GET /_next/webpack-hmr 404 in 218ms
+ GET /favicon.ico 500 in 205ms
+ GET /_next/webpack-hmr 404 in 100ms
+ GET /_next/webpack-hmr 404 in 148ms
+ GET /_next/webpack-hmr 404 in 112ms
+ GET /_next/webpack-hmr 404 in 106ms
+ GET /_next/webpack-hmr 404 in 104ms
+ GET /_next/webpack-hmr 404 in 109ms
+ GET /_next/webpack-hmr 404 in 101ms
+ GET /_next/webpack-hmr 404 in 109ms
+ GET /_next/webpack-hmr 404 in 106ms
+ GET /_next/webpack-hmr 404 in 136ms
+ GET /_next/webpack-hmr 404 in 100ms
+ GET /_next/webpack-hmr 404 in 104ms
+ ⨯ ./src/app/bi/page.tsx:3:1
+Module not found: Can't resolve './app.css'
+[0m [90m 1 |[39m [32m"use client"[39m[33m;[39m
+ [90m 2 |[39m [36mimport[39m [33mReact[39m[33m,[39m { useState } [36mfrom[39m [32m'react'[39m[33m;[39m
+[31m[1m>[22m[39m[90m 3 |[39m [36mimport[39m [32m'./app.css'[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 4 |[39m
+ [90m 5 |[39m [90m// Itemの型定義[39m
+ [90m 6 |[39m type [33mItem[39m [33m=[39m {[0m
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/bi/page.tsx [Client Component Browser]
+    ./src/app/bi/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/bi/page.tsx [Client Component SSR]
+    ./src/app/bi/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ GET /bi 500 in 96ms
+ GET /favicon.ico 500 in 134ms
+ GET /_next/webpack-hmr 404 in 96ms
+ GET /_next/webpack-hmr 404 in 100ms
+ GET /_next/webpack-hmr 404 in 98ms
+ GET /_next/webpack-hmr 404 in 121ms
+ GET /_next/webpack-hmr 404 in 97ms
+ GET /_next/webpack-hmr 404 in 106ms
+ GET /_next/webpack-hmr 404 in 104ms
+ GET /_next/webpack-hmr 404 in 108ms
+ GET /_next/webpack-hmr 404 in 104ms
+ GET /_next/webpack-hmr 404 in 99ms
+ GET /_next/webpack-hmr 404 in 113ms
+ GET /_next/webpack-hmr 404 in 111ms
+ GET /_next/webpack-hmr 404 in 104ms
+ GET /_next/webpack-hmr 404 in 103ms
+ GET /_next/webpack-hmr 404 in 114ms
+ GET /_next/webpack-hmr 404 in 105ms
+ GET /_next/webpack-hmr 404 in 125ms
+ ⨯ ./src/app/bi/page.tsx:3:1
+Module not found: Can't resolve './app.css'
+[0m [90m 1 |[39m [32m"use client"[39m[33m;[39m
+ [90m 2 |[39m [36mimport[39m [33mReact[39m[33m,[39m { useState } [36mfrom[39m [32m'react'[39m[33m;[39m
+[31m[1m>[22m[39m[90m 3 |[39m [36mimport[39m [32m'./app.css'[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 4 |[39m
+ [90m 5 |[39m [90m// Itemの型定義[39m
+ [90m 6 |[39m type [33mItem[39m [33m=[39m {[0m
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/bi/page.tsx [Client Component Browser]
+    ./src/app/bi/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/bi/page.tsx [Client Component SSR]
+    ./src/app/bi/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ GET /bi 500 in 89ms
+ GET /favicon.ico 500 in 154ms
+ GET /_next/webpack-hmr 404 in 210ms
+ GET /_next/webpack-hmr 404 in 96ms
+ GET /_next/webpack-hmr 404 in 98ms
+ GET /_next/webpack-hmr 404 in 114ms
+ GET /_next/webpack-hmr 404 in 99ms
+ GET /_next/webpack-hmr 404 in 96ms
+ GET /_next/webpack-hmr 404 in 98ms
+ GET /_next/webpack-hmr 404 in 91ms
+ GET /_next/webpack-hmr 404 in 123ms
+ GET /_next/webpack-hmr 404 in 107ms
+ GET /_next/webpack-hmr 404 in 114ms
+ GET /_next/webpack-hmr 404 in 115ms
+ GET /_next/webpack-hmr 404 in 103ms
+ GET /_next/webpack-hmr 404 in 110ms
+ GET /_next/webpack-hmr 404 in 108ms
+ GET /_next/webpack-hmr 404 in 112ms
+ GET /_next/webpack-hmr 404 in 132ms
+ GET /_next/webpack-hmr 404 in 108ms
+ ⨯ ./src/app/bi/page.tsx:3:1
+Module not found: Can't resolve './app.css'
+[0m [90m 1 |[39m [32m"use client"[39m[33m;[39m
+ [90m 2 |[39m [36mimport[39m [33mReact[39m[33m,[39m { useState } [36mfrom[39m [32m'react'[39m[33m;[39m
+[31m[1m>[22m[39m[90m 3 |[39m [36mimport[39m [32m'./app.css'[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 4 |[39m
+ [90m 5 |[39m [90m// Itemの型定義[39m
+ [90m 6 |[39m type [33mItem[39m [33m=[39m {[0m
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/bi/page.tsx [Client Component Browser]
+    ./src/app/bi/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/bi/page.tsx [Client Component SSR]
+    ./src/app/bi/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ GET /bi 500 in 90ms
+ GET /favicon.ico 500 in 69ms
+ GET /_next/webpack-hmr 404 in 107ms
+ GET /_next/webpack-hmr 404 in 109ms
+ GET /_next/webpack-hmr 404 in 98ms
+ GET /_next/webpack-hmr 404 in 101ms
+ GET /_next/webpack-hmr 404 in 101ms
+ GET /_next/webpack-hmr 404 in 103ms
+ GET /_next/webpack-hmr 404 in 151ms
+ GET /_next/webpack-hmr 404 in 104ms
+ GET /_next/webpack-hmr 404 in 108ms
+ GET /_next/webpack-hmr 404 in 100ms
+ GET /_next/webpack-hmr 404 in 112ms
+ GET /_next/webpack-hmr 404 in 112ms
+ GET /_next/webpack-hmr 404 in 110ms
+ GET /_next/webpack-hmr 404 in 109ms
+ GET /_next/webpack-hmr 404 in 123ms
+ ⨯ ./src/app/bi/page.tsx:3:1
+Module not found: Can't resolve './app.css'
+[0m [90m 1 |[39m [32m"use client"[39m[33m;[39m
+ [90m 2 |[39m [36mimport[39m [33mReact[39m[33m,[39m { useState } [36mfrom[39m [32m'react'[39m[33m;[39m
+[31m[1m>[22m[39m[90m 3 |[39m [36mimport[39m [32m'./app.css'[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 4 |[39m
+ [90m 5 |[39m [90m// Itemの型定義[39m
+ [90m 6 |[39m type [33mItem[39m [33m=[39m {[0m
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/bi/page.tsx [Client Component Browser]
+    ./src/app/bi/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/bi/page.tsx [Client Component SSR]
+    ./src/app/bi/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ GET /bi 500 in 97ms
+ GET /favicon.ico 500 in 188ms
+ GET /_next/webpack-hmr 404 in 211ms
+ GET /_next/webpack-hmr 404 in 96ms
+ GET /_next/webpack-hmr 404 in 102ms
+ GET /_next/webpack-hmr 404 in 106ms
+ GET /_next/webpack-hmr 404 in 91ms
+ GET /_next/webpack-hmr 404 in 104ms
+ GET /_next/webpack-hmr 404 in 98ms
+ GET /_next/webpack-hmr 404 in 90ms
+ ✓ Compiled in 158ms
+ ✓ Compiled /bi in 98ms
+ GET /_next/webpack-hmr 404 in 133ms
+ GET /bi 200 in 414ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 264ms
+ GET /bi 200 in 362ms
+ GET /_next/webpack-hmr 404 in 150ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 288ms
+ GET /bi 200 in 114ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 265ms
+ GET /bi 200 in 114ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 261ms
+ ⨯ [Error: input is a self-closing tag and must neither have `children` nor use `dangerouslySetInnerHTML`.] {
+  digest: '1752910508'
+}
+ GET /bi 500 in 810ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 247ms
+ GET /favicon.ico 200 in 249ms
+ GET /bi 200 in 369ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 278ms
+ ⨯ ReferenceError: handleSubmit is not defined
+    at App (src/app/bi/page.tsx:54:23)
+  52 |     <div className="min-h-screen flex flex-col items-center justify-center p-8">
+  53 |       <h1 className="text-3xl font-bold mb-6">フォーム</h1>
+> 54 |       <form onSubmit={handleSubmit} className="flex flex-col gap-4 w-full max-w-md">
+     |                       ^
+  55 |         <input
+  56 |           type="text"
+  57 |           placeholder="table name(include schema)" {
+  digest: '3468146137'
+}
+ GET /bi 500 in 391ms
+ GET /_next/webpack-hmr 404 in 170ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 313ms
+ GET /favicon.ico 200 in 306ms
+ GET /bi 200 in 345ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 265ms
+ GET /bi 200 in 362ms
+ GET /_next/webpack-hmr 404 in 122ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 280ms
+ GET /bi 200 in 123ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 268ms
+ GET /bi 200 in 120ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 260ms
+ GET /bi 200 in 121ms
+ GET /_next/webpack-hmr 404 in 138ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 287ms
+ GET /bi 200 in 117ms
+ GET /_next/webpack-hmr 404 in 202ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 370ms
+ GET /bi 200 in 115ms
+ GET /_next/webpack-hmr 404 in 130ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 287ms
+ GET /favicon.ico 200 in 254ms
+ GET /favicon.ico 200 in 256ms
+ GET /favicon.ico 200 in 254ms
+ GET /favicon.ico 200 in 252ms
+ GET /favicon.ico 200 in 258ms
+ GET /favicon.ico 200 in 256ms
+ GET /favicon.ico 200 in 254ms
+ GET /favicon.ico 200 in 249ms
+ GET /favicon.ico 200 in 256ms
+ GET /favicon.ico 200 in 255ms
+ GET /favicon.ico 200 in 250ms
+ GET /favicon.ico 200 in 252ms
+ GET /favicon.ico 200 in 254ms
+ GET /favicon.ico 200 in 255ms
+ GET /favicon.ico 200 in 253ms
+ GET /favicon.ico 200 in 252ms
+ GET /favicon.ico 200 in 254ms
+ GET /favicon.ico 200 in 260ms
+ GET /favicon.ico 200 in 251ms
+ GET /favicon.ico 200 in 252ms
+ GET /favicon.ico 200 in 378ms
+ GET /favicon.ico 200 in 257ms
+ GET /favicon.ico 200 in 258ms
+ GET /favicon.ico 200 in 253ms
+ GET /favicon.ico 200 in 253ms
+ GET /bi 200 in 133ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 254ms
+ GET /bi 200 in 116ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 263ms
+ GET /bi 200 in 402ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 267ms
+ GET /bi 200 in 346ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 436ms
+ GET /bi 200 in 344ms
+ GET /_next/webpack-hmr 404 in 120ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 267ms
+ GET /bi 200 in 362ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 259ms
+ GET /bi 200 in 398ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 256ms
+ GET /bi 200 in 353ms
+ GET /_next/webpack-hmr 404 in 134ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 282ms
+ GET /bi 200 in 349ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 255ms
+ GET /bi 200 in 355ms
+ GET /_next/webpack-hmr 404 in 128ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 278ms
+ GET /bi 200 in 95ms
+ GET /_next/webpack-hmr 404 in 123ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 263ms
+ GET /bi 200 in 345ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 252ms

@@ -18,7 +18,11 @@ const App = ()=>{
     const fetchTable = async ()=>{
         const res = await fetch("http://54.65.233.242/api/get_table");
         const data = await res.json();
-        setItemsA(data.data);
+        const updatedData = data.data.map((item)=>({
+                ...item,
+                columns: item.columns.split(",")
+            }));
+        setItemsA(updatedData);
     };
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
         "App.useEffect": ()=>{
@@ -73,23 +77,34 @@ const App = ()=>{
                         children: "リストA（ドラッグ元）"
                     }, void 0, false, {
                         fileName: "[project]/src/app/playground/page.tsx",
-                        lineNumber: 79,
+                        lineNumber: 84,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0)),
                     itemsA.map((item)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             className: "draggable",
                             draggable: true,
                             onDragStart: (e)=>onDragStart(e, item, 'A'),
-                            children: item.name
-                        }, item.serial, false, {
+                            children: [
+                                item.name,
+                                item.columns.map((column, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "column-item",
+                                        draggable: true,
+                                        children: column
+                                    }, index, false, {
+                                        fileName: "[project]/src/app/playground/page.tsx",
+                                        lineNumber: 94,
+                                        columnNumber: 15
+                                    }, ("TURBOPACK compile-time value", void 0)))
+                            ]
+                        }, item.serial, true, {
                             fileName: "[project]/src/app/playground/page.tsx",
-                            lineNumber: 81,
+                            lineNumber: 86,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0)))
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/playground/page.tsx",
-                lineNumber: 74,
+                lineNumber: 79,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -101,7 +116,7 @@ const App = ()=>{
                         children: "リストB（ドロップ先）"
                     }, void 0, false, {
                         fileName: "[project]/src/app/playground/page.tsx",
-                        lineNumber: 98,
+                        lineNumber: 108,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0)),
                     itemsB.map((item)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -111,19 +126,28 @@ const App = ()=>{
                             children: item.name
                         }, item.serial, false, {
                             fileName: "[project]/src/app/playground/page.tsx",
-                            lineNumber: 100,
+                            lineNumber: 110,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0)))
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/playground/page.tsx",
-                lineNumber: 93,
+                lineNumber: 103,
+                columnNumber: 7
+            }, ("TURBOPACK compile-time value", void 0)),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                href: "/edit_table",
+                className: "text-blue-600 hover:underline",
+                children: "edit table"
+            }, void 0, false, {
+                fileName: "[project]/src/app/playground/page.tsx",
+                lineNumber: 120,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0))
         ]
     }, void 0, true, {
         fileName: "[project]/src/app/playground/page.tsx",
-        lineNumber: 72,
+        lineNumber: 77,
         columnNumber: 5
     }, ("TURBOPACK compile-time value", void 0));
 };

@@ -1,8 +1,9 @@
 "use client";
 import { useState, useEffect } from "react";
+
 interface TableItem {
   name: string;
-  index: string;
+  columns: string;
   serial:number;
 }
 
@@ -13,7 +14,7 @@ interface TableResponse {
 
 export default function editTablePage() {
   const [name, setName] = useState("");
-  const [index, setIndex] = useState("");
+  const [columns, setColumns] = useState("");
   const [tableData, setTableData] = useState<TableItem[]>([]);
 
 
@@ -31,16 +32,16 @@ export default function editTablePage() {
     const res = await fetch("http://54.65.233.242/api/add_table", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ name: name,index:index }),
+    body: JSON.stringify({ name: name,columns:columns }),
   });
   const data = await res.json();
   fetchTable();
   };
-  const handleDelete = async(name: string, index: string) => {
+  const handleDelete = async(name: string) => {
     const res = await fetch("http://54.65.233.242/api/del_table", {
     method: "DELETE",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ name: name,index:index }),
+    body: JSON.stringify({ name: name }),
   });
   const data = await res.json();
   console.log(data);
@@ -60,9 +61,9 @@ export default function editTablePage() {
         />
         <input
           type="text"
-          placeholder="index"
-          value={index}
-          onChange={(e) => setIndex(e.target.value)}
+          placeholder="columns"
+          value={columns}
+          onChange={(e) => setColumns(e.target.value)}
           className="border rounded px-3 py-2"
           required
         />
@@ -81,9 +82,9 @@ export default function editTablePage() {
         <ul>
           {tableData.map((item, idx) => (
             <li key={idx}>
-              {item.name} - {item.index}
+              {item.name} - {item.columns}
                 <button
-                  onClick={() => handleDelete(item.name, item.index)}
+                  onClick={() => handleDelete(item.name)}
                   className="ml-4 text-red-600 hover:text-red-800"
                 >
                   削除
@@ -93,6 +94,12 @@ export default function editTablePage() {
         </ul>
       )}
     </div>
+    <a
+          href="/playground"
+          className="text-blue-600 hover:underline"
+        >
+          playground
+        </a>
     </div>
     
   );

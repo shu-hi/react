@@ -2,26 +2,31 @@
 import React, { useState, useEffect } from 'react';
 import './app.css';
 
+
 // Itemの型定義
 type Item = {
-  index: string;
+  columns: string[];
   name: string;
-  serial:number;
+  serial: number;
 };
-interface TableItem {
-  name: string;
-  index: string;
-  serial:number;
-}
 interface TableResponse {
   status: string;
-  data: TableItem[];
+  data: {
+    name: string;
+    columns: string;
+    serial: number;
+  }[];
 }
 const App: React.FC = () => {
   const fetchTable = async () => {
       const res = await fetch("http://54.65.233.242/api/get_table");
       const data: TableResponse = await res.json();
-      setItemsA(data.data);
+      const updatedData = data.data.map(item => ({
+    ...item,
+    columns: item.columns.split(","), // item.columnsが文字列なので、これをパースして配列に
+  }));
+
+  setItemsA(updatedData); 
     };
   useEffect(() => {
     // ページロード時に GET API を叩く
@@ -85,6 +90,11 @@ const App: React.FC = () => {
             onDragStart={(e) => onDragStart(e, item, 'A')}
           >
             {item.name}
+            {item.columns.map((column,index)=>(
+              <div key={index} className="column-item" draggable>
+                {column}
+              </div>
+            ))}
           </div>
         ))}
       </div>
@@ -107,6 +117,12 @@ const App: React.FC = () => {
           </div>
         ))}
       </div>
+      <a
+          href="/edit_table"
+          className="text-blue-600 hover:underline"
+        >
+          edit table
+        </a>
     </div>
   );
 };
