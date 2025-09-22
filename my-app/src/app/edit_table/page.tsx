@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 interface TableItem {
   name: string;
   index: string;
+  serial:number;
 }
 
 interface TableResponse {
@@ -10,7 +11,7 @@ interface TableResponse {
   data: TableItem[];
 }
 
-export default function addTablePage() {
+export default function editTablePage() {
   const [name, setName] = useState("");
   const [index, setIndex] = useState("");
   const [tableData, setTableData] = useState<TableItem[]>([]);
@@ -35,7 +36,16 @@ export default function addTablePage() {
   const data = await res.json();
   fetchTable();
   };
-
+  const handleDelete = async(name: string, index: string) => {
+    const res = await fetch("http://54.65.233.242/api/del_table", {
+    method: "DELETE",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ name: name,index:index }),
+  });
+  const data = await res.json();
+  console.log(data);
+  fetchTable();
+  };
   return (
     <div className="min-h-screen flex flex-col items-center justify-center p-8">
       <h1 className="text-3xl font-bold mb-6">フォーム</h1>
@@ -72,6 +82,12 @@ export default function addTablePage() {
           {tableData.map((item, idx) => (
             <li key={idx}>
               {item.name} - {item.index}
+                <button
+                  onClick={() => handleDelete(item.name, item.index)}
+                  className="ml-4 text-red-600 hover:text-red-800"
+                >
+                  削除
+                </button>
             </li>
           ))}
         </ul>

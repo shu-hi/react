@@ -1,88 +1,89 @@
 nohup: 入力を無視します
 
 > my-app@0.1.0 dev
-> next dev --turbopack
+> next dev --turbopack -H 0.0.0.0
 
    ▲ Next.js 15.5.3 (Turbopack)
    - Local:        http://localhost:3000
-   - Network:      http://10.0.1.42:3000
+   - Network:      http://0.0.0.0:3000
 
  ✓ Starting...
- ✓ Ready in 1268ms
+ ✓ Ready in 1989ms
  ○ Compiling /_not-found/page ...
- ✓ Compiled /_not-found/page in 3.9s
- GET /react 404 in 4407ms
- GET /react/react 404 in 137ms
+ ✓ Compiled /_not-found/page in 4.2s
+ GET /stat 404 in 4748ms
+ ✓ Compiled /favicon.ico in 268ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 600ms
+ ✓ Compiled / in 420ms
+ GET / 200 in 624ms
  ⚠ Cross origin request detected from 54.65.233.242 to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
 Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
- GET /_next/webpack-hmr 404 in 148ms
- GET /react 404 in 132ms
- ✓ Compiled / in 432ms
- GET / 200 in 606ms
- GET / 200 in 132ms
- GET /react/next.svg 404 in 270ms
- GET /react/vercel.svg 404 in 480ms
- GET /react/globe.svg 404 in 420ms
- GET /react/window.svg 404 in 428ms
- GET /react/file.svg 404 in 433ms
- GET /react/next.svg 404 in 111ms
- GET / 200 in 114ms
- GET /react/next.svg 404 in 144ms
- GET /react/window.svg 404 in 443ms
- GET /react/file.svg 404 in 418ms
- GET /react/globe.svg 404 in 404ms
- GET /react/vercel.svg 404 in 443ms
- GET /react/next.svg 404 in 151ms
- ✓ Compiled in 126ms
- ✓ Compiled / in 37ms
- GET / 200 in 396ms
- GET / 200 in 128ms
- GET / 200 in 120ms
- GET /vue 404 in 115ms
- GET /_next/webpack-hmr 404 in 138ms
- ✓ Compiled /favicon.ico in 303ms
- GET /favicon.ico?favicon.0b3bf435.ico 200 in 620ms
- GET / 200 in 124ms
- GET / 200 in 118ms
- GET /_next/webpack-hmr 404 in 96ms
- ✓ Compiled in 168ms
- ✓ Compiled / in 33ms
- GET / 200 in 388ms
- GET /bi 404 in 99ms
- GET /_next/webpack-hmr 404 in 101ms
- GET /bi 404 in 114ms
- GET /_next/webpack-hmr 404 in 95ms
- GET /bi 404 in 133ms
- GET /_next/webpack-hmr 404 in 99ms
- GET /bi 404 in 98ms
- ✓ Compiled /bi in 300ms
- GET /bi 200 in 652ms
- GET /bi 200 in 359ms
- GET /_next/webpack-hmr 404 in 163ms
- GET /bi 200 in 100ms
- GET /data 404 in 114ms
- GET /_next/webpack-hmr 404 in 102ms
- GET / 200 in 151ms
- GET /bi 200 in 110ms
- GET /_next/webpack-hmr 404 in 91ms
- GET /bi 200 in 378ms
- GET /_next/webpack-hmr 404 in 114ms
- GET /bi 200 in 146ms
- GET /bi 200 in 121ms
- GET /bi 200 in 121ms
- GET /bi 200 in 114ms
- GET /_next/webpack-hmr 404 in 129ms
- GET /bi 200 in 376ms
- GET /_next/webpack-hmr 404 in 157ms
- GET /bi 200 in 377ms
- GET /bi 200 in 396ms
+ GET /_next/webpack-hmr 404 in 119ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 274ms
+ ✓ Compiled /add_table in 286ms
+ GET /add_table 200 in 399ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 253ms
+ ✓ Compiled /playground in 285ms
+ GET /playground 200 in 396ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 306ms
+ GET /playground 200 in 376ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 261ms
+ GET /playground 200 in 151ms
+ GET /_next/webpack-hmr 404 in 192ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 366ms
+ GET /playground 200 in 120ms
+ GET /_next/webpack-hmr 404 in 123ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 296ms
+[]
+ GET /playground 200 in 417ms
+ GET /_next/webpack-hmr 404 in 134ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 291ms
+[]
+ GET /playground 200 in 374ms
+ GET /_next/webpack-hmr 404 in 147ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 306ms
+[]
+ GET /playground 200 in 383ms
+ GET /_next/webpack-hmr 404 in 139ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 304ms
+ GET /playground 200 in 376ms
  GET /_next/webpack-hmr 404 in 132ms
- GET /bi 200 in 386ms
- GET /bi 200 in 125ms
- GET /_next/webpack-hmr 404 in 125ms
- ✓ Compiled in 155ms
- GET /bi 404 in 351ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 303ms
+ GET /playground 200 in 129ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 264ms
+ GET /playground 200 in 114ms
+ GET /_next/webpack-hmr 404 in 163ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 298ms
+ GET /playground 200 in 358ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 303ms
+ ✓ Compiled /edit_table in 250ms
+ GET /edit_table 200 in 351ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 253ms
+ GET /edit_table 200 in 382ms
+ GET /_next/webpack-hmr 404 in 171ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 305ms
+ GET /edit_table 200 in 345ms
+ GET /_next/webpack-hmr 404 in 127ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 292ms
+ GET /edit_table 200 in 124ms
+ GET /_next/webpack-hmr 404 in 110ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 264ms
+ GET /edit_table 200 in 135ms
+ GET /_next/webpack-hmr 404 in 126ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 277ms
+ GET /edit_table 200 in 373ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 278ms
+ GET /edit_table 200 in 102ms
+ GET /_next/webpack-hmr 404 in 121ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 283ms
+ ✓ Compiled in 160ms
+ GET /edit_table 200 in 114ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 262ms
  ✓ Compiled / in 27ms
- GET / 200 in 356ms
- ✓ Compiled /add_table in 278ms
- GET /add_table 200 in 386ms
+ GET / 200 in 380ms
+ GET /_next/webpack-hmr 404 in 130ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 279ms
+ GET /edit_table 200 in 105ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 261ms
+ GET /playground 200 in 136ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 252ms

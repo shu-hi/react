@@ -1,0 +1,29 @@
+/* [project]/src/app/playground/app.css [app-client] (css) */
+.container {
+  justify-content: space-around;
+  padding: 20px;
+  display: flex;
+}
+
+.list, .dropzone {
+  border: 2px dashed #ccc;
+  border-radius: 10px;
+  width: 40%;
+  min-height: 200px;
+  padding: 10px;
+}
+
+.draggable, .dropped {
+  cursor: grab;
+  text-align: center;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  margin: 5px 0;
+  padding: 8px;
+}
+
+.dropzone {
+  background-color: #fafafa;
+}
+
+/*# sourceMappingURL=src_app_playground_app_ad8dfa36.css.map*/

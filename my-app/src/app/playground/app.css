@@ -1,0 +1,26 @@
+.container {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.list, .dropzone {
+  width: 40%;
+  min-height: 200px;
+  border: 2px dashed #ccc;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.draggable, .dropped {
+  background-color: #f0f0f0;
+  padding: 8px;
+  margin: 5px 0;
+  cursor: grab;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.dropzone {
+  background-color: #fafafa;
+}
