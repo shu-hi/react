@@ -3,6 +3,7 @@
   justify-content: space-around;
   padding: 20px;
   display: flex;
+  position: relative;
 }
 
 .list, .dropzone {
@@ -20,10 +21,54 @@
   border-radius: 5px;
   margin: 5px 0;
   padding: 8px;
+  position: relative;
 }
 
 .dropzone {
   background-color: #fafafa;
+}
+
+.nodes {
+  justify-content: space-around;
+  display: flex;
+}
+
+.connection-layer {
+  pointer-events: none;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.connection-layer line {
+  pointer-events: stroke;
+}
+
+.column-item {
+  cursor: pointer;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  margin: 5px;
+  padding: 3px 6px;
+  display: inline-block;
+  position: relative;
+}
+
+.reset {
+  cursor: pointer;
+  border-radius: 50%;
+  padding: 0 5px;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+
+.reset:hover {
+  background-color: #fcc;
+  transform: rotate(-20deg);
 }
 
 /*# sourceMappingURL=src_app_playground_app_ad8dfa36.css.map*/

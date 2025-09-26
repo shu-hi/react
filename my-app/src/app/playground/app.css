@@ -2,6 +2,7 @@
   display: flex;
   justify-content: space-around;
   padding: 20px;
+  position: relative;
 }
 
 .list, .dropzone {
@@ -19,8 +20,46 @@
   cursor: grab;
   border-radius: 5px;
   text-align: center;
+  position: relative;
 }
 
 .dropzone {
   background-color: #fafafa;
+}
+.nodes{
+  display: flex;
+  justify-content: space-around;
+}
+.connection-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+.connection-layer line {
+  pointer-events: stroke; /* ← 線はクリック可能 */
+}
+.column-item {
+  position: relative;
+  display: inline-block;
+  margin: 5px;
+  padding: 3px 6px;
+  border: 1px solid #ccc;
+  background-color: #f0f0f0;
+  cursor: pointer;
+}
+.reset {
+  padding:0px 5px;
+  border-radius: 50%;
+  cursor: pointer;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+.reset:hover {
+  background-color: #ffcccc;
+  transform: rotate(-20deg);
 }
