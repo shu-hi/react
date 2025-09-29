@@ -15,17 +15,22 @@ const App: React.FC = () => {
   const [sql,setSql] = useState<Sql>("");
   const [result, setResult] = useState<ApiResult|null>(null);
   const [plotUrl, setPlotUrl] = useState<string | null>(null);
-
+  const [didResult,setDid]=useState<ApiResult|null>(null);
+  const [memo,showMemo]=useState<0|1>(0);
+  const [spinner,setSpinner]=useState<0|1>(0);
+  const [del_outlier,setDelOutlier]=useState<boolean>(false);
   const execSql = async(e: React.FormEvent) => {
+    setSpinner(1);
     e.preventDefault();
     const res = await fetch("http://54.65.233.242/api/head", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ sql: sql,params:[] }),
-  });
-  const data = await res.json();
-  console.log(data);
-  setResult(data);
+    });
+    const data = await res.json();
+    setSpinner(0);
+    console.log(data);
+    setResult(data);
   };
   const getColumn=async(text:string)=>{
     const match = (text.match(/from (\S+)/i) || [])[1] || "";
@@ -40,7 +45,20 @@ const App: React.FC = () => {
     setResult(data);
     }
   }
+  const makeDid=async()=>{
+    setSpinner(1);
+    const res=await fetch("http://54.65.233.242/api/did", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ sql: sql,params:[],del_outlier:del_outlier }),
+    });
+    const data = await res.json();
+    console.log(data);
+    setSpinner(0);
+    setDid(data);
+  }
   const makePlot=async()=>{
+    setSpinner(1);
     try{
       const res=await fetch("http://54.65.233.242/api/plot", {
         method: "POST",
@@ -57,6 +75,7 @@ const App: React.FC = () => {
     } catch (err) {
       console.error("Error generating plot:", err);
     }
+    setSpinner(0);
   }
   
   
@@ -65,14 +84,58 @@ const App: React.FC = () => {
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center p-8">
-      <button type="button" onClick={makePlot}>plot</button>
+      {!!spinner&&(
+        <div className="spinner-overlay">
+          <div className="spinner"></div>
+        </div>
+      )}
+      <button type="button" onClick={makePlot} className="px-4 py-2 rounded-lg bg-gray-200 text-gray-800 hover:bg-gray-300 transition">plot</button>
       {plotUrl && (
         <div className="mt-6">
           <h2 className="text-xl font-semibold mb-2">Plot</h2>
           <img src={plotUrl} alt="Plot Image" className="border rounded max-w-full" />
         </div>
       )}
-
+      <button type="button" onClick={makeDid} className="px-4 py-2 rounded-lg bg-gray-200 text-gray-800 hover:bg-gray-300 transition">did(must include target,treated,period_flg)</button>
+      <input type="checkbox" onChange={(e)=>setDelOutlier(e.target.checked)} />
+      {didResult&&didResult.status==='ok'&&didResult.data.summary &&(
+        <div>
+        <table>
+          <thead>
+            <tr>
+              <th>Variable</th>
+              <th>Coef</th>
+              <th>StdErr</th>
+              <th>t</th>
+              <th>P-value</th>
+              <th>CI Lower(95%信頼区間)</th>
+              <th>CI Upper(95%信頼区間)</th>
+              <th>outlier</th>
+            </tr>
+          </thead>
+          <tbody>
+            {didResult.data.summary.map((row, i) => (
+              <tr key={i}>
+                <td>{row.Variable}</td>
+                <td>{row.Coef.toFixed(3)}</td>
+                <td>{row.StdErr.toFixed(3)}</td>
+                <td>{row.t.toFixed(2)}</td>
+                <td>{row["P>|t|"]}</td>
+                <td>{row.CI_lower.toFixed(3)}</td>
+                <td>{row.CI_upper.toFixed(3)}</td>
+                <td>{row.outlier}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+        <img src={`data:image/png;base64,${didResult.data.plot}`} alt="DID Plot" />
+        </div>
+      )}
+      <button type="button" onClick={()=>showMemo(1)}>show memo</button>
+      {memo===1&&(
+        <div>{didmemo}
+        <br></br><button type="button" onClick={()=>showMemo(0)}className="px-4 py-2 rounded-lg bg-gray-200 text-gray-800 hover:bg-gray-300 transition">hide memo</button></div>
+      )}
       <form onSubmit={execSql} className="flex flex-col gap-4 w-full max-w-md">
         <textarea
           placeholder="sql"
@@ -87,7 +150,7 @@ const App: React.FC = () => {
         />
         <button
           type="submit"
-          className="bg-blue-600 text-white rounded px-4 py-2 hover:bg-blue-700 transition"
+          className="px-4 py-2 rounded-lg bg-gray-200 text-gray-800 hover:bg-gray-300 transition"
         >
           execute
         </button>
@@ -129,3 +192,36 @@ const App: React.FC = () => {
 };
 
 export default App;
+const didmemo=`select 
+date_format(order_time,'%m-%d')as order_date,
+m_seller_id,
+sum(suryou) as target,
+1 as treated,
+case when order_time<='2023-11-13' then 0 
+when order_time between '2023-11-14' and '2023-11-27' then 1 
+else 2 
+end as period_flag 
+from dami2.order_dat_m as orders inner join 
+(select 
+distinct seller_id as id_list 
+from crush.crush_item_dat 
+where event_num=3)
+as treated_cos on orders.m_seller_id=treated_cos.id_list where order_time between '2023-08-01' and '2024-02-01' group by juchubi,m_seller_id 
+union all 
+select 
+date_format(order_time,'%m-%d')as order_date,
+m_seller_id,
+sum(suryou) as target,
+0 as treated,
+case when order_time<='2023-11-13' then 0 
+when order_time between '2023-11-14' and '2023-11-27' then 1 
+else 2 
+end as period_flag 
+from dami2.order_dat_m as orders
+left join 
+(select 
+distinct seller_id as id_list 
+from crush.crush_item_dat
+where event_num=3)as treated_cos on orders.m_seller_id=treated_cos.id_list
+where order_time between '2023-08-01' and '2024-02-01' and treated_cos.id_list is null 
+group by order_date,m_seller_id`;

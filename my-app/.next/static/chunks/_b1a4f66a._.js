@@ -19,7 +19,12 @@ const App = ()=>{
     const [sql, setSql] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])("");
     const [result, setResult] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(null);
     const [plotUrl, setPlotUrl] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(null);
+    const [didResult, setDid] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(null);
+    const [memo, showMemo] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(0);
+    const [spinner, setSpinner] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(0);
+    const [del_outlier, setDelOutlier] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
     const execSql = async (e)=>{
+        setSpinner(1);
         e.preventDefault();
         const res = await fetch("http://54.65.233.242/api/head", {
             method: "POST",
@@ -32,6 +37,7 @@ const App = ()=>{
             })
         });
         const data = await res.json();
+        setSpinner(0);
         console.log(data);
         setResult(data);
     };
@@ -53,7 +59,26 @@ const App = ()=>{
             setResult(data);
         }
     };
+    const makeDid = async ()=>{
+        setSpinner(1);
+        const res = await fetch("http://54.65.233.242/api/did", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                sql: sql,
+                params: [],
+                del_outlier: del_outlier
+            })
+        });
+        const data = await res.json();
+        console.log(data);
+        setSpinner(0);
+        setDid(data);
+    };
     const makePlot = async ()=>{
+        setSpinner(1);
         try {
             const res = await fetch("http://54.65.233.242/api/plot", {
                 method: "POST",
@@ -74,17 +99,33 @@ const App = ()=>{
         } catch (err) {
             console.error("Error generating plot:", err);
         }
+        setSpinner(0);
     };
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         className: "min-h-screen flex flex-col items-center justify-center p-8",
         children: [
+            !!spinner && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "spinner-overlay",
+                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    className: "spinner"
+                }, void 0, false, {
+                    fileName: "[project]/src/app/bi/page.tsx",
+                    lineNumber: 89,
+                    columnNumber: 11
+                }, ("TURBOPACK compile-time value", void 0))
+            }, void 0, false, {
+                fileName: "[project]/src/app/bi/page.tsx",
+                lineNumber: 88,
+                columnNumber: 9
+            }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                 type: "button",
                 onClick: makePlot,
+                className: "px-4 py-2 rounded-lg bg-gray-200 text-gray-800 hover:bg-gray-300 transition",
                 children: "plot"
             }, void 0, false, {
                 fileName: "[project]/src/app/bi/page.tsx",
-                lineNumber: 68,
+                lineNumber: 92,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             plotUrl && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -95,7 +136,7 @@ const App = ()=>{
                         children: "Plot"
                     }, void 0, false, {
                         fileName: "[project]/src/app/bi/page.tsx",
-                        lineNumber: 71,
+                        lineNumber: 95,
                         columnNumber: 11
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
@@ -104,13 +145,228 @@ const App = ()=>{
                         className: "border rounded max-w-full"
                     }, void 0, false, {
                         fileName: "[project]/src/app/bi/page.tsx",
-                        lineNumber: 72,
+                        lineNumber: 96,
                         columnNumber: 11
                     }, ("TURBOPACK compile-time value", void 0))
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/bi/page.tsx",
-                lineNumber: 70,
+                lineNumber: 94,
+                columnNumber: 9
+            }, ("TURBOPACK compile-time value", void 0)),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                type: "button",
+                onClick: makeDid,
+                className: "px-4 py-2 rounded-lg bg-gray-200 text-gray-800 hover:bg-gray-300 transition",
+                children: "did(must include target,treated,period_flg)"
+            }, void 0, false, {
+                fileName: "[project]/src/app/bi/page.tsx",
+                lineNumber: 99,
+                columnNumber: 7
+            }, ("TURBOPACK compile-time value", void 0)),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
+                type: "checkbox",
+                onChange: (e)=>setDelOutlier(e.target.checked)
+            }, void 0, false, {
+                fileName: "[project]/src/app/bi/page.tsx",
+                lineNumber: 100,
+                columnNumber: 7
+            }, ("TURBOPACK compile-time value", void 0)),
+            didResult && didResult.status === 'ok' && didResult.data.summary && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("table", {
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("thead", {
+                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("tr", {
+                                    children: [
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
+                                            children: "Variable"
+                                        }, void 0, false, {
+                                            fileName: "[project]/src/app/bi/page.tsx",
+                                            lineNumber: 106,
+                                            columnNumber: 15
+                                        }, ("TURBOPACK compile-time value", void 0)),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
+                                            children: "Coef"
+                                        }, void 0, false, {
+                                            fileName: "[project]/src/app/bi/page.tsx",
+                                            lineNumber: 107,
+                                            columnNumber: 15
+                                        }, ("TURBOPACK compile-time value", void 0)),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
+                                            children: "StdErr"
+                                        }, void 0, false, {
+                                            fileName: "[project]/src/app/bi/page.tsx",
+                                            lineNumber: 108,
+                                            columnNumber: 15
+                                        }, ("TURBOPACK compile-time value", void 0)),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
+                                            children: "t"
+                                        }, void 0, false, {
+                                            fileName: "[project]/src/app/bi/page.tsx",
+                                            lineNumber: 109,
+                                            columnNumber: 15
+                                        }, ("TURBOPACK compile-time value", void 0)),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
+                                            children: "P-value"
+                                        }, void 0, false, {
+                                            fileName: "[project]/src/app/bi/page.tsx",
+                                            lineNumber: 110,
+                                            columnNumber: 15
+                                        }, ("TURBOPACK compile-time value", void 0)),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
+                                            children: "CI Lower(95%信頼区間)"
+                                        }, void 0, false, {
+                                            fileName: "[project]/src/app/bi/page.tsx",
+                                            lineNumber: 111,
+                                            columnNumber: 15
+                                        }, ("TURBOPACK compile-time value", void 0)),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
+                                            children: "CI Upper(95%信頼区間)"
+                                        }, void 0, false, {
+                                            fileName: "[project]/src/app/bi/page.tsx",
+                                            lineNumber: 112,
+                                            columnNumber: 15
+                                        }, ("TURBOPACK compile-time value", void 0)),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
+                                            children: "outlier"
+                                        }, void 0, false, {
+                                            fileName: "[project]/src/app/bi/page.tsx",
+                                            lineNumber: 113,
+                                            columnNumber: 15
+                                        }, ("TURBOPACK compile-time value", void 0))
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "[project]/src/app/bi/page.tsx",
+                                    lineNumber: 105,
+                                    columnNumber: 13
+                                }, ("TURBOPACK compile-time value", void 0))
+                            }, void 0, false, {
+                                fileName: "[project]/src/app/bi/page.tsx",
+                                lineNumber: 104,
+                                columnNumber: 11
+                            }, ("TURBOPACK compile-time value", void 0)),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("tbody", {
+                                children: didResult.data.summary.map((row, i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("tr", {
+                                        children: [
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
+                                                children: row.Variable
+                                            }, void 0, false, {
+                                                fileName: "[project]/src/app/bi/page.tsx",
+                                                lineNumber: 119,
+                                                columnNumber: 17
+                                            }, ("TURBOPACK compile-time value", void 0)),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
+                                                children: row.Coef.toFixed(3)
+                                            }, void 0, false, {
+                                                fileName: "[project]/src/app/bi/page.tsx",
+                                                lineNumber: 120,
+                                                columnNumber: 17
+                                            }, ("TURBOPACK compile-time value", void 0)),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
+                                                children: row.StdErr.toFixed(3)
+                                            }, void 0, false, {
+                                                fileName: "[project]/src/app/bi/page.tsx",
+                                                lineNumber: 121,
+                                                columnNumber: 17
+                                            }, ("TURBOPACK compile-time value", void 0)),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
+                                                children: row.t.toFixed(2)
+                                            }, void 0, false, {
+                                                fileName: "[project]/src/app/bi/page.tsx",
+                                                lineNumber: 122,
+                                                columnNumber: 17
+                                            }, ("TURBOPACK compile-time value", void 0)),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
+                                                children: row["P>|t|"]
+                                            }, void 0, false, {
+                                                fileName: "[project]/src/app/bi/page.tsx",
+                                                lineNumber: 123,
+                                                columnNumber: 17
+                                            }, ("TURBOPACK compile-time value", void 0)),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
+                                                children: row.CI_lower.toFixed(3)
+                                            }, void 0, false, {
+                                                fileName: "[project]/src/app/bi/page.tsx",
+                                                lineNumber: 124,
+                                                columnNumber: 17
+                                            }, ("TURBOPACK compile-time value", void 0)),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
+                                                children: row.CI_upper.toFixed(3)
+                                            }, void 0, false, {
+                                                fileName: "[project]/src/app/bi/page.tsx",
+                                                lineNumber: 125,
+                                                columnNumber: 17
+                                            }, ("TURBOPACK compile-time value", void 0)),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
+                                                children: row.outlier
+                                            }, void 0, false, {
+                                                fileName: "[project]/src/app/bi/page.tsx",
+                                                lineNumber: 126,
+                                                columnNumber: 17
+                                            }, ("TURBOPACK compile-time value", void 0))
+                                        ]
+                                    }, i, true, {
+                                        fileName: "[project]/src/app/bi/page.tsx",
+                                        lineNumber: 118,
+                                        columnNumber: 15
+                                    }, ("TURBOPACK compile-time value", void 0)))
+                            }, void 0, false, {
+                                fileName: "[project]/src/app/bi/page.tsx",
+                                lineNumber: 116,
+                                columnNumber: 11
+                            }, ("TURBOPACK compile-time value", void 0))
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/src/app/bi/page.tsx",
+                        lineNumber: 103,
+                        columnNumber: 9
+                    }, ("TURBOPACK compile-time value", void 0)),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
+                        src: "data:image/png;base64,".concat(didResult.data.plot),
+                        alt: "DID Plot"
+                    }, void 0, false, {
+                        fileName: "[project]/src/app/bi/page.tsx",
+                        lineNumber: 131,
+                        columnNumber: 9
+                    }, ("TURBOPACK compile-time value", void 0))
+                ]
+            }, void 0, true, {
+                fileName: "[project]/src/app/bi/page.tsx",
+                lineNumber: 102,
+                columnNumber: 9
+            }, ("TURBOPACK compile-time value", void 0)),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                type: "button",
+                onClick: ()=>showMemo(1),
+                children: "show memo"
+            }, void 0, false, {
+                fileName: "[project]/src/app/bi/page.tsx",
+                lineNumber: 134,
+                columnNumber: 7
+            }, ("TURBOPACK compile-time value", void 0)),
+            memo === 1 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                children: [
+                    didmemo,
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
+                        fileName: "[project]/src/app/bi/page.tsx",
+                        lineNumber: 137,
+                        columnNumber: 9
+                    }, ("TURBOPACK compile-time value", void 0)),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                        type: "button",
+                        onClick: ()=>showMemo(0),
+                        className: "px-4 py-2 rounded-lg bg-gray-200 text-gray-800 hover:bg-gray-300 transition",
+                        children: "hide memo"
+                    }, void 0, false, {
+                        fileName: "[project]/src/app/bi/page.tsx",
+                        lineNumber: 137,
+                        columnNumber: 18
+                    }, ("TURBOPACK compile-time value", void 0))
+                ]
+            }, void 0, true, {
+                fileName: "[project]/src/app/bi/page.tsx",
+                lineNumber: 136,
                 columnNumber: 9
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("form", {
@@ -130,22 +386,22 @@ const App = ()=>{
                         required: true
                     }, void 0, false, {
                         fileName: "[project]/src/app/bi/page.tsx",
-                        lineNumber: 77,
+                        lineNumber: 140,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                         type: "submit",
-                        className: "bg-blue-600 text-white rounded px-4 py-2 hover:bg-blue-700 transition",
+                        className: "px-4 py-2 rounded-lg bg-gray-200 text-gray-800 hover:bg-gray-300 transition",
                         children: "execute"
                     }, void 0, false, {
                         fileName: "[project]/src/app/bi/page.tsx",
-                        lineNumber: 88,
+                        lineNumber: 151,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0))
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/bi/page.tsx",
-                lineNumber: 76,
+                lineNumber: 139,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             result && result.status === 'ok' && ((_result_data = result.data) === null || _result_data === void 0 ? void 0 : _result_data.length) > 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -156,7 +412,7 @@ const App = ()=>{
                         children: "result(head)"
                     }, void 0, false, {
                         fileName: "[project]/src/app/bi/page.tsx",
-                        lineNumber: 97,
+                        lineNumber: 160,
                         columnNumber: 13
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("table", {
@@ -169,17 +425,17 @@ const App = ()=>{
                                             children: key
                                         }, key, false, {
                                             fileName: "[project]/src/app/bi/page.tsx",
-                                            lineNumber: 102,
+                                            lineNumber: 165,
                                             columnNumber: 21
                                         }, ("TURBOPACK compile-time value", void 0)))
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/bi/page.tsx",
-                                    lineNumber: 100,
+                                    lineNumber: 163,
                                     columnNumber: 17
                                 }, ("TURBOPACK compile-time value", void 0))
                             }, void 0, false, {
                                 fileName: "[project]/src/app/bi/page.tsx",
-                                lineNumber: 99,
+                                lineNumber: 162,
                                 columnNumber: 15
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("tbody", {
@@ -189,29 +445,29 @@ const App = ()=>{
                                                 children: value === null ? '-' : String(value).slice(0, 25)
                                             }, i, false, {
                                                 fileName: "[project]/src/app/bi/page.tsx",
-                                                lineNumber: 112,
+                                                lineNumber: 175,
                                                 columnNumber: 23
                                             }, ("TURBOPACK compile-time value", void 0)))
                                     }, index, false, {
                                         fileName: "[project]/src/app/bi/page.tsx",
-                                        lineNumber: 110,
+                                        lineNumber: 173,
                                         columnNumber: 19
                                     }, ("TURBOPACK compile-time value", void 0)))
                             }, void 0, false, {
                                 fileName: "[project]/src/app/bi/page.tsx",
-                                lineNumber: 108,
+                                lineNumber: 171,
                                 columnNumber: 15
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/bi/page.tsx",
-                        lineNumber: 98,
+                        lineNumber: 161,
                         columnNumber: 13
                     }, ("TURBOPACK compile-time value", void 0))
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/bi/page.tsx",
-                lineNumber: 96,
+                lineNumber: 159,
                 columnNumber: 11
             }, ("TURBOPACK compile-time value", void 0)),
             result && result.status === 'ng' && ((_result_error = result.error) === null || _result_error === void 0 ? void 0 : _result_error.length) > 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -219,19 +475,20 @@ const App = ()=>{
                 children: result.error
             }, void 0, false, {
                 fileName: "[project]/src/app/bi/page.tsx",
-                lineNumber: 123,
+                lineNumber: 186,
                 columnNumber: 11
             }, ("TURBOPACK compile-time value", void 0))
         ]
     }, void 0, true, {
         fileName: "[project]/src/app/bi/page.tsx",
-        lineNumber: 67,
+        lineNumber: 86,
         columnNumber: 5
     }, ("TURBOPACK compile-time value", void 0));
 };
-_s(App, "lKxb4v28BLf9y5LOLy1QRFTPCrk=");
+_s(App, "ek2uiIlyIaO873qKMxPGdI190lU=");
 _c = App;
 const __TURBOPACK__default__export__ = App;
+const didmemo = "select \ndate_format(order_time,'%m-%d')as order_date,\nm_seller_id,\nsum(suryou) as target,\n1 as treated,\ncase when order_time<='2023-11-13' then 0 \nwhen order_time between '2023-11-14' and '2023-11-27' then 1 \nelse 2 \nend as period_flag \nfrom dami2.order_dat_m as orders inner join \n(select \ndistinct seller_id as id_list \nfrom crush.crush_item_dat \nwhere event_num=3)\nas treated_cos on orders.m_seller_id=treated_cos.id_list where order_time between '2023-08-01' and '2024-02-01' group by juchubi,m_seller_id \nunion all \nselect \ndate_format(order_time,'%m-%d')as order_date,\nm_seller_id,\nsum(suryou) as target,\n0 as treated,\ncase when order_time<='2023-11-13' then 0 \nwhen order_time between '2023-11-14' and '2023-11-27' then 1 \nelse 2 \nend as period_flag \nfrom dami2.order_dat_m as orders\nleft join \n(select \ndistinct seller_id as id_list \nfrom crush.crush_item_dat\nwhere event_num=3)as treated_cos on orders.m_seller_id=treated_cos.id_list\nwhere order_time between '2023-08-01' and '2024-02-01' and treated_cos.id_list is null \ngroup by order_date,m_seller_id";
 var _c;
 __turbopack_context__.k.register(_c, "App");
 if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
