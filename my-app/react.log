@@ -8,124 +8,109 @@ nohup: 入力を無視します
    - Network:      http://0.0.0.0:3000
 
  ✓ Starting...
- ✓ Ready in 1951ms
+ ✓ Ready in 1941ms
  ○ Compiling /_not-found/page ...
- ✓ Compiled /_not-found/page in 4.2s
- GET /stat 404 in 4690ms
+ ✓ Compiled /_not-found/page in 4.1s
+ GET /stat 404 in 4625ms
  ⚠ Cross origin request detected from 54.65.233.242 to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
 Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
- GET /_next/webpack-hmr 404 in 152ms
- ✓ Compiled /favicon.ico in 323ms
- GET /favicon.ico?favicon.0b3bf435.ico 200 in 649ms
- ✓ Compiled /bi in 338ms
- GET /bi 200 in 507ms
+ GET /_next/webpack-hmr 404 in 176ms
+ ✓ Compiled /favicon.ico in 305ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 625ms
+ ✓ Compiled /bi in 335ms
+ GET /bi 200 in 459ms
  GET /favicon.ico?favicon.0b3bf435.ico 200 in 252ms
- GET /bi 200 in 368ms
- GET /favicon.ico?favicon.0b3bf435.ico 200 in 303ms
- GET /bi 200 in 376ms
- GET /_next/webpack-hmr 404 in 157ms
- GET /favicon.ico?favicon.0b3bf435.ico 200 in 305ms
- GET /bi 200 in 376ms
- GET /favicon.ico?favicon.0b3bf435.ico 200 in 276ms
- GET /bi 200 in 364ms
- GET /_next/webpack-hmr 404 in 142ms
- GET /favicon.ico?favicon.0b3bf435.ico 200 in 288ms
- GET /bi 200 in 375ms
- GET /favicon.ico?favicon.0b3bf435.ico 200 in 306ms
- GET /bi 200 in 368ms
- GET /_next/webpack-hmr 404 in 137ms
- GET /favicon.ico?favicon.0b3bf435.ico 200 in 276ms
- GET /bi 200 in 336ms
- GET /_next/webpack-hmr 404 in 147ms
- GET /favicon.ico?favicon.0b3bf435.ico 200 in 288ms
- ✓ Compiled in 162ms
- ✓ Compiled /bi in 30ms
- GET /bi 200 in 378ms
- GET /favicon.ico?favicon.0b3bf435.ico 200 in 256ms
- GET /bi 200 in 375ms
- GET /_next/webpack-hmr 404 in 139ms
- GET /favicon.ico?favicon.0b3bf435.ico 200 in 300ms
- GET /bi 200 in 376ms
- GET /favicon.ico?favicon.0b3bf435.ico 200 in 263ms
- GET /bi 200 in 368ms
- GET /favicon.ico?favicon.0b3bf435.ico 200 in 263ms
- ⨯ ./src/app/bi/page.tsx:120:134
-Parsing ecmascript source code failed
-[0m [90m 118 |[39m       [33m<[39m[33mbutton[39m type[33m=[39m[32m"button"[39m onClick[33m=[39m{()[33m=>[39mshowMemo([35m1[39m)}[33m>[39mshow memo[33m<[39m[33m/[39m[33mbutton[39m[33m>[39m
- [90m 119 |[39m       {memo[33m===[39m[35m1[39m[33m&&[39m(
-[31m[1m>[22m[39m[90m 120 |[39m         [33m<[39m[33mdiv[39m[33m>[39mselect date_format(order_time[33m,[39m[32m'%m-%d'[39m)[36mas[39m order_date[33m,[39mm_seller_id[33m,[39msum(suryou) [36mas[39m target[33m,[39m[35m1[39m [36mas[39m treated[33m,[39m[36mcase[39m when order_time[33m<=[39m[32m'2023-09-20'[39m then [35m0[39m when order_time between [32m'2023-09-21'[39m and [32m'2023-09-28'[39m then [35m1[39m [36melse[39m [35m2[39m end [36mas[39m period_flag [36mfrom[39m dami2[33m.[39morder_dat_m [36mas[39m orders inner join (select distinct seller_id [36mas[39m id_list [36mfrom[39m crush[33m.[39mcrush_item_dat where event_num[33m=[39m[35m3[39m)[36mas[39m treated_cos on orders[33m.[39mm_seller_id[33m=[39mtreated_cos[33m.[39mid_list where order_time between [32m'2023-05-01'[39m and [32m'2023-11-01'[39m group by juchubi[33m,[39mm_seller_id union all select date_format(order_time[33m,[39m[32m'%m-%d'[39m)[36mas[39m order_date[33m,[39mm_seller_id[33m,[39msum(suryou) [36mas[39m target[33m,[39m[35m0[39m [36mas[39m treated[33m,[39m[36mcase[39m when order_time[33m<=[39m[32m'2023-09-20'[39m then [35m0[39m when order_time between [32m'2023-09-21'[39m and [32m'2023-09-28'[39m then [35m1[39m [36melse[39m [35m2[39m end [36mas[39m period_flag [36mfrom[39m dami2[33m.[39morder_dat_m [36mas[39m orders left join (select distinct seller_id [36mas[39m id_list [36mfrom[39m crush[33m.[39mcrush_item_dat where event_num[33m=[39m[35m3[39m)[36mas[39m treated_cos on orders[33m.[39mm_seller_id[33m=[39mtreated_cos[33m.[39mid_list where order_time between [32m'2023-05-01'[39m and [32m'2023-11-01'[39m and treated_cos[33m.[39mid_list is [36mnull[39m group by order_date[33m,[39mm_seller_id
- [90m     |[39m                                                                                                                                      [31m[1m^[22m[39m
- [90m 121 |[39m         [33m<[39m[33mbutton[39m type[33m=[39m[32m"button"[39m onClick[33m=[39m{()[33m=>[39mshowMemo([35m0[39m)}[33m>[39mhide memo[33m<[39m[33m/[39m[33mbutton[39m[33m>[39m[33m<[39m[33m/[39m[33mdiv[39m[33m>[39m
- [90m 122 |[39m       )}
- [90m 123 |[39m       [33m<[39m[33mform[39m onSubmit[33m=[39m{execSql} className[33m=[39m[32m"flex flex-col gap-4 w-full max-w-md"[39m[33m>[39m[0m
-
-Expected '</', got '='
-
-Import traces:
-  Client Component Browser:
-    ./src/app/bi/page.tsx [Client Component Browser]
-    ./src/app/bi/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./src/app/bi/page.tsx [Client Component SSR]
-    ./src/app/bi/page.tsx [Server Component]
-
-
- ○ Compiling /_error ...
- ✓ Compiled /_error in 1730ms
- GET /bi 500 in 2030ms
- GET /favicon.ico 500 in 104ms
- GET /_next/webpack-hmr 404 in 107ms
- GET /_next/webpack-hmr 404 in 100ms
- GET /_next/webpack-hmr 404 in 96ms
- GET /_next/webpack-hmr 404 in 97ms
- GET /_next/webpack-hmr 404 in 117ms
- ✓ Compiled in 160ms
- GET /_next/webpack-hmr 404 in 148ms
- ✓ Compiled /bi in 24ms
- GET /bi 200 in 354ms
- GET /favicon.ico?favicon.0b3bf435.ico 200 in 269ms
- GET /bi 200 in 366ms
- GET /favicon.ico?favicon.0b3bf435.ico 200 in 265ms
+ GET /bi 200 in 374ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 254ms
+ GET /bi 200 in 350ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 257ms
+ GET /bi 200 in 398ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 255ms
+ GET /bi 200 in 392ms
+ GET /_next/webpack-hmr 404 in 113ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 270ms
+ GET /bi 200 in 373ms
+ GET /_next/webpack-hmr 404 in 128ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 278ms
  GET /bi 200 in 377ms
- GET /favicon.ico?favicon.0b3bf435.ico 200 in 268ms
- GET /bi 200 in 375ms
- GET /favicon.ico?favicon.0b3bf435.ico 200 in 259ms
- GET /bi 200 in 378ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 267ms
+ GET /bi 200 in 360ms
+ GET /_next/webpack-hmr 404 in 134ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 272ms
+ GET /bi 200 in 130ms
  GET /favicon.ico?favicon.0b3bf435.ico 200 in 260ms
- GET /bi 200 in 365ms
- GET /_next/webpack-hmr 404 in 112ms
- GET /favicon.ico?favicon.0b3bf435.ico 200 in 289ms
- GET /bi 200 in 134ms
- GET /favicon.ico?favicon.0b3bf435.ico 200 in 266ms
- GET /bi 200 in 378ms
+ GET /bi 200 in 376ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 264ms
+ GET /bi 200 in 337ms
+ GET /_next/webpack-hmr 404 in 123ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 270ms
+ GET /bi 200 in 120ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 268ms
+ GET /bi 200 in 114ms
+ GET /_next/webpack-hmr 404 in 135ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 274ms
+ GET /bi 200 in 114ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 261ms
+ GET /bi 200 in 119ms
+ GET /_next/webpack-hmr 404 in 121ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 269ms
+ GET /bi 200 in 112ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 260ms
+ GET /bi 200 in 131ms
+ GET /_next/webpack-hmr 404 in 126ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 275ms
+ GET /bi 200 in 395ms
+ GET /_next/webpack-hmr 404 in 119ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 264ms
+ GET /bi 200 in 383ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 271ms
+ GET /bi 200 in 133ms
  GET /_next/webpack-hmr 404 in 127ms
  GET /favicon.ico?favicon.0b3bf435.ico 200 in 279ms
- GET /bi 200 in 322ms
- GET /_next/webpack-hmr 404 in 100ms
- GET /favicon.ico?favicon.0b3bf435.ico 200 in 258ms
- GET /bi 200 in 372ms
- GET /favicon.ico?favicon.0b3bf435.ico 200 in 262ms
- GET /bi 200 in 138ms
- GET /favicon.ico?favicon.0b3bf435.ico 200 in 254ms
- GET /bi 200 in 377ms
- GET /_next/webpack-hmr 404 in 134ms
- GET /favicon.ico?favicon.0b3bf435.ico 200 in 294ms
- GET /bi 200 in 332ms
- GET /_next/webpack-hmr 404 in 137ms
- GET /favicon.ico?favicon.0b3bf435.ico 200 in 328ms
- GET /bi 200 in 354ms
+ GET /bi 200 in 109ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 317ms
+ GET /bi 200 in 369ms
+ GET /_next/webpack-hmr 404 in 101ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 268ms
+ GET /bi 200 in 369ms
  GET /_next/webpack-hmr 404 in 126ms
- GET /favicon.ico?favicon.0b3bf435.ico 200 in 278ms
- GET /stat 404 in 111ms
- GET /favicon.ico?favicon.0b3bf435.ico 200 in 253ms
- ✓ Compiled /matsu in 262ms
- ⨯ [Error: The default export is not a React Component in "/matsu/page"]
- ⨯ [Error: The default export is not a React Component in "/matsu/page"] {
-  page: '/matsu'
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 289ms
+ GET /bi 200 in 327ms
+ GET /_next/webpack-hmr 404 in 133ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 299ms
+ GET /bi 200 in 370ms
+ GET /_next/webpack-hmr 404 in 153ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 287ms
+ ⨯ TypeError: Cannot read properties of null (reading 'data')
+    at App (src/app/bi/page.tsx:169:17)
+  167 |       )}
+  168 |       <button type="button" onClick={makeLifelines} className="px-4 py-2 rounded-lg bg-gray-200 text-gray-800 hover:bg-gray-300 transition">lifelines(must include duration,event)</button>
+> 169 |       {llresult.data}aaaaaa
+      |                 ^
+  170 |       {llresult && llresult.status === 'ok' && llresult.data?.length > 0 && (
+  171 |         <div className="mt-8 p-4 border rounded w-5/5">
+  172 |             {llresult.data}aaaaaa {
+  digest: '400138932'
 }
- GET /matsu 500 in 1321ms
- GET /_next/webpack-hmr 404 in 931ms
- GET /favicon.ico 200 in 1086ms
- GET /_next/webpack-hmr 404 in 91ms
- GET /_next/webpack-hmr 404 in 95ms
+ GET /bi 500 in 412ms
+ GET /_next/webpack-hmr 404 in 135ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 304ms
+ GET /favicon.ico 200 in 290ms
+ GET /bi 200 in 325ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 260ms
+ GET /bi 200 in 368ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 270ms
+ GET /bi 200 in 363ms
+ GET /_next/webpack-hmr 404 in 140ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 265ms
+ GET /bi 200 in 359ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 251ms
+ GET /bi 200 in 372ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 259ms
+ GET /bi 200 in 112ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 259ms
+ GET /bi 200 in 388ms
+ GET /_next/webpack-hmr 404 in 137ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 281ms
+ GET /bi 200 in 358ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 260ms
