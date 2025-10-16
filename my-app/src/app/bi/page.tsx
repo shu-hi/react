@@ -20,6 +20,7 @@ const App: React.FC = () => {
   const [memo,showMemo]=useState<0|1>(0);
   const [spinner,setSpinner]=useState<0|1>(0);
   const [del_outlier,setDelOutlier]=useState<boolean>(false);
+  const [LinregResult,setLinreg]=useState<ApiResult|null>(null);
   const execSql = async(e: React.FormEvent) => {
     setSpinner(1);
     e.preventDefault();
@@ -110,6 +111,27 @@ const App: React.FC = () => {
     }
     setSpinner(0);
   }
+  const makeLinreg=async()=>{
+    setSpinner(1);
+    try{
+      const res=await fetch("http://54.65.233.242/api/Linreg", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ sql: sql,params:[] }),
+      });
+      if (!res.ok) {
+      throw new Error("linreg request failed");
+    }
+
+    const data = await res.json();
+    console.log(data);
+    setSpinner(0);
+    setLinreg(data);
+    } catch (err) {
+      console.error("Error generating plot:", err);
+    }
+    setSpinner(0);
+  }
   
 
   
@@ -123,10 +145,40 @@ const App: React.FC = () => {
       )}
       <button type="button" onClick={makePlot} className="px-4 py-2 rounded-lg bg-gray-200 text-gray-800 hover:bg-gray-300 transition">plot</button>
       <button type="button" onClick={makeHist} className="px-4 py-2 rounded-lg bg-gray-200 text-gray-800 hover:bg-gray-300 transition">hist</button>
+      
       {plotUrl && (
         <div className="mt-6">
           <h2 className="text-xl font-semibold mb-2">Plot</h2>
           <img src={plotUrl} alt="Plot Image" className="border rounded max-w-full" />
+        </div>
+      )}
+      <button type="button" onClick={makeLinreg} className="px-4 py-2 rounded-lg bg-gray-200 text-gray-800 hover:bg-gray-300 transition">Linreg</button>
+      {LinregResult&&LinregResult.status==='ok'&&LinregResult.data.summary &&(
+        <div>
+        <table className="table-auto border-collapse border">
+          <thead>
+            <tr>
+              <th className="border px-4 py-2">Variable</th>
+              <th className="border px-4 py-2">Coef</th>
+              <th className="border px-4 py-2">rsquared</th>
+              <th className="border px-4 py-2">t</th>
+              <th className="border px-4 py-2">P-value</th>
+            </tr>
+          </thead>
+          <tbody>
+            {LinregResult.data.summary.map((row, i) => (
+              <tr key={i}>
+                <td className="border px-4 py-2">{row.Variable}</td>
+                <td className="border px-4 py-2">{row.Coef.toFixed(3)}</td>
+                <td className="border px-4 py-2">{row.rsquared.toFixed(3)}</td>
+                <td className="border px-4 py-2">{row.t.toFixed(2)}</td>
+                <td className="border px-4 py-2">{row["P>|t|"]}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+        <img src={`data:image/png;base64,${LinregResult.data.plot}`} alt="Linreg Plot" />
+        
         </div>
       )}
       <button type="button" onClick={makeDid} className="px-4 py-2 rounded-lg bg-gray-200 text-gray-800 hover:bg-gray-300 transition">did(must include target,treated,period_flg)</button>
@@ -165,6 +217,7 @@ const App: React.FC = () => {
         
         </div>
       )}
+
       <button type="button" onClick={makeLifelines} className="px-4 py-2 rounded-lg bg-gray-200 text-gray-800 hover:bg-gray-300 transition">lifelines(must include duration,event)</button>
       {llresult && llresult.status === 'ok' && llresult.data?.length > 0 && (
         <div className="mt-8 p-4 border rounded w-5/5">
