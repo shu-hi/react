@@ -6,21 +6,25 @@ import './app.css';
 type Sql = 
    string;
 ;
-type ApiResult = {
+type ApiResult<T> = {
   status: string;
   error: string;
-  data: any;
+  data: T;
 };
+type DidDataType={
+  summary:any[];
+  plot:string;
+}
 const App: React.FC = () => {
   const [sql,setSql] = useState<Sql>("");
-  const [result, setResult] = useState<ApiResult|null>(null);
+  const [result, setResult] = useState<ApiResult<any[]>|null>(null);
   const [plotUrl, setPlotUrl] = useState<string | null>(null);
-  const [didResult,setDid]=useState<ApiResult|null>(null);
-  const [llresult,setllResult]=useState<ApiResult|null>(null);
+  const [didResult,setDid]=useState<ApiResult<DidDataType>|null>(null);
+  const [llresult,setllResult]=useState<ApiResult<any[]>|null>(null);
   const [memo,showMemo]=useState<0|1>(0);
   const [spinner,setSpinner]=useState<0|1>(0);
   const [del_outlier,setDelOutlier]=useState<boolean>(false);
-  const [LinregResult,setLinreg]=useState<ApiResult|null>(null);
+  const [LinregResult,setLinreg]=useState<ApiResult<DidDataType>|null>(null);
   const execSql = async(e: React.FormEvent) => {
     setSpinner(1);
     e.preventDefault();

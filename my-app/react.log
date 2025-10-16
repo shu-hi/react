@@ -18,3 +18,8 @@ Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allow
  ✓ Compiled /favicon.ico in 494ms
  GET /favicon.ico?favicon.0b3bf435.ico 200 in 685ms
  GET /_next/webpack-hmr 404 in 645ms
+ GET /bi 200 in 378ms
+ GET /_next/webpack-hmr 404 in 203ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 356ms
+ GET /bi 200 in 366ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 250ms
