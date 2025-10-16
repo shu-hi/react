@@ -31,3 +31,11 @@ Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allow
 
  ✓ Starting...
  ✓ Ready in 1278ms
+ ○ Compiling /bi ...
+ ✓ Compiled /bi in 3.9s
+ GET /bi 200 in 4428ms
+ ⚠ Cross origin request detected from 54.65.233.242 to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
+Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
+ ✓ Compiled /favicon.ico in 499ms
+ GET /_next/webpack-hmr 404 in 623ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 808ms

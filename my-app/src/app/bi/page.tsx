@@ -39,8 +39,6 @@ const App: React.FC = () => {
     setResult(data);
   };
   const getColumn=async(text:string)=>{
-    console.log("API Base URL:", process.env.NEXT_PUBLIC_API_BASE_URL);
-
     const match = (text.match(/from (\S+)/i) || [])[1] || "";
     if(match){
       const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/api/execute`, {
