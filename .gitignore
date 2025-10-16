@@ -1,3 +1,4 @@
 myenv/
 my-app/node_modules/
 my-app/.env*
+my-app/src/app/matsu
