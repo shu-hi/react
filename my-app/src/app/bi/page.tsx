@@ -24,7 +24,7 @@ const App: React.FC = () => {
   const execSql = async(e: React.FormEvent) => {
     setSpinner(1);
     e.preventDefault();
-    const res = await fetch("http://54.65.233.242/api/head", {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/api/head`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ sql: sql,params:[] }),
@@ -37,7 +37,7 @@ const App: React.FC = () => {
   const getColumn=async(text:string)=>{
     const match = (text.match(/from (\S+)/i) || [])[1] || "";
     if(match){
-      const res = await fetch("http://54.65.233.242/api/execute", {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/api/execute`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ sql: "describe "+match,params:[] }),
@@ -49,7 +49,7 @@ const App: React.FC = () => {
   }
   const makeDid=async()=>{
     setSpinner(1);
-    const res=await fetch("http://54.65.233.242/api/did", {
+    const res=await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/api/did`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ sql: sql,params:[],del_outlier:del_outlier }),
@@ -61,7 +61,7 @@ const App: React.FC = () => {
   }
   const makeLifelines=async()=>{
     setSpinner(1);
-    const res=await fetch("http://54.65.233.242/api/lifelines", {
+    const res=await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/api/lifelines`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ sql: sql,params:[]}),
@@ -74,7 +74,7 @@ const App: React.FC = () => {
   const makePlot=async()=>{
     setSpinner(1);
     try{
-      const res=await fetch("http://54.65.233.242/api/plot", {
+      const res=await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/api/plot`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ sql: sql,params:[] }),
@@ -94,7 +94,7 @@ const App: React.FC = () => {
   const makeHist=async()=>{
     setSpinner(1);
     try{
-      const res=await fetch("http://54.65.233.242/api/hist", {
+      const res=await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/api/hist`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ sql: sql,params:[] }),
@@ -114,7 +114,7 @@ const App: React.FC = () => {
   const makeLinreg=async()=>{
     setSpinner(1);
     try{
-      const res=await fetch("http://54.65.233.242/api/Linreg", {
+      const res=await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/api/Linreg`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ sql: sql,params:[] }),
@@ -245,7 +245,7 @@ const App: React.FC = () => {
       <button type="button" onClick={()=>showMemo(1)}>show memo</button>
       {memo===1&&(
         <div>{didmemo}
-        <br></br>
+        <br></br>-----↑did--------------↓lifeline--------<br></br>
         {lifelinememo}
         <br></br><button type="button" onClick={()=>showMemo(0)}className="px-4 py-2 rounded-lg bg-gray-200 text-gray-800 hover:bg-gray-300 transition">hide memo</button></div>
       )}

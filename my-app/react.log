@@ -6,14 +6,15 @@ nohup: 入力を無視します
    ▲ Next.js 15.5.3 (Turbopack)
    - Local:        http://localhost:3000
    - Network:      http://0.0.0.0:3000
+   - Environments: .env.development
 
  ✓ Starting...
- ✓ Ready in 1958ms
- ○ Compiling /_not-found/page ...
- ✓ Compiled /_not-found/page in 4.2s
- GET /stat 404 in 4724ms
- ✓ Compiled /favicon.ico in 254ms
- GET /favicon.ico?favicon.0b3bf435.ico 200 in 586ms
- ✓ Compiled /bi in 354ms
- GET /bi 200 in 577ms
- GET /favicon.ico?favicon.0b3bf435.ico 200 in 270ms
+ ✓ Ready in 1288ms
+ ○ Compiling /bi ...
+ ✓ Compiled /bi in 3.9s
+ GET /bi 200 in 4422ms
+ ⚠ Cross origin request detected from 54.65.233.242 to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
+Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
+ ✓ Compiled /favicon.ico in 494ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 685ms
+ GET /_next/webpack-hmr 404 in 645ms
