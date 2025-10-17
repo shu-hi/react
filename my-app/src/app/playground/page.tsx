@@ -25,7 +25,7 @@ const App: React.FC = () => {
   const [itemsB,setItemsB] = useState<Item[]>([]);
   const [nodesList,setNodes]=useState<[string,number,string,number][]>([]);
   const fetchTable = async () => {
-      const res = await fetch("http://54.65.233.242/api/get_table");
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/api/get_table`);
       const data: TableResponse = await res.json();
       const updatedData = data.data.map(item => ({
     ...item,

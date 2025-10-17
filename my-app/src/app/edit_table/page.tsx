@@ -19,7 +19,7 @@ export default function editTablePage() {
 
 
   const fetchTable = async () => {
-      const res = await fetch("http://54.65.233.242/api/get_table");
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/api/get_table`);
       const data: TableResponse = await res.json();
       setTableData(data.data);
     };
@@ -29,7 +29,7 @@ export default function editTablePage() {
   }, []); //
   const handleSubmit = async(e: React.FormEvent) => {
     e.preventDefault();
-    const res = await fetch("http://54.65.233.242/api/add_table", {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/api/add_table`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ name: name,columns:columns }),
@@ -38,7 +38,7 @@ export default function editTablePage() {
   fetchTable();
   };
   const handleDelete = async(name: string) => {
-    const res = await fetch("http://54.65.233.242/api/del_table", {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/api/del_table`, {
     method: "DELETE",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ name: name }),
