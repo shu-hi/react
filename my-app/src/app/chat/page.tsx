@@ -42,9 +42,16 @@ const StreamChat = () => {
     <div>
       <h1>Stream Chat</h1>
 
-      <form onSubmit={handleSubmit}>
-        <input value={query} onChange={(e) => setQuery(e.target.value)} />
-        <button type="submit">Send</button>
+      <form onSubmit={handleSubmit}className="flex flex-col gap-4 w-full max-w-md">
+        <textarea 
+          value={query} 
+          onChange={(e) => {setQuery(e.target.value);
+            e.target.style.height = "auto"; // textareaサイズ拡大処理
+            e.target.style.height = `${e.target.scrollHeight}px`;
+          }} 
+          className="border rounded px-3 py-2 overflow-hidden resize-none"
+          required/>
+        <button type="submit" className="px-4 py-2 rounded-lg bg-gray-200 text-gray-800 hover:bg-gray-300 transition">Send</button>
       </form>
 
       <pre style={{ whiteSpace: "pre-wrap" }}>{text}</pre>
