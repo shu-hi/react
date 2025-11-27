@@ -4,12 +4,12 @@ import axios from "axios";
 
 function App() {
   // CSVファイルを保持する状態
-  const [file, setFile] = useState(null);
+  const [file, setFile] = useState<File | null>(null);
   const [message, setMessage] = useState("");
 
   // ファイルが選択された時の処理
-  const handleFileChange = (e) => {
-    const selectedFile = e.target.files[0];
+  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const selectedFile = e.target.files?.[0];
     if (selectedFile && selectedFile.type === "text/csv") {
       setFile(selectedFile);
     } else {
@@ -18,7 +18,7 @@ function App() {
   };
 
   // フォームの送信処理
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     
     if (!file) {
