@@ -16,7 +16,7 @@ const StreamChat = () => {
 
     try {
       const response = await fetch(
-        `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/streamchat/${encodeURIComponent(query)}`,
+        `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/rag/${encodeURIComponent(query)}`,
         { cache: "no-store" }
       );
 
