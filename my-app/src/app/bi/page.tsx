@@ -41,10 +41,13 @@ const App: React.FC = () => {
   const getColumn=async(text:string)=>{
     const match = (text.match(/from (\S+)/i) || [])[1] || "";
     if(match){
+      const parts = match.split('.');
+      const tableName=parts.length > 1 ? parts.slice(1).join('.') : match;
+      const schema=parts.length > 1 ? parts[0] : '%';
       const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/api/execute`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ sql: "describe "+match,params:[] }),
+      body: JSON.stringify({ sql: "SELECT table_schema,table_name,column_name,data_type,character_maximum_length,numeric_precision,column_default FROM information_schema.columns WHERE table_name = %s and table_schema like %s",params:[tableName,schema] }),
     });
     const data = await res.json();
     console.log(data);
@@ -272,7 +275,7 @@ const App: React.FC = () => {
           execute
         </button>
       </form>
-      {result && result.status === 'ok' && result.data?.length > 0 && (
+      {result && (result.status === 'ok'||result.status==='fallback') && result.data?.length > 0 && (
           <div className="mt-8 p-4 border rounded w-5/5">
             <h2 className="text-2xl font-semibold mb-2">result(head)</h2>
             <table className="table-auto border-collapse border max-h-screen max-w-screen overflow-auto">

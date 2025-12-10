@@ -53,7 +53,11 @@ const StreamChat = () => {
           required/>
         <button type="submit" className="px-4 py-2 rounded-lg bg-gray-200 text-gray-800 hover:bg-gray-300 transition">Send</button>
       </form>
-
+      {loading && (
+        <div className="flex justify-center my-4">
+          <div className="animate-spin border-t-2 border-gray-800 rounded-full w-8 h-8 border-t-transparent"></div>
+        </div>
+      )}
       <pre style={{ whiteSpace: "pre-wrap" }}>{text}</pre>
     </div>
   );
