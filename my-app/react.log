@@ -10,11 +10,169 @@ nohup: 入力を無視します
  Detected additional lockfiles: 
    * /home/ubuntu/react/my-app/package-lock.json
 
- ⚠ Port 3000 is in use by an unknown process, using available port 3002 instead.
    ▲ Next.js 15.5.3 (Turbopack)
-   - Local:        http://localhost:3002
-   - Network:      http://0.0.0.0:3002
+   - Local:        http://localhost:3000
+   - Network:      http://0.0.0.0:3000
    - Environments: .env.development
 
  ✓ Starting...
- ✓ Ready in 1448ms
+ ✓ Ready in 1910ms
+ ○ Compiling /_not-found/page ...
+ ✓ Compiled /_not-found/page in 4.1s
+ GET /stat 404 in 4644ms
+ ⚠ Cross origin request detected from 54.65.233.242 to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
+Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
+ GET /_next/webpack-hmr 404 in 189ms
+ ✓ Compiled /favicon.ico in 349ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 678ms
+ ✓ Compiled /real_estate in 322ms
+ GET /real_estate 200 in 517ms
+ GET /_next/webpack-hmr 404 in 148ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 294ms
+ GET /real_estate 200 in 126ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 268ms
+ GET /real_estate 200 in 391ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 314ms
+ GET /real_estate 200 in 390ms
+ GET /_next/webpack-hmr 404 in 150ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 287ms
+ GET /real_estate 200 in 410ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 274ms
+ GET /real_estate 200 in 393ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 285ms
+ GET /real_estate 200 in 167ms
+ GET /_next/webpack-hmr 404 in 169ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 291ms
+ GET /real_estate 200 in 116ms
+ GET /_next/webpack-hmr 404 in 137ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 278ms
+ GET /real_estate 200 in 124ms
+ GET /_next/webpack-hmr 404 in 143ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 276ms
+ GET /real_estate 200 in 130ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 264ms
+ GET /real_estate 200 in 474ms
+ GET /_next/webpack-hmr 404 in 161ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 279ms
+ GET /real_estate 200 in 377ms
+ GET /_next/webpack-hmr 404 in 135ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 276ms
+ GET /real_estate 200 in 380ms
+ GET /_next/webpack-hmr 404 in 109ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 258ms
+ GET /real_estate 200 in 388ms
+ GET /_next/webpack-hmr 404 in 298ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 268ms
+ GET /real_estate 200 in 146ms
+ GET /_next/webpack-hmr 404 in 151ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 339ms
+ GET /real_estate 200 in 138ms
+ GET /_next/webpack-hmr 404 in 202ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 407ms
+ GET /real_estate 200 in 149ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 287ms
+ GET /real_estate 200 in 158ms
+ GET /_next/webpack-hmr 404 in 185ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 347ms
+ GET /real_estate 200 in 148ms
+ GET /_next/webpack-hmr 404 in 183ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 353ms
+ GET /real_estate 200 in 148ms
+ GET /_next/webpack-hmr 404 in 189ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 339ms
+ ✓ Compiled in 164ms
+ ✓ Compiled /real_estate in 37ms
+ ⨯ ReferenceError: handleSubmit is not defined
+    at App (src/app/real_estate/page.tsx:32:25)
+  30 |       <div className='main-body'>
+  31 |         <div className='map' dangerouslySetInnerHTML={{ __html: mapHtml }} />
+> 32 |         <form onSubmit={handleSubmit} className="flex flex-col gap-4 w-full max-w-md">
+     |                         ^
+  33 |           <input
+  34 |             type="text"
+  35 |             placeholder="address" {
+  digest: '1544215794'
+}
+ GET /real_estate 500 in 420ms
+ GET /favicon.ico 200 in 355ms
+ GET /real_estate 200 in 393ms
+ GET /_next/webpack-hmr 404 in 195ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 383ms
+ GET /real_estate? 200 in 115ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 321ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 455ms
+ GET /real_estate? 200 in 112ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 483ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 346ms
+ GET /real_estate 200 in 132ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 579ms
+ GET /real_estate? 200 in 106ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 295ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 297ms
+ GET /real_estate? 200 in 135ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 366ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 366ms
+ GET /real_estate? 200 in 131ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 472ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 461ms
+ GET /real_estate 200 in 147ms
+ GET /_next/webpack-hmr 404 in 172ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 322ms
+ GET /real_estate? 200 in 126ms
+ GET /_next/webpack-hmr 404 in 442ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 511ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 514ms
+ GET /real_estate? 200 in 125ms
+ GET /_next/webpack-hmr 404 in 256ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 352ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 351ms
+ GET /real_estate? 200 in 150ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 798ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 683ms
+ GET /_next/webpack-hmr 404 in 782ms
+ GET /real_estate 200 in 144ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 273ms
+ GET /real_estate? 200 in 123ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 258ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 270ms
+ GET /real_estate 200 in 128ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 418ms
+ GET /real_estate? 200 in 209ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 328ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 305ms
+ GET /real_estate? 200 in 164ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 289ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 292ms
+ GET /real_estate 200 in 387ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 300ms
+ GET /real_estate? 200 in 167ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 336ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 357ms
+ GET /real_estate 200 in 385ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 249ms
+ GET /real_estate 200 in 153ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 503ms
+ GET /real_estate 200 in 155ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 390ms
+ GET /real_estate 200 in 139ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 292ms
+ GET /real_estate 200 in 157ms
+ GET /_next/webpack-hmr 404 in 218ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 471ms
+ GET /real_estate 200 in 392ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 496ms
+ GET /real_estate 200 in 149ms
+ GET /real_estate 200 in 123ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 335ms
+ GET /_next/webpack-hmr 404 in 358ms
+ GET /real_estate 200 in 112ms
+ GET /_next/webpack-hmr 404 in 333ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 431ms
+ GET /real_estate 200 in 380ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 281ms
+ GET /real_estate 200 in 385ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 312ms
+ GET /_next/webpack-hmr 404 in 256ms
+ GET /real_estate 200 in 436ms
+ GET /_next/webpack-hmr 404 in 173ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 394ms

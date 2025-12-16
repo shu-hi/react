@@ -1,6 +1,30 @@
-.map-container {
-  width: 50%;          /* 幅を画面の50%に制限 */
-  max-width: 100%;     /* 最大幅を画面の100%に設定 */
-  height: 500px;       /* 高さを500pxに設定（適宜調整） */
-  margin: 0 auto;      /* 中央揃え */
+.main-body {
+  display:flex;
+  height: 80vh;
+}
+.map{
+  width:800px;
+  flex-shrink:0;
+  height: 100%;
+}
+.search-form {
+  display: flex;
+  width: 300px;
+  height:50px;
+}
+
+.search-form input {
+  flex: 1;               /* 入力欄を残り幅いっぱいに */
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-right: none;    /* ボタンとつなげるため右側のボーダー消す */
+  border-radius: 4px 0 0 4px;
+}
+
+.search-form button {
+  padding: 0.5rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 0 4px 4px 0;
+  background-color: #eee;
+  cursor: pointer;
 }
