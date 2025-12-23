@@ -176,73 +176,87 @@ function PopulationComparison({ population_rate, population_sum }: { population_
   return (
     <div>
       <h2>人口比較（2025年基準）</h2>
-        <table>
-          <thead>
-            <tr>
-              {population_rate.year.slice(4,9).map((year,i)=>{
-                return(
-                  <th
-                    key={i}>
-                    {year}
-                  </th>
-                );
-              })}
-            </tr>
-          </thead>
-          <tbody>
-            <tr>         
-              {population_rate.data[0].slice(4,9).map((popsum, i) => {
-                const growthFrom2025 = (popsum - population_rate.data[0][5]) / population_rate.data[0][5]*10; // 各年の伸び幅計算
-                const color = getColorForGrowth(growthFrom2025);
-                return (
-                  <td
-                    key={i}
-                    style={{
-                      backgroundColor: color,
-                      textAlign: 'center',
-                      padding: '10px',
-                    }}
-                  >
-                    {popsum.toLocaleString()}
-                    {makeInnerDiv(i,population_rate.data[1].slice(4,9),makeInnerDiv(i,population_sum.slice(0, 5),null))}
-                  </td>
-                );
-              })}
-            </tr> 
-          </tbody>
-        </table>
-        <table>
-          <thead>
-            <tr>
-              <th colSpan={10}></th>
-            </tr>
-          </thead>
-        <tbody>
+      <div style={{display:'flex'}}>
+      <div style={{border:'solid',maxWidth:'100px',textAlign: 'center',padding: '5px',}}>
+        {population_rate.data[0][1]}
+        <div style={{border:'solid',textAlign: 'center',padding: '5px',}}>
+          {population_rate.data[1][1]}
+          <div style={{border:'solid',textAlign: 'center',padding: '5px',}}>
+            メッシュ
+          </div>
+        </div>
+      </div>
+      <div>
+      <table>
+        <thead>
           <tr>
-        {[...Array(10)].map((_, i:number) => parseFloat(((i/10)-0.5).toFixed(1))).map((num,index)=>{
-          const color = getColorForGrowth(num);
-          return (<td key={index}
-          style={{
-            backgroundColor: color,
-            textAlign: 'center',
-            padding: '10px',}}>
-            {Math.round((num)*10)+"%"}
-          </td>);
-        })}
-        </tr>
+            {population_rate.year.slice(4,9).map((year,i)=>{
+              return(
+                <th
+                  key={i}>
+                  {year}
+                </th>
+              );
+            })}
+          </tr>
+        </thead>
+        <tbody>
+          <tr>         
+            {population_rate.data[0].slice(4,9).map((popsum, i) => {
+              const growthFrom2025 = (popsum - population_rate.data[0][4]) / population_rate.data[0][4]*10; // 各年の伸び幅計算
+              const color = getColorForGrowth(growthFrom2025);
+              return (
+                <td
+                  key={i}
+                  style={{
+                    backgroundColor: color,
+                    textAlign: 'center',
+                    padding: '10px',
+                  }}
+                >
+                  {popsum.toLocaleString()}
+                  {makeInnerDiv(i,population_rate.data[1].slice(4,9),makeInnerDiv(i,population_sum.slice(0, 5),null))}
+                </td>
+              );
+            })}
+          </tr> 
         </tbody>
       </table>
+      <table>
+        <thead>
+          <tr>
+            <th colSpan={10}></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            {[...Array(10)].map((_, i:number) => parseFloat(((i/10)-0.5).toFixed(1))).map((num,index)=>{
+              const color = getColorForGrowth(num);
+              return (
+              <td key={index}
+                style={{
+                  backgroundColor: color,
+                  textAlign: 'center',
+                  padding: '10px',}}>
+                  {Math.round((num)*10)+"%"}
+              </td>);
+            })}
+          </tr>
+        </tbody>
+      </table>
+      </div>
+      </div>
     </div>
   );
 }
 const getColorForGrowth = (growthPercentage: number): string => {
-  return `rgba(0, 149, 217, ${(growthPercentage+0.5)})`; // デフォルト (白)
+  return `rgba(${255-(growthPercentage+1)*100}, ${255-(growthPercentage+1)*100},  ${255-(growthPercentage+1)*100},1)`; // デフォルト (白)
 };
 const makeInnerDiv=(index:number,givenarr:(number|string)[],innerDiv:React.JSX.Element|null)=>{
   const popuarr=givenarr;
   const growthFrom2025 = (popuarr[index] - popuarr[0]) / popuarr[0]*10; // 各年の伸び幅計算
-  //const color = getColorForGrowth(growthFrom2025);
-  const color = `rgba(0, 149, 217, ${(growthFrom2025+1)})`;
+  const color = getColorForGrowth(growthFrom2025);
+  //const color = `rgba(0, 149, 217, ${(growthFrom2025+0.5)})`;
   return(
     <div
       style={{

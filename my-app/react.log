@@ -278,3 +278,91 @@ popurate []
 popurate []
  GET /real_estate 200 in 404ms
  GET /favicon.ico?favicon.0b3bf435.ico 200 in 556ms
+popurate []
+ GET /real_estate 200 in 168ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 255ms
+popurate []
+ GET /real_estate 200 in 378ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 399ms
+popurate []
+ GET /real_estate 200 in 407ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 440ms
+popurate []
+ GET /real_estate 200 in 408ms
+ GET /_next/webpack-hmr 404 in 178ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 291ms
+popurate []
+ GET /real_estate 200 in 393ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 449ms
+ GET /_next/webpack-hmr 404 in 574ms
+popurate []
+ GET /real_estate 200 in 412ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 551ms
+popurate []
+ GET /real_estate 200 in 395ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 616ms
+popurate []
+ GET /real_estate 200 in 373ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 325ms
+popurate []
+ GET /real_estate 200 in 415ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 575ms
+popurate []
+ GET /real_estate 200 in 409ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 444ms
+popurate []
+ GET /real_estate 200 in 406ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 261ms
+popurate []
+ GET /real_estate 200 in 414ms
+ GET /_next/webpack-hmr 404 in 210ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 304ms
+popurate []
+ GET /real_estate 200 in 406ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 265ms
+popurate []
+ GET /real_estate 200 in 406ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 537ms
+popurate []
+ GET /real_estate 200 in 402ms
+ GET /_next/webpack-hmr 404 in 267ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 510ms
+popurate []
+ GET /real_estate 200 in 369ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 403ms
+ GET /_next/webpack-hmr 404 in 458ms
+popurate []
+ GET /real_estate 200 in 421ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 430ms
+popurate []
+ GET /real_estate 200 in 406ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 283ms
+popurate []
+ GET /real_estate 200 in 415ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 333ms
+popurate []
+ GET /real_estate 200 in 402ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 250ms
+popurate []
+ GET /real_estate 200 in 416ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 463ms
+popurate []
+ GET /real_estate 200 in 406ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 270ms
+popurate []
+ GET /real_estate 200 in 404ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 379ms
+popurate []
+ GET /real_estate 200 in 408ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 371ms
+popurate []
+ GET /real_estate 200 in 412ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 286ms
+ GET /_next/webpack-hmr 404 in 241ms
+popurate []
+ GET /real_estate 200 in 416ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 432ms
+popurate []
+ GET /real_estate 200 in 142ms
+ GET /_next/webpack-hmr 404 in 235ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 445ms
