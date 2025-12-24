@@ -254,7 +254,7 @@ const getColorForGrowth = (growthPercentage: number): string => {
 };
 const makeInnerDiv=(index:number,givenarr:(number|string)[],innerDiv:React.JSX.Element|null)=>{
   const popuarr=givenarr;
-  const growthFrom2025 = (popuarr[index] - popuarr[0]) / popuarr[0]*10; // 各年の伸び幅計算
+  const growthFrom2025 = (Number(popuarr[index]) - Number(popuarr[0])) / Number(popuarr[0])*10; // 各年の伸び幅計算
   const color = getColorForGrowth(growthFrom2025);
   //const color = `rgba(0, 149, 217, ${(growthFrom2025+0.5)})`;
   return(
