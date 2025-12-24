@@ -203,7 +203,7 @@ function PopulationComparison({ population_rate, population_sum }: { population_
         <tbody>
           <tr>         
             {population_rate.data[0].slice(4,9).map((popsum, i) => {
-              const growthFrom2025 = (popsum - population_rate.data[0][4]) / population_rate.data[0][4]*10; // 各年の伸び幅計算
+              const growthFrom2025 = (Number(popsum) - Number(population_rate.data[0][4])) / Number(population_rate.data[0][4])*10; // 各年の伸び幅計算
               const color = getColorForGrowth(growthFrom2025);
               return (
                 <td
