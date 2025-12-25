@@ -28,3 +28,87 @@
   background-color: #eee;
   cursor: pointer;
 }
+.stacked-chart{
+  width: 600px;
+  height:400px;
+}
+.comparison-table tbody tr td{
+    text-align: center;
+    padding: 10px;
+    height:80px;
+}
+.inner-div{
+  text-align: center;
+  padding: 10px;
+  border: solid;
+}
+.slash{
+  display:none;
+}
+.first-mesh-ex{
+    width:150px;
+    margin-top: 40px;
+  }
+.mesh-ex{
+    border:solid;
+    text-align: center;
+    padding: 3px;
+  }
+@media (max-width: 600px) {
+  .map{
+    width:100%;
+    height:50%;
+  }
+  
+  .main-body {
+    display:block;
+    text-align: center;
+    /* background-color: aqua; */
+  }
+  .popuration{
+    text-align: center;
+    width:100%;
+    /* background-color: red; */
+  }
+  .search-form {
+    display: flex;
+    width: 85%;
+    height:50px;
+    margin:10px;
+  }
+  .stacked-chart{
+    width: 450px;
+    height:275px;
+  }
+  .comparison-table tbody tr td{
+    /* width:30px; */
+    text-align: center;
+    padding: 5px;
+  }
+  .inner-div{
+    text-align: center;
+    padding: 0px;
+    border:none;
+  }
+  .slash{
+    display:inline;
+  }
+  .color-ex tbody tr td{
+    width:1px;
+    font-size: 12px;
+    height:5px;
+  }
+  .color-ex{
+    width:100%;
+  }
+  .mesh-ex{
+    max-width:130px;
+    text-align: center;
+    padding: 0px;
+    border:none;
+    font-size: 12px;
+  }
+  .first-mesh-ex{
+    margin-top: 35px;
+  }
+}

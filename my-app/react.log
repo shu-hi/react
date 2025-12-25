@@ -16,18 +16,558 @@ nohup: 入力を無視します
    - Environments: .env.development
 
  ✓ Starting...
- ✓ Ready in 1975ms
+ ✓ Ready in 1958ms
  ○ Compiling /_not-found/page ...
- ✓ Compiled /_not-found/page in 4.2s
- GET /stat 404 in 4735ms
+ ✓ Compiled /_not-found/page in 4.1s
+ GET /stat 404 in 4694ms
+ ✓ Compiled /favicon.ico in 260ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 583ms
+ GET /real_state 404 in 151ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 269ms
+ ○ Compiling /real_estate ...
+ ✓ Compiled /real_estate in 787ms
+popurate []
+ GET /real_estate 200 in 1015ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 257ms
+popurate []
+ GET /real_estate 200 in 185ms
  ⚠ Cross origin request detected from 54.65.233.242 to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
 Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
- ○ Compiling /favicon.ico ...
- GET /_next/webpack-hmr 404 in 500ms
- ✓ Compiled /favicon.ico in 651ms
- GET /favicon.ico?favicon.0b3bf435.ico 200 in 1075ms
- ○ Compiling /real_estate ...
- ✓ Compiled /real_estate in 755ms
+ GET /_next/webpack-hmr 404 in 359ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 472ms
 popurate []
- GET /real_estate 200 in 941ms
- GET /favicon.ico?favicon.0b3bf435.ico 200 in 264ms
+ GET /real_estate 200 in 120ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 375ms
+ GET /_next/webpack-hmr 404 in 429ms
+popurate []
+ GET /real_estate 200 in 134ms
+ GET /_next/webpack-hmr 404 in 153ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 311ms
+popurate []
+ GET /real_estate 200 in 175ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 289ms
+popurate []
+ GET /real_estate 200 in 170ms
+ GET /_next/webpack-hmr 404 in 151ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 298ms
+popurate []
+ GET /real_estate 200 in 123ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 278ms
+popurate []
+ GET /real_estate 200 in 138ms
+ GET /_next/webpack-hmr 404 in 386ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 576ms
+popurate []
+ GET /real_estate 200 in 168ms
+ GET /_next/webpack-hmr 404 in 442ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 642ms
+popurate []
+ GET /real_estate 200 in 176ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 462ms
+popurate []
+ GET /real_estate 200 in 168ms
+ GET /_next/webpack-hmr 404 in 204ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 534ms
+popurate []
+ GET /real_estate 200 in 119ms
+ GET /_next/webpack-hmr 404 in 572ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 606ms
+popurate []
+ GET /real_estate 200 in 115ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 455ms
+ GET /_next/webpack-hmr 404 in 576ms
+popurate []
+ GET /real_estate 200 in 442ms
+ GET /_next/webpack-hmr 404 in 153ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 317ms
+popurate []
+ GET /real_estate 200 in 173ms
+ GET /_next/webpack-hmr 404 in 307ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 467ms
+popurate []
+ GET /real_estate 200 in 172ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 338ms
+popurate []
+ GET /real_estate 200 in 170ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 494ms
+popurate []
+ GET /real_estate 200 in 173ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 314ms
+popurate []
+ GET /real_estate 200 in 167ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 434ms
+popurate []
+ GET /real_estate 200 in 173ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 449ms
+popurate []
+ GET /real_estate 200 in 170ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 422ms
+popurate []
+ GET /real_estate 200 in 175ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 428ms
+popurate []
+ GET /real_estate 200 in 167ms
+ GET /_next/webpack-hmr 404 in 333ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 531ms
+popurate []
+ GET /real_estate 200 in 170ms
+ GET /_next/webpack-hmr 404 in 173ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 348ms
+popurate []
+ GET /real_estate 200 in 120ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 356ms
+popurate []
+ GET /real_estate 200 in 168ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 539ms
+popurate []
+ GET /real_estate 200 in 149ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 371ms
+ GET /_next/webpack-hmr 404 in 402ms
+popurate []
+ GET /real_estate 200 in 125ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 411ms
+popurate []
+ GET /real_estate 200 in 120ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 417ms
+popurate []
+ GET /real_estate 200 in 109ms
+ GET /_next/webpack-hmr 404 in 220ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 395ms
+popurate []
+ GET /real_estate 200 in 170ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 309ms
+popurate []
+ GET /real_estate 200 in 167ms
+ GET /_next/webpack-hmr 404 in 200ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 292ms
+popurate []
+ GET /real_estate 200 in 176ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 540ms
+ GET /_next/webpack-hmr 404 in 650ms
+popurate []
+ GET /real_estate 200 in 170ms
+ GET /_next/webpack-hmr 404 in 325ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 449ms
+popurate []
+ GET /real_estate 200 in 442ms
+ GET /_next/webpack-hmr 404 in 162ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 306ms
+popurate []
+ GET /real_estate 200 in 440ms
+ GET /_next/webpack-hmr 404 in 196ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 280ms
+popurate []
+ GET /real_estate 200 in 168ms
+ GET /_next/webpack-hmr 404 in 176ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 320ms
+popurate []
+ GET /real_estate 200 in 173ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 507ms
+popurate []
+ GET /real_estate 200 in 168ms
+ GET /_next/webpack-hmr 404 in 321ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 422ms
+popurate []
+ GET /real_estate 200 in 168ms
+ GET /_next/webpack-hmr 404 in 339ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 442ms
+popurate []
+ GET /real_estate 200 in 436ms
+ GET /_next/webpack-hmr 404 in 149ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 293ms
+ ✓ Compiled in 222ms
+ ✓ Compiled /real_estate in 34ms
+popurate []
+ GET /real_estate 200 in 451ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 342ms
+popurate []
+ GET /real_estate 200 in 167ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 526ms
+popurate []
+ GET /real_estate 200 in 172ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 545ms
+ GET /_next/webpack-hmr 404 in 656ms
+popurate []
+ GET /real_estate 200 in 165ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 305ms
+popurate []
+ GET /real_estate 200 in 437ms
+ GET /_next/webpack-hmr 404 in 163ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 295ms
+popurate []
+ GET /real_estate 200 in 164ms
+ GET /_next/webpack-hmr 404 in 159ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 296ms
+popurate []
+ GET /real_estate 200 in 115ms
+ GET /_next/webpack-hmr 404 in 366ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 498ms
+popurate []
+ GET /real_estate 200 in 165ms
+ GET /_next/webpack-hmr 404 in 379ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 518ms
+popurate []
+ GET /real_estate 200 in 115ms
+ GET /_next/webpack-hmr 404 in 320ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 535ms
+popurate []
+ GET /real_estate 200 in 165ms
+ GET /_next/webpack-hmr 404 in 384ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 513ms
+popurate []
+ GET /real_estate 200 in 174ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 464ms
+popurate []
+ GET /real_estate 200 in 165ms
+ GET /_next/webpack-hmr 404 in 346ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 506ms
+popurate []
+ GET /real_estate 200 in 445ms
+ GET /_next/webpack-hmr 404 in 158ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 288ms
+popurate []
+ GET /real_estate 200 in 170ms
+ GET /_next/webpack-hmr 404 in 377ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 534ms
+popurate []
+ GET /real_estate 200 in 438ms
+ GET /_next/webpack-hmr 404 in 269ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 329ms
+ ⨯ ./my-app/src/app/real_estate/page.tsx:179:14
+Parsing ecmascript source code failed
+[0m [90m 177 |[39m     [33m<[39m[33mdiv[39m[33m>[39m
+ [90m 178 |[39m       [33m<[39m[33mh2[39m[33m>[39m人口比較（2025年基準）[33m<[39m[33m/[39m[33mh2[39m[33m>[39m
+[31m[1m>[22m[39m[90m 179 |[39m       [33m<[39m style[33m=[39m{{display[33m:[39m[32m'flex'[39m}}[33m>[39m
+ [90m     |[39m              [31m[1m^[22m[39m
+ [90m 180 |[39m         [33m<[39m[33mdiv[39m className[33m=[39m[32m'mesh-ex'[39m[33m>[39m
+ [90m 181 |[39m           {population_rate[33m.[39mdata[[35m0[39m][[35m1[39m]}
+ [90m 182 |[39m           [33m<[39m[33mdiv[39m className[33m=[39m[32m'mesh-ex'[39m[33m>[39m[0m
+
+Expected '</', got '='
+
+Import traces:
+  Client Component Browser:
+    ./my-app/src/app/real_estate/page.tsx [Client Component Browser]
+    ./my-app/src/app/real_estate/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./my-app/src/app/real_estate/page.tsx [Client Component SSR]
+    ./my-app/src/app/real_estate/page.tsx [Server Component]
+
+
+ ○ Compiling /_error ...
+
+-----
+[1m[31mFATAL[39m[0m: An unexpected Turbopack error occurred. A panic log has been written to /tmp/next-panic-3740f3e369356a315f440526b1184260.log.
+
+To help make Turbopack better, report this error by clicking here: https://github.com/vercel/next.js/discussions/new?category=turbopack-error-report&title=Turbopack%20Error%3A%20failed%20to%20write%20to%20%2Fhome%2Fubuntu%2Freact%2Fmy-app%2F.next%2Fstatic%2Fchunks%2F07e91_next_dist_shared_lib_d16669b4._.js.map&body=Turbopack%20version%3A%20%60db56d775%60%0ANext.js%20version%3A%20%600.0.0%60%0A%0AError%20message%3A%0A%60%60%60%0ATurbopack%20Error%3A%20failed%20to%20write%20to%20%2Fhome%2Fubuntu%2Freact%2Fmy-app%2F.next%2Fstatic%2Fchunks%2F07e91_next_dist_shared_lib_d16669b4._.js.map%0A%60%60%60&labels=Turbopack,Turbopack%20Panic%20Backtrace
+-----
+
+ ✓ Compiled /_error in 5.9s
+Error [ModuleBuildError]: ./my-app/src/app/real_estate/page.tsx:179:14
+Parsing ecmascript source code failed
+[0m [90m 177 |[39m     [33m<[39m[33mdiv[39m[33m>[39m
+ [90m 178 |[39m       [33m<[39m[33mh2[39m[33m>[39m人口比較（2025年基準）[33m<[39m[33m/[39m[33mh2[39m[33m>[39m
+[31m[1m>[22m[39m[90m 179 |[39m       [33m<[39m style[33m=[39m{{display[33m:[39m[32m'flex'[39m}}[33m>[39m
+ [90m     |[39m              [31m[1m^[22m[39m
+ [90m 180 |[39m         [33m<[39m[33mdiv[39m className[33m=[39m[32m'mesh-ex'[39m[33m>[39m
+ [90m 181 |[39m           {population_rate[33m.[39mdata[[35m0[39m][[35m1[39m]}
+ [90m 182 |[39m           [33m<[39m[33mdiv[39m className[33m=[39m[32m'mesh-ex'[39m[33m>[39m[0m
+
+Expected '</', got '='
+
+Import traces:
+  Client Component Browser:
+    ./my-app/src/app/real_estate/page.tsx [Client Component Browser]
+    ./my-app/src/app/real_estate/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./my-app/src/app/real_estate/page.tsx [Client Component SSR]
+    ./my-app/src/app/real_estate/page.tsx [Server Component]
+
+
+    at <unknown> (ModuleBuildError: ./my-app/src/app/real_estate/page.tsx:179:14)
+Error [TurbopackInternalError]: failed to write to /home/ubuntu/react/my-app/.next/static/chunks/07e91_next_dist_shared_lib_d16669b4._.js.map
+
+Caused by:
+- Permission denied (os error 13)
+
+Debug info:
+- Execution of TaskId { id: 2147483959 } transient failed
+- failed to write to /home/ubuntu/react/my-app/.next/static/chunks/07e91_next_dist_shared_lib_d16669b4._.js.map
+- Permission denied (os error 13)
+    at <unknown> (TurbopackInternalError: failed to write to /home/ubuntu/react/my-app/.next/static/chunks/07e91_next_dist_shared_lib_d16669b4._.js.map) {
+  location: undefined
+}
+ GET /favicon.ico 500 in 48ms
+ ⨯ ./my-app/src/app/real_estate/page.tsx:179:14
+Parsing ecmascript source code failed
+[0m [90m 177 |[39m     [33m<[39m[33mdiv[39m[33m>[39m
+ [90m 178 |[39m       [33m<[39m[33mh2[39m[33m>[39m人口比較（2025年基準）[33m<[39m[33m/[39m[33mh2[39m[33m>[39m
+[31m[1m>[22m[39m[90m 179 |[39m       [33m<[39m style[33m=[39m{{display[33m:[39m[32m'flex'[39m}}[33m>[39m
+ [90m     |[39m              [31m[1m^[22m[39m
+ [90m 180 |[39m         [33m<[39m[33mdiv[39m className[33m=[39m[32m'mesh-ex'[39m[33m>[39m
+ [90m 181 |[39m           {population_rate[33m.[39mdata[[35m0[39m][[35m1[39m]}
+ [90m 182 |[39m           [33m<[39m[33mdiv[39m className[33m=[39m[32m'mesh-ex'[39m[33m>[39m[0m
+
+Expected '</', got '='
+
+Import traces:
+  Client Component Browser:
+    ./my-app/src/app/real_estate/page.tsx [Client Component Browser]
+    ./my-app/src/app/real_estate/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./my-app/src/app/real_estate/page.tsx [Client Component SSR]
+    ./my-app/src/app/real_estate/page.tsx [Server Component]
+
+
+
+-----
+[1m[31mFATAL[39m[0m: An unexpected Turbopack error occurred. A panic log has been written to /tmp/next-panic-3740f3e369356a315f440526b1184260.log.
+
+To help make Turbopack better, report this error by clicking here: https://github.com/vercel/next.js/discussions/new?category=turbopack-error-report&title=Turbopack%20Error%3A%20failed%20to%20write%20to%20%2Fhome%2Fubuntu%2Freact%2Fmy-app%2F.next%2Fstatic%2Fchunks%2F07e91_next_dist_shared_lib_d16669b4._.js.map&body=Turbopack%20version%3A%20%60db56d775%60%0ANext.js%20version%3A%20%600.0.0%60%0A%0AError%20message%3A%0A%60%60%60%0ATurbopack%20Error%3A%20failed%20to%20write%20to%20%2Fhome%2Fubuntu%2Freact%2Fmy-app%2F.next%2Fstatic%2Fchunks%2F07e91_next_dist_shared_lib_d16669b4._.js.map%0A%60%60%60&labels=Turbopack,Turbopack%20Panic%20Backtrace
+-----
+
+Error [ModuleBuildError]: ./my-app/src/app/real_estate/page.tsx:179:14
+Parsing ecmascript source code failed
+[0m [90m 177 |[39m     [33m<[39m[33mdiv[39m[33m>[39m
+ [90m 178 |[39m       [33m<[39m[33mh2[39m[33m>[39m人口比較（2025年基準）[33m<[39m[33m/[39m[33mh2[39m[33m>[39m
+[31m[1m>[22m[39m[90m 179 |[39m       [33m<[39m style[33m=[39m{{display[33m:[39m[32m'flex'[39m}}[33m>[39m
+ [90m     |[39m              [31m[1m^[22m[39m
+ [90m 180 |[39m         [33m<[39m[33mdiv[39m className[33m=[39m[32m'mesh-ex'[39m[33m>[39m
+ [90m 181 |[39m           {population_rate[33m.[39mdata[[35m0[39m][[35m1[39m]}
+ [90m 182 |[39m           [33m<[39m[33mdiv[39m className[33m=[39m[32m'mesh-ex'[39m[33m>[39m[0m
+
+Expected '</', got '='
+
+Import traces:
+  Client Component Browser:
+    ./my-app/src/app/real_estate/page.tsx [Client Component Browser]
+    ./my-app/src/app/real_estate/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./my-app/src/app/real_estate/page.tsx [Client Component SSR]
+    ./my-app/src/app/real_estate/page.tsx [Server Component]
+
+
+    at <unknown> (ModuleBuildError: ./my-app/src/app/real_estate/page.tsx:179:14)
+Error [TurbopackInternalError]: failed to write to /home/ubuntu/react/my-app/.next/static/chunks/07e91_next_dist_shared_lib_d16669b4._.js.map
+
+Caused by:
+- Permission denied (os error 13)
+
+Debug info:
+- Execution of TaskId { id: 2147483966 } transient failed
+- failed to write to /home/ubuntu/react/my-app/.next/static/chunks/07e91_next_dist_shared_lib_d16669b4._.js.map
+- Permission denied (os error 13)
+    at <unknown> (TurbopackInternalError: failed to write to /home/ubuntu/react/my-app/.next/static/chunks/07e91_next_dist_shared_lib_d16669b4._.js.map) {
+  location: undefined
+}
+ GET /favicon.ico 500 in 45ms
+ ⨯ ./my-app/src/app/real_estate/page.tsx:179:14
+Parsing ecmascript source code failed
+[0m [90m 177 |[39m     [33m<[39m[33mdiv[39m[33m>[39m
+ [90m 178 |[39m       [33m<[39m[33mh2[39m[33m>[39m人口比較（2025年基準）[33m<[39m[33m/[39m[33mh2[39m[33m>[39m
+[31m[1m>[22m[39m[90m 179 |[39m       [33m<[39m style[33m=[39m{{display[33m:[39m[32m'flex'[39m}}[33m>[39m
+ [90m     |[39m              [31m[1m^[22m[39m
+ [90m 180 |[39m         [33m<[39m[33mdiv[39m className[33m=[39m[32m'mesh-ex'[39m[33m>[39m
+ [90m 181 |[39m           {population_rate[33m.[39mdata[[35m0[39m][[35m1[39m]}
+ [90m 182 |[39m           [33m<[39m[33mdiv[39m className[33m=[39m[32m'mesh-ex'[39m[33m>[39m[0m
+
+Expected '</', got '='
+
+Import traces:
+  Client Component Browser:
+    ./my-app/src/app/real_estate/page.tsx [Client Component Browser]
+    ./my-app/src/app/real_estate/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./my-app/src/app/real_estate/page.tsx [Client Component SSR]
+    ./my-app/src/app/real_estate/page.tsx [Server Component]
+
+
+
+-----
+[1m[31mFATAL[39m[0m: An unexpected Turbopack error occurred. A panic log has been written to /tmp/next-panic-3740f3e369356a315f440526b1184260.log.
+
+To help make Turbopack better, report this error by clicking here: https://github.com/vercel/next.js/discussions/new?category=turbopack-error-report&title=Turbopack%20Error%3A%20failed%20to%20write%20to%20%2Fhome%2Fubuntu%2Freact%2Fmy-app%2F.next%2Fstatic%2Fchunks%2F07e91_next_dist_shared_lib_d16669b4._.js.map&body=Turbopack%20version%3A%20%60db56d775%60%0ANext.js%20version%3A%20%600.0.0%60%0A%0AError%20message%3A%0A%60%60%60%0ATurbopack%20Error%3A%20failed%20to%20write%20to%20%2Fhome%2Fubuntu%2Freact%2Fmy-app%2F.next%2Fstatic%2Fchunks%2F07e91_next_dist_shared_lib_d16669b4._.js.map%0A%60%60%60&labels=Turbopack,Turbopack%20Panic%20Backtrace
+-----
+
+Error [ModuleBuildError]: ./my-app/src/app/real_estate/page.tsx:179:14
+Parsing ecmascript source code failed
+[0m [90m 177 |[39m     [33m<[39m[33mdiv[39m[33m>[39m
+ [90m 178 |[39m       [33m<[39m[33mh2[39m[33m>[39m人口比較（2025年基準）[33m<[39m[33m/[39m[33mh2[39m[33m>[39m
+[31m[1m>[22m[39m[90m 179 |[39m       [33m<[39m style[33m=[39m{{display[33m:[39m[32m'flex'[39m}}[33m>[39m
+ [90m     |[39m              [31m[1m^[22m[39m
+ [90m 180 |[39m         [33m<[39m[33mdiv[39m className[33m=[39m[32m'mesh-ex'[39m[33m>[39m
+ [90m 181 |[39m           {population_rate[33m.[39mdata[[35m0[39m][[35m1[39m]}
+ [90m 182 |[39m           [33m<[39m[33mdiv[39m className[33m=[39m[32m'mesh-ex'[39m[33m>[39m[0m
+
+Expected '</', got '='
+
+Import traces:
+  Client Component Browser:
+    ./my-app/src/app/real_estate/page.tsx [Client Component Browser]
+    ./my-app/src/app/real_estate/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./my-app/src/app/real_estate/page.tsx [Client Component SSR]
+    ./my-app/src/app/real_estate/page.tsx [Server Component]
+
+
+    at <unknown> (ModuleBuildError: ./my-app/src/app/real_estate/page.tsx:179:14)
+Error [TurbopackInternalError]: failed to write to /home/ubuntu/react/my-app/.next/static/chunks/07e91_next_dist_shared_lib_d16669b4._.js.map
+
+Caused by:
+- Permission denied (os error 13)
+
+Debug info:
+- Execution of TaskId { id: 2147483973 } transient failed
+- failed to write to /home/ubuntu/react/my-app/.next/static/chunks/07e91_next_dist_shared_lib_d16669b4._.js.map
+- Permission denied (os error 13)
+    at <unknown> (TurbopackInternalError: failed to write to /home/ubuntu/react/my-app/.next/static/chunks/07e91_next_dist_shared_lib_d16669b4._.js.map) {
+  location: undefined
+}
+ GET /favicon.ico 500 in 42ms
+ ⨯ ./my-app/src/app/real_estate/page.tsx:179:14
+Parsing ecmascript source code failed
+[0m [90m 177 |[39m     [33m<[39m[33mdiv[39m[33m>[39m
+ [90m 178 |[39m       [33m<[39m[33mh2[39m[33m>[39m人口比較（2025年基準）[33m<[39m[33m/[39m[33mh2[39m[33m>[39m
+[31m[1m>[22m[39m[90m 179 |[39m       [33m<[39m style[33m=[39m{{display[33m:[39m[32m'flex'[39m}}[33m>[39m
+ [90m     |[39m              [31m[1m^[22m[39m
+ [90m 180 |[39m         [33m<[39m[33mdiv[39m className[33m=[39m[32m'mesh-ex'[39m[33m>[39m
+ [90m 181 |[39m           {population_rate[33m.[39mdata[[35m0[39m][[35m1[39m]}
+ [90m 182 |[39m           [33m<[39m[33mdiv[39m className[33m=[39m[32m'mesh-ex'[39m[33m>[39m[0m
+
+Expected '</', got '='
+
+Import traces:
+  Client Component Browser:
+    ./my-app/src/app/real_estate/page.tsx [Client Component Browser]
+    ./my-app/src/app/real_estate/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./my-app/src/app/real_estate/page.tsx [Client Component SSR]
+    ./my-app/src/app/real_estate/page.tsx [Server Component]
+
+
+
+-----
+[1m[31mFATAL[39m[0m: An unexpected Turbopack error occurred. A panic log has been written to /tmp/next-panic-3740f3e369356a315f440526b1184260.log.
+
+To help make Turbopack better, report this error by clicking here: https://github.com/vercel/next.js/discussions/new?category=turbopack-error-report&title=Turbopack%20Error%3A%20failed%20to%20write%20to%20%2Fhome%2Fubuntu%2Freact%2Fmy-app%2F.next%2Fstatic%2Fchunks%2F07e91_next_dist_shared_lib_d16669b4._.js.map&body=Turbopack%20version%3A%20%60db56d775%60%0ANext.js%20version%3A%20%600.0.0%60%0A%0AError%20message%3A%0A%60%60%60%0ATurbopack%20Error%3A%20failed%20to%20write%20to%20%2Fhome%2Fubuntu%2Freact%2Fmy-app%2F.next%2Fstatic%2Fchunks%2F07e91_next_dist_shared_lib_d16669b4._.js.map%0A%60%60%60&labels=Turbopack,Turbopack%20Panic%20Backtrace
+-----
+
+Error [ModuleBuildError]: ./my-app/src/app/real_estate/page.tsx:179:14
+Parsing ecmascript source code failed
+[0m [90m 177 |[39m     [33m<[39m[33mdiv[39m[33m>[39m
+ [90m 178 |[39m       [33m<[39m[33mh2[39m[33m>[39m人口比較（2025年基準）[33m<[39m[33m/[39m[33mh2[39m[33m>[39m
+[31m[1m>[22m[39m[90m 179 |[39m       [33m<[39m style[33m=[39m{{display[33m:[39m[32m'flex'[39m}}[33m>[39m
+ [90m     |[39m              [31m[1m^[22m[39m
+ [90m 180 |[39m         [33m<[39m[33mdiv[39m className[33m=[39m[32m'mesh-ex'[39m[33m>[39m
+ [90m 181 |[39m           {population_rate[33m.[39mdata[[35m0[39m][[35m1[39m]}
+ [90m 182 |[39m           [33m<[39m[33mdiv[39m className[33m=[39m[32m'mesh-ex'[39m[33m>[39m[0m
+
+Expected '</', got '='
+
+Import traces:
+  Client Component Browser:
+    ./my-app/src/app/real_estate/page.tsx [Client Component Browser]
+    ./my-app/src/app/real_estate/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./my-app/src/app/real_estate/page.tsx [Client Component SSR]
+    ./my-app/src/app/real_estate/page.tsx [Server Component]
+
+
+    at <unknown> (ModuleBuildError: ./my-app/src/app/real_estate/page.tsx:179:14)
+Error [TurbopackInternalError]: failed to write to /home/ubuntu/react/my-app/.next/static/chunks/07e91_next_dist_shared_lib_d16669b4._.js.map
+
+Caused by:
+- Permission denied (os error 13)
+
+Debug info:
+- Execution of TaskId { id: 2147483980 } transient failed
+- failed to write to /home/ubuntu/react/my-app/.next/static/chunks/07e91_next_dist_shared_lib_d16669b4._.js.map
+- Permission denied (os error 13)
+    at <unknown> (TurbopackInternalError: failed to write to /home/ubuntu/react/my-app/.next/static/chunks/07e91_next_dist_shared_lib_d16669b4._.js.map) {
+  location: undefined
+}
+ GET /favicon.ico 500 in 52ms
+ ✓ Compiled in 166ms
+ ✓ Compiled /real_estate in 27ms
+popurate []
+ GET /real_estate 200 in 443ms
+ GET /_next/webpack-hmr 404 in 286ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 439ms
+popurate []
+ GET /real_estate 200 in 446ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 308ms
+popurate []
+ GET /real_estate 200 in 168ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 472ms
+ GET /_next/webpack-hmr 404 in 579ms
+popurate []
+ GET /real_estate 200 in 114ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 458ms
+popurate []
+ GET /real_estate 200 in 120ms
+ GET /_next/webpack-hmr 404 in 328ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 511ms
+popurate []
+ GET /real_estate 200 in 166ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 304ms
+popurate []
+ GET /real_estate 200 in 167ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 424ms
+ GET /real_estate 200 in 441ms
+ GET /_next/webpack-hmr 404 in 328ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 477ms
+ GET /real_estate 200 in 163ms
+ GET /_next/webpack-hmr 404 in 148ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 356ms
+ GET /real_estate 200 in 110ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 454ms
+ GET /real_estate 200 in 169ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 463ms
+ GET /real_estate 200 in 129ms
+ GET /_next/webpack-hmr 404 in 357ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 460ms
+ GET /real_estate 200 in 160ms
+ GET /_next/webpack-hmr 404 in 178ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 311ms
+ GET /real_estate 200 in 163ms
+ GET /_next/webpack-hmr 404 in 172ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 393ms
+ GET /real_estate 200 in 159ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 373ms
+ GET /real_estate 200 in 159ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 367ms
+ GET /_next/webpack-hmr 404 in 432ms
+ GET /real_estate 200 in 165ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 346ms
+ GET /_next/webpack-hmr 404 in 316ms
+ GET /real_estate 200 in 124ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 338ms
+ GET /real_estate 200 in 165ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 513ms
+ GET /real_estate 200 in 156ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 506ms
+ GET /real_estate 200 in 188ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 446ms
+ GET /_next/webpack-hmr 404 in 564ms
+ GET /real_estate 200 in 163ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 436ms
+ GET /real_estate 200 in 161ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 265ms
+ GET /real_estate 200 in 160ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 453ms
+ GET /real_estate 200 in 435ms
+ GET /_next/webpack-hmr 404 in 307ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 436ms
+ GET /real_estate 200 in 449ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 271ms
+ GET /real_estate 200 in 447ms
+ GET /_next/webpack-hmr 404 in 157ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 287ms
