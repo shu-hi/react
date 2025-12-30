@@ -2,6 +2,7 @@
 import React, {useEffect, useState } from 'react';
 import './app.css';
 import Login from './login';
+import HealthCheckBoxes from './check';
 import { Session } from 'inspector/promises';
 
 function App() {
@@ -29,7 +30,7 @@ function App() {
       <Login />
       ):(
         <div className="App">
-          {token}
+          <HealthCheckBoxes />
           <button type='button' onClick={()=>logout()}>log out</button>
         </div>
       )}

@@ -9,9 +9,6 @@ type LoginApiResponse = {
   data: null|{access_token:string;job_class:string}
   err:string|null;
 };
-type LoginProps = {
-  onLoginSuccess: (token: string) => void; // onLoginSuccess を親から受け取る
-};
 
 function Login() {
   const [user_input_id, setUserInputId] = useState('');
