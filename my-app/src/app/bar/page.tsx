@@ -3,6 +3,7 @@ import React, {useEffect, useState } from 'react';
 import './app.css';
 import Login from './login';
 import HealthCheckBoxes from './check';
+import Shift from './shift';
 import { Session } from 'inspector/promises';
 
 function App() {
@@ -26,11 +27,12 @@ function App() {
   return (
     
     <div className="App" >
-      {!([1, 2, 3].includes(login))?(
-      <Login />
+      {!([1, 2, 3].includes(login))?(//ログインしていなければログイン画面　1:バイト,2:管理者,3:システム
+        <Login />
       ):(
         <div className="App">
           <HealthCheckBoxes />
+          <Shift/>
           <button type='button' onClick={()=>logout()}>log out</button>
         </div>
       )}

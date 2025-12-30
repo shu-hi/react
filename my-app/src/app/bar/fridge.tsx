@@ -72,7 +72,7 @@ function HealthCheckBoxes() {
     } catch (err) {
       console.error('Error fetching data:', err);
     }
-  };
+    };
   const checkList={"attr_1":["原材料の受け入れの確認","外装、におい、品温、包装の状態など"],
                     "attr_2":["冷蔵・冷凍庫内の温度の確認","機器温度チェックシートに記入漏れはないか？"],
                     "attr_3":["交差（二次）汚染の防止","	用途別仕様（まな板やダスターの使い分け）、冷蔵庫内の区分けなど"],
