@@ -4,19 +4,28 @@ import { setFlagsFromString } from 'v8';
 import { Session } from 'inspector/promises';
 import { toast } from "react-hot-toast";
 
-type HealthCheckApiResponse = {
+type FridgeCheckApiResponse = {
   status: string;
-  data: null|{[key:string]:boolean}[];
+  data: null|{[key:string]:number}[];
   err:string|null;
 };
 
 
-function HealthCheckBoxes() {
-  const [healthCheck, setHealthCheck] = useState<{[key:string]:boolean}>({});
+function FridgeInputs() {
+  const [fridgeCheck, setFridgeCheck] = useState<{[key:string]:number}>({});
   const [inputDate, setInputDate] = useState('');
   const [visible, setVisible] = useState(true);
   const storedToken = sessionStorage.getItem('access_token');
-  const formatedDateString = new Date().toLocaleDateString('ja-JP').replaceAll('/','-');
+  function getFormattedDate(): string {
+    const today = new Date();
+    
+    const year = today.getFullYear();
+    const month = (today.getMonth() + 1).toString().padStart(2, '0'); // 月は0から始まるので +1
+    const day = today.getDate().toString().padStart(2, '0'); // 2桁にするために0埋め
+  
+    return `${year}-${month}-${day}`;
+  }
+  const formatedDateString = getFormattedDate()
   useEffect(() => {
     
     fetchHealthData();
@@ -28,14 +37,14 @@ function HealthCheckBoxes() {
     console.log(formatedDateString);
     try {
       const res1 = await fetch(
-        `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/bar/set_health_check`,
+        `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/bar/set_fridge_check`,
         {
           method:"POST",
           headers: {
                     "Content-Type": "application/json",
                     'Authorization': `Bearer ${storedToken}`
                 },
-          body: JSON.stringify({ date: inputDate,healthCheck})
+          body: JSON.stringify({ date: inputDate,fridgeCheck})
         }
       );
       const data: {status:string,data:any,err:null|string} = await res1.json();
@@ -52,7 +61,7 @@ function HealthCheckBoxes() {
   const fetchHealthData=async()=>{
       try {
       const res1 = await fetch(
-        `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/bar/get_health_check`,
+        `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/bar/get_fridge_check`,
         {
           method:"POST",
           headers: {
@@ -63,27 +72,22 @@ function HealthCheckBoxes() {
         }
       );
       
-      const data: HealthCheckApiResponse = await res1.json();
+      const data: FridgeCheckApiResponse = await res1.json();
       if(data.status=='ok'&& data.data && data.data.length == 1){
         setVisible(false);
-        setHealthCheck(data.data[0]);
+        setFridgeCheck(data.data[0]);
         
       }
     } catch (err) {
       console.error('Error fetching data:', err);
     }
-    };
-  const checkList={"attr_1":["原材料の受け入れの確認","外装、におい、品温、包装の状態など"],
-                    "attr_2":["冷蔵・冷凍庫内の温度の確認","機器温度チェックシートに記入漏れはないか？"],
-                    "attr_3":["交差（二次）汚染の防止","	用途別仕様（まな板やダスターの使い分け）、冷蔵庫内の区分けなど"],
-                    "attr_4":["器具などの洗浄・消毒","使用したあとの器具など"],
-                    "attr_5":["下痢、腹痛、発熱、吐き気、嘔吐等の症状はない","食品に直接触れない"],
-                    "attr_6":["手指等に外傷（やけど、切り傷等の化膿創）無ければチェック","食品に触れないポジションにつく,手袋を着用"],
-                    "attr_7":["手のひらから見て、指先から爪先が見えないくらい短く切っている","見えていたら爪を切る"],
-                    "attr_8":["作業着等は清潔なものに交換している（洗濯した物を使用）","責任者判断"],
-                    "attr_9":["マニュアル通りの手洗いを実行",""],
-                    "attr_10":["衛生的な手洗いの実施","トイレ後、調理前、ゴミを触ったあとなど"],
-                    "attr_11":["非加熱で提供","洗浄・冷蔵・調理前後の手洗い等が問題なく行われたか？"],
+  };
+  const checkList={"attr_1":["カウンター内左"],
+                    "attr_2":["カウンター内右"],
+                    "attr_3":["ショーケース右"],
+                    "attr_4":["ショーケース左"],
+                    "attr_5":["ショーケース中央"],
+                    "attr_6":["自分の検温"]
                   };
   
   return (
@@ -92,12 +96,12 @@ function HealthCheckBoxes() {
         <header>
           <img className="w-20 mx-auto mb-5" src="https://img.icons8.com/fluent/344/year-of-tiger.png" />
         </header> 
-        <form onSubmit={handleSubmit} className="health-check-form" style={{display:visible?'block':'none'}}>
+        <form onSubmit={handleSubmit} className="fridge-check-form" style={{display:visible?'block':'none'}}>
           <div>
-            <label className="block mb-2 text-zinc-500">ID</label>
+            <label className="block mb-2 text-zinc-500">Date</label>
             <input
               type="date"
-              placeholder="id"
+              placeholder="date"
               className="w-full p-2 mb-6 text-zinc-700 border-b-2 border-zinc-500 outline-none focus:bg-gray-300"
               value={formatedDateString}
               onChange={(e)=>setInputDate(e.target.value)}
@@ -108,13 +112,13 @@ function HealthCheckBoxes() {
           <div>
             {Object.entries(checkList).map(([key, values]) => (
               <div key={key} className="mb-4">
-                <input type='checkbox'
+                <input type='number'
                         name={key}
-                        checked={healthCheck[key] || false}
+                        value={fridgeCheck[key] || 36}
                         onChange={(e)=>{
-                          let _copy = { ...healthCheck };
-                          _copy[key]=e.target.checked;
-                          setHealthCheck(_copy);
+                          let _copy = { ...fridgeCheck };
+                          _copy[key]=+e.target.value;//+ for numberize
+                          setFridgeCheck(_copy);
                         }}/>
                 <span>
                   {values[0]}
@@ -132,12 +136,12 @@ function HealthCheckBoxes() {
             </button>
           </div>
         </form>
-        <button style={{display:Object.keys(healthCheck).length>0?'block':'none'}} onClick={()=>setVisible(visible?false:true)} className="w-full bg-zinc-700 hover:bg-pink-700 text-white font-bold py-2 px-4 mb-6 rounded">{visible?'非表示':'登録済み内容を確認'}</button>
+        <button style={{display:Object.keys(fridgeCheck).length>0?'block':'none'}} onClick={()=>setVisible(visible?false:true)} className="w-full bg-zinc-700 hover:bg-pink-700 text-white font-bold py-2 px-4 mb-6 rounded">{visible?'非表示':'登録済み内容を確認'}</button>
       </div>
     </div>
   );
 }
 
-export default HealthCheckBoxes;
+export default FridgeInputs;
 
 

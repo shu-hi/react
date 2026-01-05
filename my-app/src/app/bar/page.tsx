@@ -3,6 +3,7 @@ import React, {useEffect, useState } from 'react';
 import './app.css';
 import Login from './login';
 import HealthCheckBoxes from './check';
+import FridgeInputs from './fridge';
 import Shift from './shift';
 import { Session } from 'inspector/promises';
 
@@ -31,8 +32,9 @@ function App() {
         <Login setLogin={setLogin} setToken={setToken}/>
       ):(
         <div className="App">
-          <HealthCheckBoxes />
-          <Shift/>
+          <FridgeInputs />
+          <HealthCheckBoxes setLogin={setLogin} setToken={setToken}/>
+          <Shift setLogin={setLogin} setToken={setToken}/>
           <button type='button' onClick={()=>logout()}>log out</button>
         </div>
       )}

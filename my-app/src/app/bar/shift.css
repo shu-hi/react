@@ -2,3 +2,6 @@
 .fc-toolbar-title{
     font-size: 15px;
 }
+.fc {
+  z-index: 1; /* カレンダーの z-index を低く設定 */
+}

@@ -3,7 +3,10 @@ import React, {useEffect, useState } from 'react';
 import { setFlagsFromString } from 'v8';
 import { Session } from 'inspector/promises';
 import { toast } from "react-hot-toast";
-
+interface LoginProps {
+  setLogin: (status: number) => void;
+  setToken: (token: string) => void;
+}
 type HealthCheckApiResponse = {
   status: string;
   data: null|{[key:string]:boolean}[];
@@ -11,7 +14,7 @@ type HealthCheckApiResponse = {
 };
 
 
-function HealthCheckBoxes() {
+function HealthCheckBoxes({ setLogin, setToken }: LoginProps) {
   const [healthCheck, setHealthCheck] = useState<{[key:string]:boolean}>({});
   const [inputDate, setInputDate] = useState('');
   const [visible, setVisible] = useState(true);
