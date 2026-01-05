@@ -42,7 +42,16 @@ function Shift() {
   const[selectedWorker,setSelectedWorker]=useState('');
   const[selectedStart,setSelectedStart]=useState('18:00');
   const[selectedEnd,setSelectedEnd]=useState('23:00');
-  const formatedDateString = new Date().toLocaleDateString('ja-JP').replaceAll('/','-');
+  function getFormattedDate(): string {
+    const today = new Date();
+    
+    const year = today.getFullYear();
+    const month = (today.getMonth() + 1).toString().padStart(2, '0'); // 月は0から始まるので +1
+    const day = today.getDate().toString().padStart(2, '0'); // 2桁にするために0埋め
+  
+    return `${year}-${month}-${day}`;
+  }
+  const formatedDateString = getFormattedDate()
   useEffect(() => {  
     fetchShiftData(); 
     fetchAvailableUser();
@@ -130,12 +139,13 @@ function Shift() {
         const data: GetShiftApiResponse = await res1.json();
         if(data.status=='ok'){
           toast.success("success");
-          
+          fetchShiftData(); 
         }
       } catch (err) {
         console.error('Error fetching data:', err);
       }
     } else {
+      console.log(selectedSerial);
       toast.error("すべてのフィールドを入力してください！");
     }
   };
@@ -175,8 +185,8 @@ function Shift() {
               shiftData.map((shift)=>{
                 return {
                   title:shift.first_name,
-                  start:shift.start_datetime,
-                  end:shift.end_datetime,
+                  // start:shift.start_datetime,
+                  // end:shift.end_datetime,
                   date:shift.date
                 }
               })

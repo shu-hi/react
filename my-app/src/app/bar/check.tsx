@@ -16,7 +16,16 @@ function HealthCheckBoxes() {
   const [inputDate, setInputDate] = useState('');
   const [visible, setVisible] = useState(true);
   const storedToken = sessionStorage.getItem('access_token');
-  const formatedDateString = new Date().toLocaleDateString('ja-JP').replaceAll('/','-');
+  function getFormattedDate(): string {
+    const today = new Date();
+    
+    const year = today.getFullYear();
+    const month = (today.getMonth() + 1).toString().padStart(2, '0'); // 月は0から始まるので +1
+    const day = today.getDate().toString().padStart(2, '0'); // 2桁にするために0埋め
+  
+    return `${year}-${month}-${day}`;
+  }
+  const formatedDateString = getFormattedDate()
   useEffect(() => {
     
     fetchHealthData();

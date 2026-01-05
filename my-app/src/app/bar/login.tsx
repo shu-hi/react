@@ -4,13 +4,18 @@ import { setFlagsFromString } from 'v8';
 import { Session } from 'inspector/promises';
 import { toast } from "react-hot-toast";
 
+
+interface LoginProps {
+  setLogin: (status: number) => void;
+  setToken: (token: string) => void;
+}
 type LoginApiResponse = {
   status: string;
   data: null|{access_token:string;job_class:string}
   err:string|null;
 };
 
-function Login() {
+function Login({ setLogin, setToken }: LoginProps) {
   const [user_input_id, setUserInputId] = useState('');
   const [user_input_pass, setUserInputPass] = useState('');
   const handleSubmit = async (e: React.FormEvent) => {
@@ -31,7 +36,8 @@ function Login() {
       if(data.status=='ok'&&data.data?.access_token){
         sessionStorage.setItem('access_token',data.data.access_token);
         sessionStorage.setItem('login_status',data.data.job_class);
-        window.location.reload();
+        setToken(data.data.access_token);
+        setLogin(parseInt(data.data.job_class,10));
       }else{
         toast.error("wrong id or password");
       }

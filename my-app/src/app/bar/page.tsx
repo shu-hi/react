@@ -22,13 +22,13 @@ function App() {
     sessionStorage.clear();
     setToken('');
     setLogin(0);
-    window.location.reload();
+    //window.location.reload();
   };
   return (
     
     <div className="App" >
       {!([1, 2, 3].includes(login))?(//ログインしていなければログイン画面　1:バイト,2:管理者,3:システム
-        <Login />
+        <Login setLogin={setLogin} setToken={setToken}/>
       ):(
         <div className="App">
           <HealthCheckBoxes />
