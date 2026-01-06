@@ -100,13 +100,13 @@ function HealthCheckBoxes({ setLogin, setToken }: LoginProps) {
   
   return (
     <div className="App flex bg-zinc-700" >
-      <div className="w-full max-w-xs m-auto bg-zinc-100 rounded p-5">
+      <div className="w-full max-w-xs m-auto bg-zinc-100 rounded p-5"> 
         <header>
-          <img className="w-20 mx-auto mb-5" src="https://img.icons8.com/fluent/344/year-of-tiger.png" />
-        </header> 
+          HACCP/体調管理
+        </header>
         <form onSubmit={handleSubmit} className="health-check-form" style={{display:visible?'block':'none'}}>
           <div>
-            <label className="block mb-2 text-zinc-500">ID</label>
+            <label className="block mb-2 text-zinc-500">date</label>
             <input
               type="date"
               placeholder="id"
@@ -144,7 +144,7 @@ function HealthCheckBoxes({ setLogin, setToken }: LoginProps) {
             </button>
           </div>
         </form>
-        <button style={{display:Object.keys(healthCheck).length>0?'block':'none'}} onClick={()=>setVisible(visible?false:true)} className="w-full bg-zinc-700 hover:bg-pink-700 text-white font-bold py-2 px-4 mb-6 rounded">{visible?'非表示':'登録済み内容を確認'}</button>
+        <button style={{display:Object.keys(healthCheck).length>0?'block':'none'}} onClick={()=>setVisible(visible?false:true)} className="w-full bg-zinc-700 hover:bg-pink-700 text-white font-bold py-2 px-4 mb-1 rounded">{visible?'非表示':'登録済み内容を確認'}</button>
       </div>
     </div>
   );

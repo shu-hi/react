@@ -6,13 +6,13 @@ import { toast } from "react-hot-toast";
 
 type FridgeCheckApiResponse = {
   status: string;
-  data: null|{[key:string]:number}[];
+  data: null|{[key:string]:string}[];
   err:string|null;
 };
 
 
 function FridgeInputs() {
-  const [fridgeCheck, setFridgeCheck] = useState<{[key:string]:number}>({});
+  const [fridgeCheck, setFridgeCheck] = useState<{[key:string]:string}>({});
   const [inputDate, setInputDate] = useState('');
   const [visible, setVisible] = useState(true);
   const storedToken = sessionStorage.getItem('access_token');
@@ -28,7 +28,7 @@ function FridgeInputs() {
   const formatedDateString = getFormattedDate()
   useEffect(() => {
     
-    fetchHealthData();
+    fetchFridgeData();
     setInputDate(formatedDateString);
     
   }, []);
@@ -37,7 +37,7 @@ function FridgeInputs() {
     console.log(formatedDateString);
     try {
       const res1 = await fetch(
-        `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/bar/set_fridge_check`,
+        `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/bar/set_fridge_temp`,
         {
           method:"POST",
           headers: {
@@ -58,7 +58,7 @@ function FridgeInputs() {
       console.error('Error setting checklist:', err);
     }
   };
-  const fetchHealthData=async()=>{
+  const fetchFridgeData=async()=>{
       try {
       const res1 = await fetch(
         `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/bar/get_fridge_check`,
@@ -82,12 +82,12 @@ function FridgeInputs() {
       console.error('Error fetching data:', err);
     }
   };
-  const checkList={"attr_1":["カウンター内左"],
-                    "attr_2":["カウンター内右"],
-                    "attr_3":["ショーケース右"],
-                    "attr_4":["ショーケース左"],
-                    "attr_5":["ショーケース中央"],
-                    "attr_6":["自分の検温"]
+  const checkList={"fridge_1":["カウンター内左"],
+                    "fridge_2":["カウンター内右"],
+                    "fridge_3":["ショーケース右"],
+                    "fridge_4":["ショーケース左"],
+                    "fridge_5":["ショーケース中央"],
+                    "body_temp":["自分の検温"]
                   };
   
   return (
@@ -95,6 +95,7 @@ function FridgeInputs() {
       <div className="w-full max-w-xs m-auto bg-zinc-100 rounded p-5">
         <header>
           <img className="w-20 mx-auto mb-5" src="https://img.icons8.com/fluent/344/year-of-tiger.png" />
+          冷蔵庫温度/検温
         </header> 
         <form onSubmit={handleSubmit} className="fridge-check-form" style={{display:visible?'block':'none'}}>
           <div>
@@ -112,20 +113,18 @@ function FridgeInputs() {
           <div>
             {Object.entries(checkList).map(([key, values]) => (
               <div key={key} className="mb-4">
-                <input type='number'
+                <input type='tel'
+                        className='w-30 border-b-2 border-zinc-500 outline-none focus:bg-gray-300'
+                        placeholder="°C"
                         name={key}
-                        value={fridgeCheck[key] || 36}
+                        value={fridgeCheck[key] !== undefined ? fridgeCheck[key] : ''}
                         onChange={(e)=>{
                           let _copy = { ...fridgeCheck };
-                          _copy[key]=+e.target.value;//+ for numberize
+                          _copy[key]=e.target.value;//+ for numberize
                           setFridgeCheck(_copy);
                         }}/>
                 <span>
                   {values[0]}
-                </span>
-                <br />
-                <span className='text-sm'>
-                  {values[1]}
                 </span>
               </div>
             ))}
@@ -136,7 +135,7 @@ function FridgeInputs() {
             </button>
           </div>
         </form>
-        <button style={{display:Object.keys(fridgeCheck).length>0?'block':'none'}} onClick={()=>setVisible(visible?false:true)} className="w-full bg-zinc-700 hover:bg-pink-700 text-white font-bold py-2 px-4 mb-6 rounded">{visible?'非表示':'登録済み内容を確認'}</button>
+        <button style={{display:Object.keys(fridgeCheck).length>0?'block':'none'}} onClick={()=>setVisible(visible?false:true)} className="w-full bg-zinc-700 hover:bg-pink-700 text-white font-bold py-2 px-4 mb-1 rounded">{visible?'非表示':'登録済み内容を確認'}</button>
       </div>
     </div>
   );

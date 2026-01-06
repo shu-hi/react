@@ -16,133 +16,80 @@ nohup: 入力を無視します
    - Environments: .env.development
 
  ✓ Starting...
- ✓ Ready in 1993ms
+ ✓ Ready in 1973ms
  ○ Compiling /_not-found/page ...
  ✓ Compiled /_not-found/page in 4.2s
- GET /stat 404 in 4789ms
+ GET /stat 404 in 4777ms
+ ✓ Compiled /favicon.ico in 343ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 673ms
+ ○ Compiling /bar ...
+ ✓ Compiled /bar in 947ms
+ GET /bar 200 in 1243ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 272ms
+ GET /bar 200 in 451ms
  ⚠ Cross origin request detected from 54.65.233.242 to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
 Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
- GET /_next/webpack-hmr 404 in 218ms
- ✓ Compiled /favicon.ico in 439ms
- GET /favicon.ico?favicon.0b3bf435.ico 200 in 766ms
- ○ Compiling /bar ...
- ✓ Compiled /bar in 934ms
- GET /bar 200 in 1162ms
- GET /favicon.ico?favicon.0b3bf435.ico 200 in 251ms
- GET /bar 200 in 115ms
- GET /favicon.ico?favicon.0b3bf435.ico 200 in 251ms
- GET /bar 200 in 471ms
- GET /favicon.ico?favicon.0b3bf435.ico 200 in 272ms
- GET /bar 200 in 125ms
- GET /favicon.ico?favicon.0b3bf435.ico 200 in 621ms
- ⨯ ReferenceError: sessionStorage is not defined
-    at App (src/app/bar/page.tsx:16:23)
-  14 |     
-  15 |   }, []);
-> 16 |   const storedToken = sessionStorage.getItem('access_token');
-     |                       ^
-  17 |     const loginStatus=sessionStorage.getItem('login_status');console.log(loginStatus);
-  18 |     if (storedToken&&loginStatus) {
-  19 |       setToken(storedToken);   {
-  digest: '3766211285'
-}
- GET /bar 500 in 517ms
- GET /favicon.ico 200 in 317ms
- GET /bar 200 in 380ms
- GET /_next/webpack-hmr 404 in 161ms
- GET /favicon.ico?favicon.0b3bf435.ico 200 in 297ms
- GET /bar 200 in 155ms
- GET /favicon.ico?favicon.0b3bf435.ico 200 in 280ms
- GET /bar 200 in 466ms
- GET /favicon.ico?favicon.0b3bf435.ico 200 in 283ms
- GET /_next/webpack-hmr 404 in 206ms
- GET /bar 200 in 158ms
- GET /_next/webpack-hmr 404 in 169ms
- GET /favicon.ico?favicon.0b3bf435.ico 200 in 313ms
- GET /bar 200 in 158ms
+ GET /_next/webpack-hmr 404 in 133ms
  GET /favicon.ico?favicon.0b3bf435.ico 200 in 277ms
- GET /bar 200 in 173ms
- GET /favicon.ico?favicon.0b3bf435.ico 200 in 284ms
- GET /bar 200 in 462ms
- GET /favicon.ico?favicon.0b3bf435.ico 200 in 335ms
- GET /bar 200 in 460ms
- GET /favicon.ico?favicon.0b3bf435.ico 200 in 406ms
- GET /bar 200 in 459ms
- GET /favicon.ico?favicon.0b3bf435.ico 200 in 272ms
- GET /bar 200 in 167ms
- GET /favicon.ico?favicon.0b3bf435.ico 200 in 300ms
- GET /bar 200 in 469ms
- GET /favicon.ico?favicon.0b3bf435.ico 200 in 283ms
- GET /bar 200 in 464ms
- GET /favicon.ico?favicon.0b3bf435.ico 200 in 331ms
- GET /bar 200 in 460ms
- GET /favicon.ico?favicon.0b3bf435.ico 200 in 492ms
- GET /bar 200 in 465ms
- GET /favicon.ico?favicon.0b3bf435.ico 200 in 339ms
- GET /bar 200 in 467ms
- GET /_next/webpack-hmr 404 in 177ms
- GET /favicon.ico?favicon.0b3bf435.ico 200 in 318ms
- GET /bar 200 in 151ms
- GET /favicon.ico?favicon.0b3bf435.ico 200 in 497ms
- GET /bar 200 in 471ms
- GET /_next/webpack-hmr 404 in 166ms
- GET /favicon.ico?favicon.0b3bf435.ico 200 in 311ms
- GET /bar 200 in 452ms
- GET /favicon.ico?favicon.0b3bf435.ico 200 in 275ms
- GET /bar 200 in 469ms
- GET /favicon.ico?favicon.0b3bf435.ico 200 in 291ms
- GET /bar 200 in 170ms
- GET /favicon.ico?favicon.0b3bf435.ico 200 in 344ms
- GET /bar 200 in 174ms
- GET /_next/webpack-hmr 404 in 118ms
- GET /bar 200 in 469ms
- GET /_next/webpack-hmr 404 in 161ms
- GET /favicon.ico?favicon.0b3bf435.ico 200 in 357ms
- GET /bar 200 in 455ms
- GET /_next/webpack-hmr 404 in 165ms
- GET /favicon.ico?favicon.0b3bf435.ico 200 in 298ms
- GET /bar 200 in 461ms
- GET /favicon.ico?favicon.0b3bf435.ico 200 in 272ms
- GET /bar 200 in 449ms
- GET /_next/webpack-hmr 404 in 236ms
- GET /favicon.ico?favicon.0b3bf435.ico 200 in 440ms
- GET /bar 200 in 434ms
- GET /_next/webpack-hmr 404 in 187ms
- GET /favicon.ico?favicon.0b3bf435.ico 200 in 301ms
- GET /bar 200 in 452ms
- GET /favicon.ico?favicon.0b3bf435.ico 200 in 281ms
- GET /_next/webpack-hmr 404 in 135ms
- GET /bar 200 in 474ms
- GET /favicon.ico?favicon.0b3bf435.ico 200 in 305ms
- GET /bar 200 in 511ms
- GET /favicon.ico?favicon.0b3bf435.ico 200 in 419ms
- GET /bar 200 in 451ms
- GET /favicon.ico?favicon.0b3bf435.ico 200 in 306ms
- GET /bar 200 in 116ms
- GET /favicon.ico?favicon.0b3bf435.ico 200 in 339ms
- GET /bar 200 in 421ms
- GET /favicon.ico?favicon.0b3bf435.ico 200 in 283ms
- GET /_next/webpack-hmr 404 in 140ms
- GET /bar 200 in 440ms
- GET /_next/webpack-hmr 404 in 180ms
- GET /favicon.ico?favicon.0b3bf435.ico 200 in 320ms
+ GET /bar 200 in 441ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 269ms
+ GET /bar 200 in 436ms
+ GET /_next/webpack-hmr 404 in 128ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 258ms
+ GET /bar 200 in 439ms
+ GET /_next/webpack-hmr 404 in 123ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 268ms
+ GET /bar 200 in 454ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 317ms
  GET /bar 200 in 172ms
- GET /favicon.ico?favicon.0b3bf435.ico 200 in 281ms
- GET /bar 200 in 143ms
- GET /favicon.ico?favicon.0b3bf435.ico 200 in 298ms
- GET /_next/webpack-hmr 404 in 177ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 312ms
+ GET /bar 200 in 458ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 277ms
+ GET /_next/webpack-hmr 404 in 175ms
+ GET /bar 200 in 447ms
+ GET /_next/webpack-hmr 404 in 191ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 334ms
+ GET /bar 200 in 439ms
+ GET /_next/webpack-hmr 404 in 153ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 301ms
+ GET /bar 200 in 577ms
+ GET /_next/webpack-hmr 404 in 182ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 317ms
  GET /bar 200 in 448ms
- GET /_next/webpack-hmr 404 in 172ms
- GET /favicon.ico?favicon.0b3bf435.ico 200 in 314ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 264ms
  GET /bar 200 in 461ms
- GET /_next/webpack-hmr 404 in 181ms
- GET /favicon.ico?favicon.0b3bf435.ico 200 in 402ms
- GET /bar 200 in 478ms
- GET /favicon.ico?favicon.0b3bf435.ico 200 in 328ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 333ms
+ GET /bar 200 in 457ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 263ms
+ GET /bar 200 in 465ms
+ GET /_next/webpack-hmr 404 in 197ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 275ms
+ GET /bar 200 in 465ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 281ms
  GET /bar 200 in 461ms
- GET /_next/webpack-hmr 404 in 200ms
+ GET /_next/webpack-hmr 404 in 173ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 333ms
+ GET /bar 200 in 454ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 302ms
+ GET /bar 200 in 173ms
+ GET /_next/webpack-hmr 404 in 249ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 399ms
+ GET /bar 200 in 134ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 289ms
+ GET /bar 200 in 171ms
  GET /favicon.ico?favicon.0b3bf435.ico 200 in 374ms
- GET /bar 200 in 410ms
- GET /favicon.ico?favicon.0b3bf435.ico 200 in 272ms
- GET /bar 200 in 144ms
- GET /favicon.ico?favicon.0b3bf435.ico 200 in 265ms
+ GET /bar 200 in 481ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 328ms
+ GET /bar 200 in 173ms
+ GET /_next/webpack-hmr 404 in 160ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 294ms
+ GET /bar 200 in 397ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 301ms
+ GET /bar 200 in 462ms
+ GET /_next/webpack-hmr 404 in 306ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 441ms
+ GET /bar 200 in 436ms
+ GET /_next/webpack-hmr 404 in 248ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 396ms
+ GET /bar 200 in 390ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 341ms
