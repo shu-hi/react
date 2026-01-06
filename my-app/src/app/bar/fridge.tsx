@@ -94,7 +94,6 @@ function FridgeInputs() {
     <div className="App flex bg-zinc-700" >
       <div className="w-full max-w-xs m-auto bg-zinc-100 rounded p-5">
         <header>
-          <img className="w-20 mx-auto mb-5" src="https://img.icons8.com/fluent/344/year-of-tiger.png" />
           冷蔵庫温度/検温
         </header> 
         <form onSubmit={handleSubmit} className="fridge-check-form" style={{display:visible?'block':'none'}}>

@@ -11,11 +11,11 @@ interface LoginProps {
 }
 type LoginApiResponse = {
   status: string;
-  data: null|{access_token:string;job_class:string}
+  data: null|{access_token:string;job_class:string;first_name:string;}
   err:string|null;
 };
 
-function Login({ setLogin, setToken }: LoginProps) {
+function Login({ setLogin, setToken}: LoginProps) {
   const [user_input_id, setUserInputId] = useState('');
   const [user_input_pass, setUserInputPass] = useState('');
   const handleSubmit = async (e: React.FormEvent) => {
@@ -38,6 +38,7 @@ function Login({ setLogin, setToken }: LoginProps) {
         sessionStorage.setItem('login_status',data.data.job_class);
         setToken(data.data.access_token);
         setLogin(parseInt(data.data.job_class,10));
+        sessionStorage.setItem('name',data.data.first_name);
       }else{
         toast.error("wrong id or password");
       }

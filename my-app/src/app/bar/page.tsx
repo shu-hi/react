@@ -5,12 +5,14 @@ import Login from './login';
 import HealthCheckBoxes from './check';
 import FridgeInputs from './fridge';
 import Shift from './shift';
+import Approach from './approach';
+import Menu from './menu';
 import { Session } from 'inspector/promises';
 
 function App() {
   const [login, setLogin] = useState(0);
   const [token, setToken] = useState('');
-  
+  const [mode,setMode]=useState<'default'|'approach'|'admin'>('default');
   useEffect(() => {
     const storedToken = sessionStorage.getItem('access_token');
     const loginStatus=sessionStorage.getItem('login_status');console.log(loginStatus);
@@ -19,12 +21,7 @@ function App() {
       setLogin(parseInt(loginStatus,10));
     }
   }, []);
-  function logout():void{
-    sessionStorage.clear();
-    setToken('');
-    setLogin(0);
-    //window.location.reload();
-  };
+  
   return (
     
     <div className="App" >
@@ -32,10 +29,22 @@ function App() {
         <Login setLogin={setLogin} setToken={setToken}/>
       ):(
         <div className="App">
-          <FridgeInputs />
-          <HealthCheckBoxes setLogin={setLogin} setToken={setToken}/>
-          <Shift setLogin={setLogin} setToken={setToken}/>
-          <button type='button' onClick={()=>logout()}>log out</button>
+          
+          <Menu setMode={setMode}setLogin={setLogin}setToken={ setToken}/>
+          
+          {mode==='default'&&(
+            <div>
+              <FridgeInputs />
+              <HealthCheckBoxes setLogin={setLogin} setToken={setToken}/>
+              <Shift setLogin={setLogin} setToken={setToken}/>
+            </div>
+          )}
+          {mode==='approach'&&(
+            <div>
+              <Approach setLogin={setLogin} setToken={setToken}/>
+            </div>
+          )}
+          
         </div>
       )}
     </div>

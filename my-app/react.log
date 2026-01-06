@@ -93,3 +93,337 @@ Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allow
  GET /favicon.ico?favicon.0b3bf435.ico 200 in 396ms
  GET /bar 200 in 390ms
  GET /favicon.ico?favicon.0b3bf435.ico 200 in 341ms
+ ⨯ ./my-app/src/app/bar/page.tsx:8:1
+Module not found: Can't resolve './approach'
+[0m [90m  6 |[39m [36mimport[39m [33mFridgeInputs[39m [36mfrom[39m [32m'./fridge'[39m[33m;[39m
+ [90m  7 |[39m [36mimport[39m [33mShift[39m [36mfrom[39m [32m'./shift'[39m[33m;[39m
+[31m[1m>[22m[39m[90m  8 |[39m [36mimport[39m [33mApproach[39m [36mfrom[39m [32m'./approach'[39m[33m;[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m  9 |[39m [36mimport[39m { [33mSession[39m } [36mfrom[39m [32m'inspector/promises'[39m[33m;[39m
+ [90m 10 |[39m
+ [90m 11 |[39m [36mfunction[39m [33mApp[39m() {[0m
+
+
+
+Import traces:
+  Client Component Browser:
+    ./my-app/src/app/bar/page.tsx [Client Component Browser]
+    ./my-app/src/app/bar/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./my-app/src/app/bar/page.tsx [Client Component SSR]
+    ./my-app/src/app/bar/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ ⨯ ./my-app/src/app/bar/page.tsx:8:1
+Module not found: Can't resolve './approach'
+[0m [90m  6 |[39m [36mimport[39m [33mFridgeInputs[39m [36mfrom[39m [32m'./fridge'[39m[33m;[39m
+ [90m  7 |[39m [36mimport[39m [33mShift[39m [36mfrom[39m [32m'./shift'[39m[33m;[39m
+[31m[1m>[22m[39m[90m  8 |[39m [36mimport[39m [33mApproach[39m [36mfrom[39m [32m'./approach'[39m[33m;[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m  9 |[39m [36mimport[39m { [33mSession[39m } [36mfrom[39m [32m'inspector/promises'[39m[33m;[39m
+ [90m 10 |[39m
+ [90m 11 |[39m [36mfunction[39m [33mApp[39m() {[0m
+
+
+
+Import traces:
+  Client Component Browser:
+    ./my-app/src/app/bar/page.tsx [Client Component Browser]
+    ./my-app/src/app/bar/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./my-app/src/app/bar/page.tsx [Client Component SSR]
+    ./my-app/src/app/bar/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ ⨯ ./my-app/src/app/bar/page.tsx:8:1
+Module not found: Can't resolve './approach'
+[0m [90m  6 |[39m [36mimport[39m [33mFridgeInputs[39m [36mfrom[39m [32m'./fridge'[39m[33m;[39m
+ [90m  7 |[39m [36mimport[39m [33mShift[39m [36mfrom[39m [32m'./shift'[39m[33m;[39m
+[31m[1m>[22m[39m[90m  8 |[39m [36mimport[39m [33mApproach[39m [36mfrom[39m [32m'./approach'[39m[33m;[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m  9 |[39m [36mimport[39m { [33mSession[39m } [36mfrom[39m [32m'inspector/promises'[39m[33m;[39m
+ [90m 10 |[39m
+ [90m 11 |[39m [36mfunction[39m [33mApp[39m() {[0m
+
+
+
+Import traces:
+  Client Component Browser:
+    ./my-app/src/app/bar/page.tsx [Client Component Browser]
+    ./my-app/src/app/bar/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./my-app/src/app/bar/page.tsx [Client Component SSR]
+    ./my-app/src/app/bar/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ ⨯ ./my-app/src/app/bar/page.tsx:8:1
+Module not found: Can't resolve './approach'
+[0m [90m  6 |[39m [36mimport[39m [33mFridgeInputs[39m [36mfrom[39m [32m'./fridge'[39m[33m;[39m
+ [90m  7 |[39m [36mimport[39m [33mShift[39m [36mfrom[39m [32m'./shift'[39m[33m;[39m
+[31m[1m>[22m[39m[90m  8 |[39m [36mimport[39m [33mApproach[39m [36mfrom[39m [32m'./approach'[39m[33m;[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m  9 |[39m [36mimport[39m { [33mSession[39m } [36mfrom[39m [32m'inspector/promises'[39m[33m;[39m
+ [90m 10 |[39m
+ [90m 11 |[39m [36mfunction[39m [33mApp[39m() {[0m
+
+
+
+Import traces:
+  Client Component Browser:
+    ./my-app/src/app/bar/page.tsx [Client Component Browser]
+    ./my-app/src/app/bar/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./my-app/src/app/bar/page.tsx [Client Component SSR]
+    ./my-app/src/app/bar/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ ⨯ ./my-app/src/app/bar/page.tsx:8:1
+Module not found: Can't resolve './approach'
+[0m [90m  6 |[39m [36mimport[39m [33mFridgeInputs[39m [36mfrom[39m [32m'./fridge'[39m[33m;[39m
+ [90m  7 |[39m [36mimport[39m [33mShift[39m [36mfrom[39m [32m'./shift'[39m[33m;[39m
+[31m[1m>[22m[39m[90m  8 |[39m [36mimport[39m [33mApproach[39m [36mfrom[39m [32m'./approach'[39m[33m;[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m  9 |[39m [36mimport[39m { [33mSession[39m } [36mfrom[39m [32m'inspector/promises'[39m[33m;[39m
+ [90m 10 |[39m
+ [90m 11 |[39m [36mfunction[39m [33mApp[39m() {[0m
+
+
+
+Import traces:
+  Client Component Browser:
+    ./my-app/src/app/bar/page.tsx [Client Component Browser]
+    ./my-app/src/app/bar/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./my-app/src/app/bar/page.tsx [Client Component SSR]
+    ./my-app/src/app/bar/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ ⨯ ./my-app/src/app/bar/page.tsx:8:1
+Module not found: Can't resolve './approach'
+[0m [90m  6 |[39m [36mimport[39m [33mFridgeInputs[39m [36mfrom[39m [32m'./fridge'[39m[33m;[39m
+ [90m  7 |[39m [36mimport[39m [33mShift[39m [36mfrom[39m [32m'./shift'[39m[33m;[39m
+[31m[1m>[22m[39m[90m  8 |[39m [36mimport[39m [33mApproach[39m [36mfrom[39m [32m'./approach'[39m[33m;[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m  9 |[39m [36mimport[39m { [33mSession[39m } [36mfrom[39m [32m'inspector/promises'[39m[33m;[39m
+ [90m 10 |[39m
+ [90m 11 |[39m [36mfunction[39m [33mApp[39m() {[0m
+
+
+
+Import traces:
+  Client Component Browser:
+    ./my-app/src/app/bar/page.tsx [Client Component Browser]
+    ./my-app/src/app/bar/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./my-app/src/app/bar/page.tsx [Client Component SSR]
+    ./my-app/src/app/bar/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ ⨯ ./my-app/src/app/bar/page.tsx:8:1
+Module not found: Can't resolve './approach'
+[0m [90m  6 |[39m [36mimport[39m [33mFridgeInputs[39m [36mfrom[39m [32m'./fridge'[39m[33m;[39m
+ [90m  7 |[39m [36mimport[39m [33mShift[39m [36mfrom[39m [32m'./shift'[39m[33m;[39m
+[31m[1m>[22m[39m[90m  8 |[39m [36mimport[39m [33mApproach[39m [36mfrom[39m [32m'./approach'[39m[33m;[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m  9 |[39m [36mimport[39m { [33mSession[39m } [36mfrom[39m [32m'inspector/promises'[39m[33m;[39m
+ [90m 10 |[39m
+ [90m 11 |[39m [36mfunction[39m [33mApp[39m() {[0m
+
+
+
+Import traces:
+  Client Component Browser:
+    ./my-app/src/app/bar/page.tsx [Client Component Browser]
+    ./my-app/src/app/bar/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./my-app/src/app/bar/page.tsx [Client Component SSR]
+    ./my-app/src/app/bar/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ ⨯ ./my-app/src/app/bar/page.tsx:8:1
+Module not found: Can't resolve './approach'
+[0m [90m  6 |[39m [36mimport[39m [33mFridgeInputs[39m [36mfrom[39m [32m'./fridge'[39m[33m;[39m
+ [90m  7 |[39m [36mimport[39m [33mShift[39m [36mfrom[39m [32m'./shift'[39m[33m;[39m
+[31m[1m>[22m[39m[90m  8 |[39m [36mimport[39m [33mApproach[39m [36mfrom[39m [32m'./approach'[39m[33m;[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m  9 |[39m [36mimport[39m { [33mSession[39m } [36mfrom[39m [32m'inspector/promises'[39m[33m;[39m
+ [90m 10 |[39m
+ [90m 11 |[39m [36mfunction[39m [33mApp[39m() {[0m
+
+
+
+Import traces:
+  Client Component Browser:
+    ./my-app/src/app/bar/page.tsx [Client Component Browser]
+    ./my-app/src/app/bar/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./my-app/src/app/bar/page.tsx [Client Component SSR]
+    ./my-app/src/app/bar/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ ✓ Compiled in 179ms
+ ✓ Compiled /bar in 38ms
+ GET /bar 200 in 454ms
+ GET /_next/webpack-hmr 404 in 170ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 345ms
+ GET /bar 200 in 456ms
+ GET /_next/webpack-hmr 404 in 158ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 303ms
+ GET /bar 200 in 460ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 290ms
+ GET /_next/webpack-hmr 404 in 165ms
+ GET /bar 200 in 451ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 270ms
+ GET /bar 200 in 457ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 329ms
+ GET /bar 200 in 455ms
+ GET /_next/webpack-hmr 404 in 218ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 359ms
+ GET /bar 200 in 453ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 283ms
+ GET /bar 200 in 468ms
+ GET /_next/webpack-hmr 404 in 160ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 294ms
+ GET /bar 200 in 438ms
+ GET /_next/webpack-hmr 404 in 174ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 318ms
+ GET /bar 200 in 428ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 445ms
+ GET /bar 200 in 446ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 332ms
+ GET /bar 200 in 433ms
+ GET /_next/webpack-hmr 404 in 157ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 310ms
+ GET /bar 200 in 418ms
+ GET /_next/webpack-hmr 404 in 156ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 365ms
+ GET /bar 200 in 410ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 295ms
+ GET /bar 200 in 408ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 286ms
+ GET /_next/webpack-hmr 404 in 138ms
+ GET /bar 200 in 413ms
+ GET /_next/webpack-hmr 404 in 269ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 433ms
+ GET /bar 200 in 383ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 271ms
+ GET /bar 200 in 424ms
+ GET /_next/webpack-hmr 404 in 171ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 315ms
+ GET /bar 200 in 419ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 272ms
+ GET /bar 200 in 467ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 269ms
+ GET /bar 200 in 425ms
+ GET /_next/webpack-hmr 404 in 147ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 275ms
+ GET /bar 200 in 474ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 267ms
+ GET /bar 200 in 409ms
+ GET /_next/webpack-hmr 404 in 180ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 318ms
+ GET /bar 200 in 379ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 402ms
+ GET /bar 200 in 430ms
+ GET /_next/webpack-hmr 404 in 165ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 381ms
+ GET /bar 200 in 396ms
+ GET /_next/webpack-hmr 404 in 123ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 388ms
+ GET /bar 200 in 411ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 308ms
+ GET /bar 200 in 451ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 273ms
+ GET /bar 200 in 428ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 412ms
+ GET /bar 200 in 387ms
+ GET /_next/webpack-hmr 404 in 141ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 310ms
+ GET /bar 200 in 463ms
+ GET /_next/webpack-hmr 404 in 167ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 316ms
+ GET /bar 200 in 400ms
+ GET /bar 200 in 198ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 308ms
+ GET /bar 200 in 410ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 316ms
+ GET /bar 200 in 419ms
+ GET /_next/webpack-hmr 404 in 149ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 314ms
+ GET /bar 200 in 417ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 594ms
+ GET /bar 200 in 393ms
+ GET /_next/webpack-hmr 404 in 143ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 320ms
+ GET /bar 200 in 157ms
+ GET /_next/webpack-hmr 404 in 155ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 300ms
+ GET /bar 200 in 393ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 430ms
+ GET /bar 200 in 414ms
+ GET /_next/webpack-hmr 404 in 195ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 446ms
+ GET /bar 200 in 395ms
+ GET /_next/webpack-hmr 404 in 145ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 285ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 251ms
+ GET /bar 200 in 415ms
+ GET /_next/webpack-hmr 404 in 206ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 334ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 375ms
+ GET /bar 200 in 455ms
+ GET /_next/webpack-hmr 404 in 141ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 283ms
+ GET /bar 200 in 397ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 273ms
+ GET /bar? 200 in 130ms
+ GET /_next/webpack-hmr 404 in 144ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 269ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 377ms
+ GET /bar 200 in 406ms
+ GET /_next/webpack-hmr 404 in 210ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 350ms
+ GET /bar 200 in 413ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 296ms
+ GET /_next/webpack-hmr 404 in 140ms
+ GET /bar 200 in 417ms
+ GET /_next/webpack-hmr 404 in 184ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 310ms
+ GET /bar 200 in 414ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 289ms
+ GET /bar 200 in 419ms
+ GET /_next/webpack-hmr 404 in 143ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 285ms
+ GET /bar 200 in 417ms
+ GET /_next/webpack-hmr 404 in 215ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 388ms
+ GET /bar 200 in 419ms
+ GET /_next/webpack-hmr 404 in 173ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 321ms
+ GET /bar 200 in 404ms
+ GET /_next/webpack-hmr 404 in 184ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 328ms
