@@ -112,7 +112,7 @@ function FridgeInputs() {
           <div>
             {Object.entries(checkList).map(([key, values]) => (
               <div key={key} className="mb-4">
-                <input type='tel'
+                <input type='text'
                         className='w-30 border-b-2 border-zinc-500 outline-none focus:bg-gray-300'
                         placeholder="°C"
                         name={key}
