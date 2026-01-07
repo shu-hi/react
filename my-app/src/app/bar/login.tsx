@@ -3,7 +3,7 @@ import React, {useEffect, useState } from 'react';
 import { setFlagsFromString } from 'v8';
 import { Session } from 'inspector/promises';
 import { toast } from "react-hot-toast";
-
+import SpinnerOverlay from "./SpinnerOverlay";
 
 interface LoginProps {
   setLogin: (status: number) => void;
@@ -18,8 +18,10 @@ type LoginApiResponse = {
 function Login({ setLogin, setToken}: LoginProps) {
   const [user_input_id, setUserInputId] = useState('');
   const [user_input_pass, setUserInputPass] = useState('');
+  const [spinner,setSpinner]=useState(false);
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setSpinner(true);
     try {
       const res1 = await fetch(
         `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/bar/login`,
@@ -42,13 +44,18 @@ function Login({ setLogin, setToken}: LoginProps) {
       }else{
         toast.error("wrong id or password");
       }
+      setSpinner(false);
     } catch (err) {
       console.error('Error logging in:', err);
+      setSpinner(false);
     }
   };
 
   return (
     <div className="App flex h-screen bg-zinc-700" >
+     <SpinnerOverlay
+        visible={spinner}
+      />
       <div className="w-full max-w-xs m-auto bg-zinc-100 rounded p-5">
         <header>
           <img className="w-20 mx-auto mb-5" src="https://img.icons8.com/fluent/344/year-of-tiger.png" />
