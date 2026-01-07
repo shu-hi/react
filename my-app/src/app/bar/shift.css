@@ -5,3 +5,6 @@
 .fc {
   z-index: 1; /* カレンダーの z-index を低く設定 */
 }
+.fc-daygrid-day-number {
+  color: #919ea3;
+}

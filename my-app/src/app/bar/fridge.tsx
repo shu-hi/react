@@ -93,7 +93,7 @@ function FridgeInputs() {
   return (
     <div className="App flex bg-zinc-700" >
       <div className="w-full max-w-xs m-auto bg-zinc-100 rounded p-5">
-        <header>
+        <header className='text-zinc-500'>
           冷蔵庫温度/検温
         </header> 
         <form onSubmit={handleSubmit} className="fridge-check-form" style={{display:visible?'block':'none'}}>
@@ -122,7 +122,7 @@ function FridgeInputs() {
                           _copy[key]=e.target.value;//+ for numberize
                           setFridgeCheck(_copy);
                         }}/>
-                <span>
+                <span className='text-zinc-500'>
                   {values[0]}
                 </span>
               </div>

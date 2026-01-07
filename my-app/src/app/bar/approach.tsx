@@ -105,7 +105,7 @@ function Approach({ setLogin, setToken }: LoginProps) {
         visible={spinner}
       />
       <div className="w-full max-w-xs m-auto bg-zinc-100 rounded p-5">
-        <header>
+        <header className='text-zinc-500'>
           イベントアプローチ
         </header> 
         <form onSubmit={searchApproach} className="fridge-check-form">
@@ -140,7 +140,7 @@ function Approach({ setLogin, setToken }: LoginProps) {
           <div>
             {Object.entries(checkList).map(([key, values]) => (
               <div key={key} className="mb-4">
-                <span>
+                <span className='text-zinc-500'>
                   {values[0]}
                 </span>
                 <input type='text'
@@ -165,7 +165,7 @@ function Approach({ setLogin, setToken }: LoginProps) {
       </div>
       <Modal isOpen={approachSearchResult.length >0}>
         {Object.entries(approachSearchResult).map(([key,values])=>(
-          <div key={key}>
+          <div key={key} className='text-zinc-500'>
             {values.co_name}
             <br />
             {values.approach_media}

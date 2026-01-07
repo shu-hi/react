@@ -101,7 +101,7 @@ function HealthCheckBoxes({ setLogin, setToken }: LoginProps) {
   return (
     <div className="App flex bg-zinc-700" >
       <div className="w-full max-w-xs m-auto bg-zinc-100 rounded p-5"> 
-        <header>
+        <header className='text-zinc-500'>
           HACCP/体調管理
         </header>
         <form onSubmit={handleSubmit} className="health-check-form" style={{display:visible?'block':'none'}}>
@@ -128,11 +128,11 @@ function HealthCheckBoxes({ setLogin, setToken }: LoginProps) {
                           _copy[key]=e.target.checked;
                           setHealthCheck(_copy);
                         }}/>
-                <span>
+                <span className='text-zinc-500'>
                   {values[0]}
                 </span>
                 <br />
-                <span className='text-sm'>
+                <span className='text-sm text-zinc-500'>
                   {values[1]}
                 </span>
               </div>
