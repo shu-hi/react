@@ -7,6 +7,7 @@ import FridgeInputs from './fridge';
 import Shift from './shift';
 import Approach from './approach';
 import Menu from './menu';
+import Admin from './admin';
 import { Session } from 'inspector/promises';
 
 function App() {
@@ -42,6 +43,11 @@ function App() {
           {mode==='approach'&&(
             <div>
               <Approach setLogin={setLogin} setToken={setToken}/>
+            </div>
+          )}
+          {mode==='admin'&&(
+            <div>
+              <Admin setLogin={setLogin} setToken={setToken}/>
             </div>
           )}
           

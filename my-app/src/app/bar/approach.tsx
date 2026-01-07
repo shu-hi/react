@@ -6,6 +6,8 @@ import { toast } from "react-hot-toast";
 import Modal from "react-modal";
 import { keyframes } from '@mui/material';
 
+import SpinnerOverlay from "./SpinnerOverlay";
+
 type ApproachApiResponse = {
   status: string;
   data: null|{[key:string]:string}[];
@@ -21,6 +23,7 @@ function Approach({ setLogin, setToken }: LoginProps) {
   const [query,setQuery]=useState('');
   const [approach,setApproach]=useState<{[key:string]:string}>({});
   const [inputDate, setInputDate] = useState('');
+  const [spinner,setSpinner]=useState(false);
   const storedToken = sessionStorage.getItem('access_token');
   function getFormattedDate(): string {
     const today = new Date();
@@ -63,6 +66,7 @@ function Approach({ setLogin, setToken }: LoginProps) {
   };
   const searchApproach=async(e: React.FormEvent)=>{
     e.preventDefault();
+    setSpinner(true);
       try {
       const res1 = await fetch(
         `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/bar/approach_search`,
@@ -84,8 +88,10 @@ function Approach({ setLogin, setToken }: LoginProps) {
         
         setApproachSearchResult([{co_name:'not found'}]);
       }
+      setSpinner(false);
     } catch (err) {
       console.error('Error fetching data:', err);
+      setSpinner(false);
     }
   };
   const checkList={"co_name":["組織名"],
@@ -95,6 +101,9 @@ function Approach({ setLogin, setToken }: LoginProps) {
   
   return (
     <div className="App flex bg-zinc-700" >
+      <SpinnerOverlay
+        visible={spinner}
+      />
       <div className="w-full max-w-xs m-auto bg-zinc-100 rounded p-5">
         <header>
           イベントアプローチ

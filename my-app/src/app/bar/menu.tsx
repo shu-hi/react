@@ -33,6 +33,7 @@ function Menu({setMode,setLogin, setToken}:Props) {
     sessionStorage.clear();
     setToken('');
     setLogin(0);
+    setMode('default');
     //window.location.reload();
   };
   return (

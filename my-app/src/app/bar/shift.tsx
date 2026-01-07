@@ -4,7 +4,7 @@ import { setFlagsFromString } from 'v8';
 import { Session } from 'inspector/promises';
 import { toast } from "react-hot-toast";
 import Modal from "react-modal";
-
+import SpinnerOverlay from "./SpinnerOverlay";
 import './shift.css';
 
 import FullCalendar from "@fullcalendar/react";
@@ -49,6 +49,7 @@ function Shift({ setLogin, setToken }: LoginProps) {
                     end_datetime: '',
                     serial:  ''});
   const[modalMode,setModalMode]=useState<'date'|'event'|'close'>('close');
+  const [spinner,setSpinner]=useState(false);
   function getFormattedDate(): string {
     const today = new Date();
     
@@ -73,31 +74,34 @@ function Shift({ setLogin, setToken }: LoginProps) {
   }, []);
   
   const fetchShiftData=async()=>{
+    setSpinner(true);
       try {
-      const res1 = await fetch(
-        `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/bar/get_shift`,
-        {
-          method:"POST",
-          headers: {
-                    "Content-Type": "application/json",
-                    'Authorization': `Bearer ${storedToken}`,
-                },
-          body: JSON.stringify({ date: formatedDateString})
+        const res1 = await fetch(
+          `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/bar/get_shift`,
+          {
+            method:"POST",
+            headers: {
+                      "Content-Type": "application/json",
+                      'Authorization': `Bearer ${storedToken}`,
+                  },
+            body: JSON.stringify({ date: formatedDateString})
+          }
+        );
+        if (res1.status === 401) {
+          toast.error('session expired. please re-login to continue.');
+          sessionStorage.clear();
+          setToken('');
+          setLogin(0);
         }
-      );
-      if (res1.status === 401) {
-        toast.error('session expired. please re-login to continue.');
-        sessionStorage.clear();
-        setToken('');
-        setLogin(0);
-      }
-      const data: GetShiftApiResponse = await res1.json();
-      if(data.status=='ok'&& data.data && data.data.length > 1){
-        setShiftData(data.data);
-        
-      }
+        const data: GetShiftApiResponse = await res1.json();
+        if(data.status=='ok'&& data.data && data.data.length > 1){
+          setShiftData(data.data);
+          
+        }
+        setSpinner(false);
     } catch (err) {
       console.error('Error fetching data:', err);
+      setSpinner(false);
     }
   };
   const fetchAvailableUser=async()=>{
@@ -219,6 +223,9 @@ function Shift({ setLogin, setToken }: LoginProps) {
 
   return (
     <div className="App flex bg-zinc-700 h-full" >
+      <SpinnerOverlay
+        visible={spinner}
+      />
       <div className="w-full max-w-xs m-auto bg-zinc-100 rounded p-5">
         <div style={{ maxHeight: '50vh', overflowY: 'auto' ,position: 'relative'}}>
           <FullCalendar 
