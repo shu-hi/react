@@ -16,45 +16,33 @@ nohup: 入力を無視します
    - Environments: .env.development
 
  ✓ Starting...
- ✓ Ready in 1334ms
- ○ Compiling /bar ...
- ✓ Compiled /bar in 4.6s
- GET /bar 200 in 5258ms
- ✓ Compiled /favicon.ico in 466ms
- GET /favicon.ico?favicon.0b3bf435.ico 200 in 795ms
+ ✓ Ready in 2s
+ ○ Compiling /_not-found/page ...
+ ✓ Compiled /_not-found/page in 4.2s
+ GET /stat 404 in 4731ms
+ ✓ Compiled /bi in 341ms
+ GET /bi 200 in 528ms
+ ✓ Compiled /favicon.ico in 361ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 675ms
  ⚠ Cross origin request detected from 54.65.233.242 to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
 Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
- ✓ Compiled /_not-found/page in 403ms
- GET /_next/webpack-hmr 404 in 617ms
- GET /bar 200 in 480ms
- GET /favicon.ico?favicon.0b3bf435.ico 200 in 284ms
- GET /bar 200 in 492ms
- GET /favicon.ico?favicon.0b3bf435.ico 200 in 285ms
- GET /_next/webpack-hmr 404 in 174ms
- GET /bar 200 in 162ms
- GET /favicon.ico?favicon.0b3bf435.ico 200 in 278ms
- GET /bar 200 in 488ms
- GET /_next/webpack-hmr 404 in 185ms
- GET /favicon.ico?favicon.0b3bf435.ico 200 in 333ms
- GET /bar 200 in 181ms
- GET /_next/webpack-hmr 404 in 198ms
- GET /favicon.ico?favicon.0b3bf435.ico 200 in 355ms
- GET /bar 200 in 476ms
- GET /favicon.ico?favicon.0b3bf435.ico 200 in 276ms
- GET /bar 200 in 488ms
- GET /_next/webpack-hmr 404 in 143ms
- GET /favicon.ico?favicon.0b3bf435.ico 200 in 270ms
- GET /bar 200 in 183ms
- GET /favicon.ico?favicon.0b3bf435.ico 200 in 262ms
- GET /_next/webpack-hmr 404 in 135ms
- GET /bar 200 in 123ms
- GET /bar 200 in 136ms
- GET /bar 200 in 134ms
- GET /bar 200 in 138ms
- GET /bar 200 in 469ms
- GET /favicon.ico?favicon.0b3bf435.ico 200 in 292ms
- GET /bar 200 in 172ms
- GET /_next/webpack-hmr 404 in 158ms
- GET /favicon.ico?favicon.0b3bf435.ico 200 in 304ms
- GET /bar 200 in 477ms
- GET /favicon.ico?favicon.0b3bf435.ico 200 in 284ms
+ GET /bi 200 in 178ms
+ GET /_next/webpack-hmr 404 in 187ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 336ms
+ ✓ Compiled in 203ms
+ ✓ Compiled /bi in 33ms
+ GET /bi 200 in 419ms
+ GET /_next/webpack-hmr 404 in 180ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 423ms
+ ✓ Compiled in 158ms
+ ✓ Compiled /bi in 32ms
+ GET /bi 200 in 399ms
+ GET /_next/webpack-hmr 404 in 164ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 370ms
+ GET /bi 200 in 407ms
+ GET /_next/webpack-hmr 404 in 182ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 350ms
+ ✓ Compiled in 179ms
+ ✓ Compiled /bi in 29ms
+ GET /bi 200 in 391ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 299ms

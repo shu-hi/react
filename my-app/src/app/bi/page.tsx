@@ -25,6 +25,7 @@ const App: React.FC = () => {
   const [spinner,setSpinner]=useState<0|1>(0);
   const [del_outlier,setDelOutlier]=useState<boolean>(false);
   const [LinregResult,setLinreg]=useState<ApiResult<DidDataType>|null>(null);
+  const [RFregResult,setRFreg]=useState<ApiResult<DidDataType>|null>(null);
   const execSql = async(e: React.FormEvent) => {
     setSpinner(1);
     e.preventDefault();
@@ -118,6 +119,26 @@ const App: React.FC = () => {
     }
     setSpinner(0);
   }
+  const makeTargetHist=async()=>{
+    setSpinner(1);
+    try{
+      const res=await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/api/target_hist`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ sql: sql,params:[] }),
+      });
+      if (!res.ok) {
+      throw new Error("Plot request failed");
+    }
+
+    const blob = await res.blob();
+    const url = URL.createObjectURL(blob); // 一時URLを作成
+    setPlotUrl(url);
+    } catch (err) {
+      console.error("Error generating plot:", err);
+    }
+    setSpinner(0);
+  }
   const makeLinreg=async()=>{
     setSpinner(1);
     try{
@@ -139,6 +160,27 @@ const App: React.FC = () => {
     }
     setSpinner(0);
   }
+  const makeRFReg=async()=>{
+    setSpinner(1);
+    try{
+      const res=await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/api/RFreg`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ sql: sql,params:[] }),
+      });
+      if (!res.ok) {
+      throw new Error("linreg request failed");
+    }
+
+    const data = await res.json();
+    console.log(data);
+    setSpinner(0);
+    setRFreg(data);
+    } catch (err) {
+      console.error("Error generating plot:", err);
+    }
+    setSpinner(0);
+  }
   
 
   
@@ -152,11 +194,51 @@ const App: React.FC = () => {
       )}
       <button type="button" onClick={makePlot} className="px-4 py-2 rounded-lg bg-gray-200 text-gray-800 hover:bg-gray-300 transition">plot</button>
       <button type="button" onClick={makeHist} className="px-4 py-2 rounded-lg bg-gray-200 text-gray-800 hover:bg-gray-300 transition">hist</button>
+      <button type="button" onClick={makeTargetHist} className="px-4 py-2 rounded-lg bg-gray-200 text-gray-800 hover:bg-gray-300 transition">target_hist(must include target,category)</button>
       
       {plotUrl && (
         <div className="mt-6">
           <h2 className="text-xl font-semibold mb-2">Plot</h2>
           <img src={plotUrl} alt="Plot Image" className="border rounded max-w-full" />
+        </div>
+      )}
+      <button type="button" onClick={makeRFReg} className="px-4 py-2 rounded-lg bg-gray-200 text-gray-800 hover:bg-gray-300 transition">random_forest(must include target)</button>
+      {RFregResult&&RFregResult.status==='ok'&&RFregResult.data.feature_importance &&RFregResult.data.metrics &&(
+        <div>
+          <table className="table-auto border-collapse border">
+          <thead>
+            <tr>
+              <th className="border px-4 py-2">rsquared</th>
+              <th className="border px-4 py-2">rmse</th>
+              <th className="border px-4 py-2">mae</th>
+            </tr>
+          </thead>
+          <tbody>
+              <tr>
+                <td className="border px-4 py-2">{RFregResult.data.metrics.r2}</td>
+                <td className="border px-4 py-2">{RFregResult.data.metrics.rmse}</td>
+                <td className="border px-4 py-2">{RFregResult.data.metrics.mae}</td>
+              </tr>
+          </tbody>
+        </table>
+        <table className="table-auto border-collapse border">
+          <thead>
+            <tr>
+              <th className="border px-4 py-2">Variable</th>
+              <th className="border px-4 py-2">Importance</th>
+            </tr>
+          </thead>
+          <tbody>
+            {RFregResult.data.feature_importance.map((row, i) => (
+              <tr key={i}>
+                <td className="border px-4 py-2">{row.Variable}</td>
+                <td className="border px-4 py-2">{row.Importance.toFixed(3)}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+        <img src={`data:image/png;base64,${RFregResult.data.plot}`} alt="Linreg Plot" />
+        
         </div>
       )}
       <button type="button" onClick={makeLinreg} className="px-4 py-2 rounded-lg bg-gray-200 text-gray-800 hover:bg-gray-300 transition">Linreg</button>
