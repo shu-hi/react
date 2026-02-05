@@ -69,6 +69,7 @@ const App: React.FC = () => {
   }
   const makeLifelines=async()=>{
     setSpinner(1);
+    try{
     const res=await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/api/lifelines`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -76,8 +77,11 @@ const App: React.FC = () => {
     });
     const data = await res.json();
     console.log(data);
-    setSpinner(0);
+    
     setllResult(data);
+  }catch (err) {
+      console.error("Error in lifeline:", err);
+    }setSpinner(0);
   }
   const makePlot=async()=>{
     setSpinner(1);

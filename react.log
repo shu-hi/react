@@ -1,0 +1,8 @@
+nohup: 入力を無視します
+npm ERR! Missing script: "dev"
+npm ERR! 
+npm ERR! To see a list of scripts, run:
+npm ERR!   npm run
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     /home/ubuntu/.npm/_logs/2026-02-05T00_18_22_915Z-debug-0.log

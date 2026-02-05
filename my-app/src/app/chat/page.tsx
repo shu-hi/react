@@ -41,7 +41,7 @@ const StreamChat = () => {
   return (
     <div>
       <h1>Stream Chat</h1>
-
+      <a href='faiss'>input rag doc</a>
       <form onSubmit={handleSubmit}className="flex flex-col gap-4 w-full max-w-md">
         <textarea 
           value={query} 
