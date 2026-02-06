@@ -14,7 +14,17 @@ type ApiResult<T> = {
 type DidDataType={
   summary:any[];
   plot:string;
+};
+type RFREGMetrics={
+  r2:number;
+  rmse:number;
+  mae:number;
 }
+type RFREGDataType={
+  feature_importance:any[];
+  metrics:RFREGMetrics;
+  plot:string;
+};
 const App: React.FC = () => {
   const [sql,setSql] = useState<Sql>("");
   const [result, setResult] = useState<ApiResult<any[]>|null>(null);
@@ -25,7 +35,7 @@ const App: React.FC = () => {
   const [spinner,setSpinner]=useState<0|1>(0);
   const [del_outlier,setDelOutlier]=useState<boolean>(false);
   const [LinregResult,setLinreg]=useState<ApiResult<DidDataType>|null>(null);
-  const [RFregResult,setRFreg]=useState<ApiResult<DidDataType>|null>(null);
+  const [RFregResult,setRFreg]=useState<ApiResult<RFREGDataType>|null>(null);
   const execSql = async(e: React.FormEvent) => {
     setSpinner(1);
     e.preventDefault();
