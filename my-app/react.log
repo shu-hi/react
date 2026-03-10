@@ -1,7 +1,7 @@
 nohup: 入力を無視します
 
 > my-app@0.1.0 dev
-> next dev --turbopack
+> next dev --turbopack -H 0.0.0.0 -p 4000
 
  ⚠ Warning: Next.js inferred your workspace root, but it may not be correct.
  We detected multiple lockfiles and selected the directory of /home/ubuntu/react/package-lock.json as the root directory.
@@ -10,11 +10,204 @@ nohup: 入力を無視します
  Detected additional lockfiles: 
    * /home/ubuntu/react/my-app/package-lock.json
 
- ⚠ Port 3000 is in use by an unknown process, using available port 3007 instead.
    ▲ Next.js 15.5.9 (Turbopack)
-   - Local:        http://localhost:3007
-   - Network:      http://10.0.1.42:3007
+   - Local:        http://localhost:4000
+   - Network:      http://0.0.0.0:4000
    - Environments: .env.development
 
  ✓ Starting...
- ✓ Ready in 1059ms
+ ✓ Ready in 1855ms
+ ○ Compiling /_not-found/page ...
+ ✓ Compiled /_not-found/page in 4.1s
+ GET /stat 404 in 4482ms
+ ✓ Compiled /favicon.ico in 343ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 628ms
+ ○ Compiling /bar ...
+ ✓ Compiled /bar in 1103ms
+ GET /bar 200 in 1291ms
+ ⚠ Cross origin request detected from 54.65.233.242 to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
+Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 264ms
+ ✓ Compiled /holo in 302ms
+ ⨯ ./my-app/src/app/holo/page.tsx:4:1
+Module not found: Can't resolve 'showHolo'
+[0m [90m 2 |[39m [36mimport[39m [33mReact[39m[33m,[39m { useState } [36mfrom[39m [32m"react"[39m[33m;[39m
+ [90m 3 |[39m [36mimport[39m axios [36mfrom[39m [32m"axios"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 4 |[39m [36mimport[39m {holoMedia[33m,[39mdefauldShowHandlerFactory[33m,[39mdarkShowHandlerFactory} [36mfrom[39m [32m"showHolo"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 5 |[39m [36mimport[39m [33mSpinnerOverlay[39m [36mfrom[39m [32m'./SpinnerOverlay'[39m[33m;[39m
+ [90m 6 |[39m [36mfunction[39m [33mApp[39m() {
+ [90m 7 |[39m   [90m// CSVファイルを保持する状態[39m[0m
+
+
+
+Import traces:
+  Client Component Browser:
+    ./my-app/src/app/holo/page.tsx [Client Component Browser]
+    ./my-app/src/app/holo/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./my-app/src/app/holo/page.tsx [Client Component SSR]
+    ./my-app/src/app/holo/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ ○ Compiling /_error ...
+
+-----
+[1m[31mFATAL[39m[0m: An unexpected Turbopack error occurred. A panic log has been written to /tmp/next-panic-dc918aff827695cea6f5ce53acadb9ee.log.
+
+To help make Turbopack better, report this error by clicking here: https://github.com/vercel/next.js/discussions/new?category=turbopack-error-report&title=Turbopack%20Error%3A%20failed%20to%20write%20to%20%2Fhome%2Fubuntu%2Freact%2Fmy-app%2F.next%2Fstatic%2Fchunks%2F07e91_next_dist_compiled_next-devtools_index_58440ce4.js&body=Turbopack%20version%3A%20%6096f69990%60%0ANext.js%20version%3A%20%600.0.0%60%0A%0AError%20message%3A%0A%60%60%60%0ATurbopack%20Error%3A%20failed%20to%20write%20to%20%2Fhome%2Fubuntu%2Freact%2Fmy-app%2F.next%2Fstatic%2Fchunks%2F07e91_next_dist_compiled_next-devtools_index_58440ce4.js%0A%60%60%60&labels=Turbopack,Turbopack%20Panic%20Backtrace
+-----
+
+ ✓ Compiled /_error in 5.8s
+Error [ModuleBuildError]: ./my-app/src/app/holo/page.tsx:4:1
+Module not found: Can't resolve 'showHolo'
+[0m [90m 2 |[39m [36mimport[39m [33mReact[39m[33m,[39m { useState } [36mfrom[39m [32m"react"[39m[33m;[39m
+ [90m 3 |[39m [36mimport[39m axios [36mfrom[39m [32m"axios"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 4 |[39m [36mimport[39m {holoMedia[33m,[39mdefauldShowHandlerFactory[33m,[39mdarkShowHandlerFactory} [36mfrom[39m [32m"showHolo"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 5 |[39m [36mimport[39m [33mSpinnerOverlay[39m [36mfrom[39m [32m'./SpinnerOverlay'[39m[33m;[39m
+ [90m 6 |[39m [36mfunction[39m [33mApp[39m() {
+ [90m 7 |[39m   [90m// CSVファイルを保持する状態[39m[0m
+
+
+
+Import traces:
+  Client Component Browser:
+    ./my-app/src/app/holo/page.tsx [Client Component Browser]
+    ./my-app/src/app/holo/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./my-app/src/app/holo/page.tsx [Client Component SSR]
+    ./my-app/src/app/holo/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+    at <unknown> (ModuleBuildError: ./my-app/src/app/holo/page.tsx:4:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+Error [TurbopackInternalError]: failed to write to /home/ubuntu/react/my-app/.next/static/chunks/07e91_next_dist_compiled_next-devtools_index_58440ce4.js
+
+Caused by:
+- Permission denied (os error 13)
+
+Debug info:
+- Execution of TaskId { id: 2147483751 } transient failed
+- failed to write to /home/ubuntu/react/my-app/.next/static/chunks/07e91_next_dist_compiled_next-devtools_index_58440ce4.js
+- Permission denied (os error 13)
+    at <unknown> (TurbopackInternalError: failed to write to /home/ubuntu/react/my-app/.next/static/chunks/07e91_next_dist_compiled_next-devtools_index_58440ce4.js) {
+  location: undefined
+}
+ GET /favicon.ico 500 in 34ms
+ ✓ Compiled in 250ms
+ ✓ Compiled /holo in 27ms
+ GET /holo 200 in 230ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 236ms
+ ✓ Compiled in 250ms
+ ✓ Compiled /holo in 25ms
+ ⨯ ReferenceError: user_input_id is not defined
+    at App (src/app/holo/page.tsx:34:22)
+  32 |               placeholder="id"
+  33 |               className="w-full p-2 mb-6 text-zinc-700 border-b-2 border-zinc-500 outline-none focus:bg-gray-300"
+> 34 |               value={user_input_id}
+     |                      ^
+  35 |               onChange={(e) => setHash(e.target.value)}
+  36 |               required
+  37 |             /> {
+  digest: '3014778907'
+}
+ GET /holo 500 in 268ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 273ms
+ GET /favicon.ico 200 in 273ms
+ ✓ Compiled in 156ms
+ ✓ Compiled /holo in 24ms
+ GET /holo 200 in 236ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 236ms
+ GET /holo 200 in 239ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 240ms
+ ✓ Compiled in 148ms
+ ✓ Compiled in 149ms
+ ✓ Compiled in 231ms
+ GET /holo 200 in 254ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 242ms
+ GET /holo? 200 in 93ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 252ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 244ms
+ ✓ Compiled in 144ms
+ GET /holo 200 in 244ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 249ms
+ GET /holo 200 in 251ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 244ms
+ ✓ Compiled in 147ms
+ ✓ Compiled in 144ms
+ ✓ Compiled in 144ms
+ ✓ Compiled in 145ms
+ ✓ Compiled in 145ms
+ GET /holo 200 in 224ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 245ms
+ ✓ Compiled in 145ms
+ ✓ Compiled in 148ms
+ ✓ Compiled in 144ms
+ GET /holo 200 in 253ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 250ms
+ ✓ Compiled in 144ms
+ ✓ Compiled in 144ms
+ ✓ Compiled in 143ms
+ GET /holo 200 in 207ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 239ms
+ ✓ Compiled in 142ms
+ ✓ Compiled in 141ms
+ GET /holo 200 in 254ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 243ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 238ms
+ ✓ Compiled in 142ms
+ GET /holo 200 in 228ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 257ms
+ ✓ Compiled in 144ms
+ GET /holo 200 in 249ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 251ms
+ GET /holo 200 in 88ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 242ms
+ GET /holo 200 in 81ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 255ms
+ GET /holo 200 in 87ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 235ms
+ GET /holo 200 in 81ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 236ms
+ GET /holo 200 in 79ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 239ms
+ GET /stat 404 in 82ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 238ms
+ GET /holo 200 in 77ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 238ms
+ GET /stat 404 in 81ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 236ms
+ GET /holo 200 in 99ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 235ms
+ GET /holo 200 in 81ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 235ms
+ GET /holo 200 in 287ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 242ms
+ GET /holo 200 in 90ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 241ms
+ GET /holo 200 in 81ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 245ms
+ GET /holo 200 in 84ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 239ms
+ GET /holo 200 in 292ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 244ms
+ ✓ Compiled in 107ms
+ GET /holo 200 in 272ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 247ms
+ ✓ Compiled in 106ms
+ GET /holo 200 in 287ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 246ms
+ ✓ Compiled in 105ms
+ GET /holo 200 in 288ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 244ms
+ GET /holo 200 in 273ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 237ms
+ GET /holo 200 in 289ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 246ms

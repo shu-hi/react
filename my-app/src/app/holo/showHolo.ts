@@ -17,6 +17,7 @@ export class holoMedia{
     }
     async getMediaReady(){
         this._isReady=await this.holoMediaAPIRes();
+        console.log(this._isReady);
         this.notify(this._isReady);
     }
     subscribe(observer: Observer): void {
@@ -37,7 +38,7 @@ export class holoMedia{
     }
     private async holoMediaAPIRes():Promise<string>{
         try{
-            const res=await fetch(`${NEXT_PUBLIC_API_BASE_URL}/show/${this.hash}`, {
+            const res=await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/show/${this.hash}`, {
                 method: "GET",
                 headers: { "Content-Type": "application/json" },
             });
@@ -45,8 +46,9 @@ export class holoMedia{
                 throw new Error("show request failed");
             }
             const data: ShowApiResponse = await res.json();
-            if(data&&data.status=='ok'&&data.data){
-                return data.data;
+            console.log(data);
+            if(data&&typeof data.url === 'string' && typeof data.media_type === 'number'){
+                return data.url;
             }else{
                 throw new Error("show request status failed");
             }
@@ -60,9 +62,8 @@ export class holoMedia{
     }
 }
 type ShowApiResponse = {
-  status: string;
-  data: string;
-  err: string | null;
+  media_type:string;
+  url:string;
 };
 
 class holoHandler implements Observer{
