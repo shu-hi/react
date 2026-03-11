@@ -1,8 +1,18 @@
-nohup: 入力を無視します
-npm ERR! Missing script: "dev"
-npm ERR! 
-npm ERR! To see a list of scripts, run:
-npm ERR!   npm run
+nohup: ignoring input
 
-npm ERR! A complete log of this run can be found in:
-npm ERR!     /home/ubuntu/.npm/_logs/2026-02-05T00_18_22_915Z-debug-0.log
+> dev
+> next -p 4000 -H 0.0.0.0
+
+▲ Next.js 16.1.6 (Turbopack)
+- Local:         http://localhost:4000
+- Network:       http://0.0.0.0:4000
+
+✓ Starting...
+Attention: Next.js now collects completely anonymous telemetry regarding usage.
+This information is used to shape Next.js' roadmap and prioritize features.
+You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
+https://nextjs.org/telemetry
+
+Error: > Couldn't find any `pages` or `app` directory. Please create one under the project root
+    at ignore-listed frames
+[?25h
