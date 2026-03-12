@@ -38,9 +38,7 @@ export class holoMedia{
     }
     private async holoMediaAPIRes():Promise<string>{
         try{
-	    console.log(`NEST_API_BASE_URL:${process.env.NEST_API_BASE_URL}`);
-	    console.log(process.env);
-            const res=await fetch(`${process.env.NEST_API_BASE_URL}/show/${this.hash}`, {
+            const res=await fetch(`${process.env.NEXT_PUBLIC_NEST_API_BASE_URL}/show/${this.hash}`, {
                 method: "GET",
                 headers: { "Content-Type": "application/json" },
             });
