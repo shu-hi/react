@@ -8,12 +8,15 @@ export class holoMedia{
     private _isReady:string = '';
     private readonly _subscribers: Observer[] = [];
     private readonly hash: string;
-
+    private _media_type:number=0;
     constructor(hash: string) {
         this.hash = hash;
     }
     get isReady():string{
         return this._isReady;
+    }
+    get mediaType():number{
+        return this._media_type;
     }
     async getMediaReady(){
         this._isReady=await this.holoMediaAPIRes();
@@ -48,6 +51,7 @@ export class holoMedia{
             const data: ShowApiResponse = await res.json();
             console.log(data);
             if(data&&typeof data.url === 'string' && typeof data.media_type === 'number'){
+                this._media_type=data.media_type;
                 return data.url;
             }else{
                 throw new Error("show request status failed");
@@ -68,7 +72,7 @@ type ShowApiResponse = {
 
 class holoHandler implements Observer{
     constructor(
-        private setMediaURL: (url: string) => void
+        private setMediaURL: (url: string) => void,
     ){}
     update(url:string):void{
         this.setMediaURL(url);//これは完全にsetStateでよいでしょう……
@@ -91,7 +95,7 @@ interface showHandlerFactory{//例えばダークモードがあるとして、�
 export class defaultShowHandlerFactory implements showHandlerFactory{
     constructor(
         private setMediaURL:(url:string)=>void,
-        private setLayer:(v:boolean)=>void
+        private setLayer:(v:boolean)=>void,
     ){}
     holoUpdater(): Observer {
         return new holoHandler(this.setMediaURL);
@@ -103,7 +107,7 @@ export class defaultShowHandlerFactory implements showHandlerFactory{
 export class darkShowHandlerFactory implements showHandlerFactory{
     constructor(
         private setMediaURL:(url:string)=>void,
-        private setLayer:(v:boolean)=>void
+        private setLayer:(v:boolean)=>void,
     ){}
     holoUpdater(): Observer {
         return new holoHandler(this.setMediaURL);
