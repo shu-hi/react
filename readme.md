@@ -6,7 +6,7 @@
 - 画像 / 動画アップロード
 - ホログラム表示(filter)
 
-
+[![My Skills](https://skillicons.dev/icons?i=nestjs,react,postgres,vercel,supabase,docker,nginx,linux,ubuntu,git,github,typescript,html,css,tailwind,md,pnpm,powershell,vscode)](https://skillicons.dev)
 ---
 ## Design Pattern Usage
 |pattern|purpose|file|
@@ -28,16 +28,16 @@
 ```mermaid
 architecture-beta
     group client[client]
-    group vercel(vercel-icon)[vercel]
+    group vercel[vercel]
     group render[render]
-    group docker(docker-icon)[docker] in render
-    group supabase(supabase-icon)[supabase]
+    group docker[docker] in render
+    group supabase[supabase]
     
     service user[user] in client
-    service react(react)[react] in vercel
-    service NestJS(nextjs-icon)[NestJS] in docker
-    service rdbms(postgresql)[postgres] in supabase
-    service bucket[storage] in supabase
+    service react[react] in vercel
+    service NestJS[NestJS] in docker
+    service rdbms(database)[postgres] in supabase
+    service bucket(disk)[storage] in supabase
     
     user:B --> T:react
     react:R --> L:NestJS
@@ -48,16 +48,16 @@ architecture-beta
 ```mermaid
 architecture-beta
     group client[client]
-    group wsl(wsl)[wsl]
-    group docker(docker-icon)[docker] in wsl
-    group supabase(supabase-icon)[supabase]
+    group wsl[wsl]
+    group docker[docker] in wsl
+    group supabase[supabase]
     
     service user[user] in client
-    service react(react)[react] in docker
-    service nginx(nginx)[nginx] in docker
-    service NestJS(nextjs-icon)[NestJS] in wsl
-    service rdbms(postgresql)[postgres] in supabase
-    service bucket[storage] in supabase
+    service react[react] in docker
+    service nginx[nginx] in docker
+    service NestJS[NestJS] in wsl
+    service rdbms(database)[postgres] in supabase
+    service bucket(disk)[storage] in supabase
     
     user:B --> T:nginx
     react:R --> L:NestJS
@@ -188,7 +188,7 @@ myenv上のmy-app下で nohup npm run dev -- -H 0.0.0.0 -p 4000 > react.log 2>&1
 使っているのは
 react:vercel
 fastapi/NestJS:render
-postgress:supabase
+postgres:supabase
 keepalive:UptimeRobot
 
 ---

@@ -1,5 +1,10 @@
 import React from "react";
-
+import {
+  TwitterShareButton,
+  TwitterIcon,
+  InstagramShareButton,
+  InstagramIcon,
+} from "react-share";
 type files = {
   r: File | null;
   l: File | null;
@@ -84,7 +89,13 @@ class uploadVideoComponent {
             {hash && (
               <div>
                 <p>{hash}</p>
-                <a href="#">share</a>
+                <button onClick={async()=>{
+                    const url = window.location.href;
+                    await navigator.clipboard.writeText('ホログラムを体験してみよう。\n'+url+'\n codeに\n'+hash+'\nを入力してtry!');
+                    alert("リンクがコピーされました");
+                  }}>
+                    Share
+                </button>
               </div>
             )}
           </div>
@@ -162,7 +173,13 @@ class uploadAdapter {
             {hash && (
               <div>
                 <p>{hash}</p>
-                <a href="#">share</a>
+                <button onClick={async()=>{
+                    const url = window.location.href;
+                    await navigator.clipboard.writeText('ホログラムを体験してみよう。\n'+url+'\n codeに\n'+hash+'\nを入力してtry!');
+                    alert("リンクがコピーされました");
+                  }}>
+                    Share
+                </button>
               </div>
             )}
 
