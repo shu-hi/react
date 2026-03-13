@@ -16,54 +16,32 @@ nohup: ignoring input
    - Environments: .env
 
  ✓ Starting...
-Attention: Next.js now collects completely anonymous telemetry regarding usage.
-This information is used to shape Next.js' roadmap and prioritize features.
-You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
-https://nextjs.org/telemetry
-
- ✓ Ready in 3.8s
+ ✓ Ready in 6.1s
+ ○ Compiling / ...
+ ✓ Compiled / in 10.5s
+ GET / 200 in 11417ms
+ ○ Compiling /favicon.ico ...
+ ✓ Compiled /favicon.ico in 922ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 1284ms
  ○ Compiling /holo ...
- ✓ Compiled /holo in 5s
- GET /holo 200 in 5648ms
- ✓ Compiled /favicon.ico in 332ms
- GET /favicon.ico?favicon.0b3bf435.ico 200 in 669ms
- GET /holo 200 in 1070ms
- GET /favicon.ico?favicon.0b3bf435.ico 200 in 325ms
+ ✓ Compiled /holo in 1151ms
+ GET /holo 200 in 1289ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 297ms
+ GET /holo 200 in 135ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 344ms
+ GET /holo 200 in 1090ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 302ms
  ✓ Compiled in 142ms
- GET /holo 200 in 361ms
- GET /favicon.ico?favicon.0b3bf435.ico 200 in 316ms
- ✓ Compiled in 149ms
- ✓ Compiled in 149ms
- ⚠ Fast Refresh had to perform a full reload due to a runtime error.
- ✓ Compiled in 137ms
- GET /holo 200 in 400ms
- GET /favicon.ico?favicon.0b3bf435.ico 200 in 298ms
- GET /holo 200 in 333ms
- GET /favicon.ico?favicon.0b3bf435.ico 200 in 294ms
- GET /holo 200 in 920ms
- GET /favicon.ico?favicon.0b3bf435.ico 200 in 316ms
- ✓ Compiled in 151ms
- GET /holo 200 in 365ms
- GET /favicon.ico?favicon.0b3bf435.ico 200 in 323ms
- ✓ Compiled in 152ms
- GET /holo 200 in 364ms
- GET /favicon.ico?favicon.0b3bf435.ico 200 in 299ms
- GET /holo 200 in 136ms
- GET /favicon.ico?favicon.0b3bf435.ico 200 in 326ms
- ✓ Compiled in 147ms
- ✓ Compiled in 167ms
- ○ Compiling /_not-found/page ...
- ✓ Compiled /_not-found/page in 963ms
-[Error: Failed to find Server Action. This request might be from an older or newer deployment.
-Read more: https://nextjs.org/docs/messages/failed-to-find-server-action]
- POST /apiupload 404 in 1341ms
- ✓ Compiled in 156ms
- ✓ Compiled in 134ms
- ✓ Compiled /holo in 328ms
- GET /holo 200 in 1003ms
- GET /favicon.ico?favicon.0b3bf435.ico 200 in 376ms
- GET /holo 200 in 890ms
- GET /favicon.ico?favicon.0b3bf435.ico 200 in 396ms
- ✓ Compiled in 393ms
- ✓ Compiled in 478ms
- ✓ Compiled in 353ms
+ ✓ Compiled in 154ms
+ GET /holo 200 in 923ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 319ms
+ ✓ Compiled in 442ms
+ GET /holo 200 in 922ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 307ms
+ ✓ Compiled in 153ms
+ ✓ Compiled in 133ms
+ ✓ Compiled in 138ms
+ ✓ Compiled in 422ms
+ GET /holo 200 in 979ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 332ms
+ ✓ Compiled in 153ms

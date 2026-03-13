@@ -8,22 +8,18 @@ type files = {
   v: File | null;
 };
 
-interface uploadprops {
+interface uploadpropsinterface {
   inputRefs: Record<keyof files, React.RefObject<HTMLInputElement|null>>;
   handleFileChange: (e: React.ChangeEvent<HTMLInputElement>,key: keyof files) => void;
-  source: string;
   handleChoose: (key:keyof files) => void;
   handleUpload: () => void;
   hash: string;
 }
-
-interface uploadprops2 {
-  inputRefs: Record<keyof files, React.RefObject<HTMLInputElement|null>>;
-  handleFileChange: (e: React.ChangeEvent<HTMLInputElement>,key: keyof files) => void;
+interface uploadprops extends uploadpropsinterface{
+  source: string;
+}
+interface uploadprops2 extends uploadpropsinterface{
   file: files;
-  handleChoose: (key:keyof files) => void;
-  handleUpload: () => void;
-  hash: string;
 }
 
 class uploadVideoComponent {

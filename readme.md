@@ -1,5 +1,15 @@
 ---
-marp: true
+
+- [x] Mementoパターン:https://github.com/shu-hi/react/blob/main/my-app/src/app/holo/fileComponents.tsx
+- [x] Strategyパターン:https://github.com/shu-hi/nest-back/blob/main/my-app/src/services/holoClass.ts
+- [x] Commandパターン:統合作業中
+- [x] Compositeパターン:https://github.com/shu-hi/nest-back/blob/main/my-app/src/services/holoClass.ts
+- [x] Abstract Factoryパターン:https://github.com/shu-hi/react/blob/main/my-app/src/app/holo/showHolo.ts
+- [x] Observerパターン:https://github.com/shu-hi/react/blob/main/my-app/src/app/holo/showHolo.ts
+- [x] Proxyパターン:いろいろ。開発ではnginx使ってたりもする。
+- [x] Simple Factoryパターン:https://github.com/shu-hi/nest-back/blob/main/my-app/src/services/holoClass.ts
+- [x] Bridgeパターン:https://github.com/shu-hi/react/blob/main/my-app/src/app/holo/UploadComponents.tsx
+- [x] Adapterパターン:https://github.com/shu-hi/react/blob/main/my-app/src/app/holo/UploadComponents.tsx
 
 ---
 ```mermaid
@@ -56,6 +66,38 @@ classDiagram
         -PicturesUploader: React.FC<uploadprops2>
         +getComponent():React.FC<uploadprops>
     }
+    class mediaFilter{
+        -monochro:boolean
+        -bluenize:boolean
+        -scanline:boolean
+        +changeState(monochro:boolean,bluenize:boolean,scanline:boolean) void
+        +save(): Memento
+        +display():string[]
+        +restore(memento:mediaMemento):void
+    }
+    class Memento{
+        <<interface>>
+        +getMonochro():boolean
+        +getBluenize():boolean
+        +getScanline():boolean
+    }
+    class mediaMemento{
+        -monochro:boolean
+        -bluenize:boolean
+        -scanline:boolean
+        +getMonochro():boolean
+        +getBluenize():boolean
+        +getScanline():boolean
+    }
+    class CareTaker{
+    -scenes:[name:string]:Memento
+    -mediaFilter:mediaFilter
+    +backup(name:string):void
+    +restore(name:string):void
+    +get(name:string):Memento | undefined
+    }
+    Memento <|-- mediaMemento : implement
+
 ```
 
 ---
@@ -68,7 +110,10 @@ reactではuseStateがあるので正直不要というか使わないほうが�
 
 showHandlerFactoryと(dark|default)ShowHandlerFactoryはabstract factory patternを想定している。showhandlerを作る際に、layerとholoをそれぞれ作って使うのでfactory内で一括でやらせている。
 
-Uploadcomponents。adopter patternのために書いた今回の魔境。動画のみだったところ(uploadVideoComponent)に写真も追加する仕様が降ってきた(uploadAdapter)想定で書いたが、この規模や状態だと書き直すか、適当なラッパーで吸収したほうが一億倍安定・早い・楽。練習にしてもapi側とかのほうが良かった。
+Uploadcomponents。adopter patternのために書いた今回の魔境。動画のみだったところ(uploadVideoComponent)に写真も追加する仕様が降ってきた(uploadAdapter)想定で書いたが、この規模や状態だと書き直すか、適当なラッパーで吸収したほうが一億倍安定・早い・楽。練習にしてもapi側とかのほうが良かった。型について一部delegation patternのようなものを実装している。
+
+filterComponents。表示のカスタムと保存のためにmemento　patternを採用した。
+reactのrenderのタイミングのため、素直な実装ではなくrefを通している。これもreactだと使わなくていいパターンな気がする。
 
 ---
 

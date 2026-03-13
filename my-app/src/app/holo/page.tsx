@@ -4,6 +4,8 @@ import axios from "axios";
 import InputComponents from "./InputComponents";
 import UploadComponents from "./UploadComponents";
 import SpinnerOverlay from './SpinnerOverlay';
+import FilterComponents from './filterComponents';
+import './filter.css';
 type files={
   r:File|null;
   l:File|null;
@@ -25,6 +27,8 @@ function App() {
   const [mediaLayer,setLayer]=useState(false);
   const [spinner, setSpinner] = useState(false);
   const [hash, setHash] = useState('');
+  const [filter,setFilter]=useState(['','none']);
+  const [cboxes,setCboxes]=useState<boolean[]>([false,false,false])
   const inputRefs : Record<keyof files, React.RefObject<HTMLInputElement|null>>= {
     u: useRef<HTMLInputElement>(null),
     r: useRef<HTMLInputElement>(null),
@@ -66,29 +70,48 @@ function App() {
     setHash(data.hash);
     setSpinner(false);
   };
+  
   return (
     <div className="App">
       <SpinnerOverlay
         visible={spinner}
       />
-      <button onClick={()=>setType('input')}>input code to view</button>
-      <button onClick={()=>setType('upload')}>make and share</button>
+      <button onClick={()=>setType('input')} className="w-full bg-zinc-700 hover:bg-black">input code to view</button>
+      <button onClick={()=>setType('upload')} className="w-full bg-zinc-700 hover:bg-black">make and share</button>
       {type=='input'&&(
         <div>
           <InputComponents setHash={setHash} setSpinner={setSpinner} setMediaUrl={setMediaUrl} setLayer={setLayer} setType={setType} hash={hash}/>
         </div>
       )}
       {type=='showv'&&(
-        <div className="min-h-screen bg-black">
-          <video
-            src={mediaUrl}
-            controls
-            className="w-full max-h-[400px] rounded"
-          />
-        </div>
+        <div className="min-h-screen bg-black ">
+          <div className="hologram-container relative inline-block">
+            <video
+              src={mediaUrl}
+              controls
+              autoPlay
+              loop
+              style={{filter:filter[0]}}
+              className="w-full max-h-[400px] rounded hologram-video"
+            />
+            <div className="scanlines absolute inset-0 pointer-events-none" style={{display:filter[1]}}></div>
+          </div>
+          <FilterComponents cboxes={cboxes} setCboxes={setCboxes} setFilter={setFilter}/>
+      </div>
       )}
       {type=='showp'&&(
-        <div className="min-h-screen bg-black"><img src={mediaUrl} alt="Sample" className="w-full rounded" /></div>
+        <div className="min-h-screen bg-black ">
+          <div className="relative w-fit overflow-hidden rounded">
+            <img 
+              src={mediaUrl} 
+              alt="Sample" 
+              style={{filter:filter[0]}}
+              className="w-full rounded hologram-image"
+            />
+            <div className="scanlines absolute inset-0 pointer-events-none" style={{display:filter[1]}}></div>
+          </div>
+          <FilterComponents cboxes={cboxes} setCboxes={setCboxes} setFilter={setFilter} />
+        </div>
       )}
       {type === 'upload' && (
         <div className="max-w-xl mx-auto p-4 bg-gray-100 rounded shadow-md">
