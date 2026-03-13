@@ -35,6 +35,9 @@ const InputComponents = ({setHash,setSpinner,setMediaUrl,setLayer,setType,hash}:
     <div>
       <form onSubmit={handleSubmit} className="login-form">
         <div>
+          {'press ↑(make and share)\n to register videos/pictures to share.'}
+          <br />
+          {'insert code and press "show" to see shared/made hologram↓'}
           <input
             type="text"
             placeholder="code"

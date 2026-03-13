@@ -22,7 +22,7 @@ function App() {
     d: null,
     v: null
   });
-  const [type, setType] = useState<'input'|'showv'|'showp'|'upload'>("upload");
+  const [type, setType] = useState<'input'|'showv'|'showp'|'upload'>("input");
   const [mediaUrl,setMediaUrl]=useState('');
   const [mediaLayer,setLayer]=useState(false);
   const [spinner, setSpinner] = useState(false);

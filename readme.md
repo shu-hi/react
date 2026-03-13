@@ -153,6 +153,11 @@ classDiagram
     Memento <|-- mediaMemento : implement
 
 ```
+---
+<p>
+  <img src="./input.png" width="45%">
+  <img src="./show.png" width="45%">
+</p>
 
 ---
 /holo
