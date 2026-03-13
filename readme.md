@@ -1,16 +1,70 @@
+
+# Hologram Media Generator
+
+スマホでホログラム動画/写真を作るためのWebアプリ。LLM不使用(デバッグは頼った)の温かみのある手書きコードです。デザインパターン学習用に無理に各パターンを詰め込んであります。
+
+- 画像 / 動画アップロード
+- ホログラム表示(filter)
+
+
 ---
+## Design Pattern Usage
+|pattern|purpose|file|
+|---|---|---|
+|Memento|表示のカスタム機能|https://github.com/shu-hi/react/blob/main/my-app/src/app/holo/fileComponents.tsx
+|Strategy|ダークモード実装時の拡張用|https://github.com/shu-hi/nest-back/blob/main/my-app/src/services/holoClass.ts
+|Command||統合作業中
+|Composite|動画と写真をmediaとしてまとめて扱う|https://github.com/shu-hi/nest-back/blob/main/my-app/src/services/holoClass.ts
+|Abstract Factory|写真/動画で使う材料(クラス)をまとめて生成|https://github.com/shu-hi/react/blob/main/my-app/src/app/holo/showHolo.ts
+|Observer|apiから取れたら通知して描画する|https://github.com/shu-hi/react/blob/main/my-app/src/app/holo/showHolo.ts
+|Proxy|いろいろ。|開発ではnginx使ってたりもする。
+|Simple Factory|写真と動画の分岐を隠蔽してクラス作成|https://github.com/shu-hi/nest-back/blob/main/my-app/src/services/holoClass.ts
+|Bridge|汚い型を委譲できれいに|https://github.com/shu-hi/react/blob/main/my-app/src/app/holo/UploadComponents.tsx
+|Adapter|動画のinterfaceに写真/動画両方の機能を付けるadapter|https://github.com/shu-hi/react/blob/main/my-app/src/app/holo/UploadComponents.tsx
 
-- [x] Mementoパターン:https://github.com/shu-hi/react/blob/main/my-app/src/app/holo/fileComponents.tsx
-- [x] Strategyパターン:https://github.com/shu-hi/nest-back/blob/main/my-app/src/services/holoClass.ts
-- [x] Commandパターン:統合作業中
-- [x] Compositeパターン:https://github.com/shu-hi/nest-back/blob/main/my-app/src/services/holoClass.ts
-- [x] Abstract Factoryパターン:https://github.com/shu-hi/react/blob/main/my-app/src/app/holo/showHolo.ts
-- [x] Observerパターン:https://github.com/shu-hi/react/blob/main/my-app/src/app/holo/showHolo.ts
-- [x] Proxyパターン:いろいろ。開発ではnginx使ってたりもする。
-- [x] Simple Factoryパターン:https://github.com/shu-hi/nest-back/blob/main/my-app/src/services/holoClass.ts
-- [x] Bridgeパターン:https://github.com/shu-hi/react/blob/main/my-app/src/app/holo/UploadComponents.tsx
-- [x] Adapterパターン:https://github.com/shu-hi/react/blob/main/my-app/src/app/holo/UploadComponents.tsx
+---
+## 本番
 
+```mermaid
+architecture-beta
+    group client[client]
+    group vercel(vercel-icon)[vercel]
+    group render[render]
+    group docker(docker-icon)[docker] in render
+    group supabase(supabase-icon)[supabase]
+    
+    service user[user] in client
+    service react(react)[react] in vercel
+    service NestJS(nextjs-icon)[NestJS] in docker
+    service rdbms(postgresql)[postgres] in supabase
+    service bucket[storage] in supabase
+    
+    user:B --> T:react
+    react:R --> L:NestJS
+    NestJS:T --> B:rdbms
+    NestJS:T --> B:bucket
+```
+## 開発
+```mermaid
+architecture-beta
+    group client[client]
+    group wsl(wsl)[wsl]
+    group docker(docker-icon)[docker] in wsl
+    group supabase(supabase-icon)[supabase]
+    
+    service user[user] in client
+    service react(react)[react] in docker
+    service nginx(nginx)[nginx] in docker
+    service NestJS(nextjs-icon)[NestJS] in wsl
+    service rdbms(postgresql)[postgres] in supabase
+    service bucket[storage] in supabase
+    
+    user:B --> T:nginx
+    react:R --> L:NestJS
+    nginx:R --> L:react
+    NestJS:T --> B:rdbms
+    NestJS:T --> B:bucket
+```
 ---
 ```mermaid
 classDiagram
