@@ -1,10 +1,5 @@
 import React from "react";
-import {
-  TwitterShareButton,
-  TwitterIcon,
-  InstagramShareButton,
-  InstagramIcon,
-} from "react-share";
+
 type files = {
   r: File | null;
   l: File | null;
