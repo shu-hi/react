@@ -3,53 +3,45 @@ nohup: ignoring input
 > my-app@0.1.0 dev
 > next dev --turbopack -H 0.0.0.0 -p 4000
 
- ⚠ Warning: Next.js inferred your workspace root, but it may not be correct.
- We detected multiple lockfiles and selected the directory of /home/ubuntu/react/package-lock.json as the root directory.
- To silence this warning, set `turbopack.root` in your Next.js config, or consider removing one of the lockfiles if it's not needed.
-   See https://nextjs.org/docs/app/api-reference/config/next-config-js/turbopack#root-directory for more information.
- Detected additional lockfiles: 
-   * /home/ubuntu/react/my-app/package-lock.json
-
    ▲ Next.js 15.5.9 (Turbopack)
    - Local:        http://localhost:4000
    - Network:      http://0.0.0.0:4000
    - Environments: .env
 
  ✓ Starting...
- ✓ Ready in 6.1s
+ ✓ Ready in 5.1s
  ○ Compiling / ...
- ✓ Compiled / in 10.5s
- GET / 200 in 11417ms
+ ✓ Compiled / in 8s
+ GET / 200 in 8727ms
  ○ Compiling /favicon.ico ...
- ✓ Compiled /favicon.ico in 922ms
- GET /favicon.ico?favicon.0b3bf435.ico 200 in 1284ms
- ○ Compiling /holo ...
- ✓ Compiled /holo in 1151ms
- GET /holo 200 in 1289ms
- GET /favicon.ico?favicon.0b3bf435.ico 200 in 297ms
- GET /holo 200 in 135ms
- GET /favicon.ico?favicon.0b3bf435.ico 200 in 344ms
- GET /holo 200 in 1090ms
- GET /favicon.ico?favicon.0b3bf435.ico 200 in 302ms
- ✓ Compiled in 142ms
- ✓ Compiled in 154ms
- GET /holo 200 in 923ms
- GET /favicon.ico?favicon.0b3bf435.ico 200 in 319ms
- ✓ Compiled in 442ms
- GET /holo 200 in 922ms
- GET /favicon.ico?favicon.0b3bf435.ico 200 in 307ms
- ✓ Compiled in 153ms
- ✓ Compiled in 133ms
- ✓ Compiled in 138ms
- ✓ Compiled in 422ms
- GET /holo 200 in 979ms
- GET /favicon.ico?favicon.0b3bf435.ico 200 in 332ms
- ✓ Compiled in 153ms
- GET /holo 200 in 1239ms
- GET /favicon.ico?favicon.0b3bf435.ico 200 in 361ms
- ✓ Compiled in 132ms
- GET /holo 200 in 894ms
- GET /favicon.ico?favicon.0b3bf435.ico 200 in 313ms
- ✓ Compiled in 152ms
- ✓ Compiled in 139ms
- ✓ Compiled in 154ms
+ ✓ Compiled /favicon.ico in 674ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 1008ms
+ ○ Compiling /stats ...
+ ✓ Compiled /stats in 1963ms
+ GET /stats 200 in 2234ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 383ms
+Each child in a list should have a unique "key" prop.
+
+Check the render method of `App`. See https://react.dev/link/warning-keys for more information.
+ GET /stats 200 in 1652ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 402ms
+ ✓ Compiled in 143ms
+ GET /stats 200 in 323ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 331ms
+ ✓ Compiled in 147ms
+ GET /stats 200 in 342ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 289ms
+ ✓ Compiled in 164ms
+ GET /stats 200 in 351ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 306ms
+ ✓ Compiled in 144ms
+ GET /stats 200 in 334ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 328ms
+ GET /stats 200 in 1913ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 379ms
+ GET /stats 200 in 121ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 272ms
+ GET /stats 200 in 654ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 345ms
+ GET /stats 200 in 2549ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 373ms

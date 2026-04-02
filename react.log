@@ -1,18 +1,6 @@
 nohup: ignoring input
-
-> dev
-> next -p 4000 -H 0.0.0.0
-
-▲ Next.js 16.1.6 (Turbopack)
-- Local:         http://localhost:4000
-- Network:       http://0.0.0.0:4000
-
-✓ Starting...
-Attention: Next.js now collects completely anonymous telemetry regarding usage.
-This information is used to shape Next.js' roadmap and prioritize features.
-You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
-https://nextjs.org/telemetry
-
-Error: > Couldn't find any `pages` or `app` directory. Please create one under the project root
-    at ignore-listed frames
-[?25h
+npm error Missing script: "dev"
+npm error
+npm error To see a list of scripts, run:
+npm error   npm run
+npm error A complete log of this run can be found in: /home/dell_156/.npm/_logs/2026-03-27T05_27_58_875Z-debug-0.log

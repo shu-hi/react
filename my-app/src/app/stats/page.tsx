@@ -3,6 +3,8 @@ import React, { useState } from 'react';
 import './app.css';
 import { ApiResult } from './commonTypes';
 import MainWindowComponent from './MainWindowComponent';
+import SubWindowComponent from './SubWindowComponent';
+import { CLIENT_STATIC_FILES_PATH } from 'next/dist/shared/lib/constants';
 // Itemの型定義
 type Sql = 
    string;
@@ -12,8 +14,9 @@ const App: React.FC = () => {
   const [sql,setSql] = useState<Sql>("");
   const [result, setResult] = useState<ApiResult<any[]>|null>(null);
   const [spinner,setSpinner]=useState<boolean>(false);
-  const [csvPath,setCsvPath]=useState<string>('');
-  const [gssPath,setGssPath]=useState<string>('');
+  const [csvPath,setCsvPath]=useState<string[]>(['']);
+  const [gssPath,setGssPath]=useState<string[]>(['']);
+  const [subResult,setSubResult]=useState<ApiResult<any[]>|null>(null);
   const execSql = async(e: React.FormEvent) => {
     setSpinner(true);
     try{
@@ -57,18 +60,34 @@ const App: React.FC = () => {
           className="border rounded px-3 py-2 overflow-hidden resize-none"
           required
         />
-        <input 
-          type='text'
-          placeholder="csv/path"
-          value={csvPath}
-          onChange={(e)=>{setCsvPath(e.target.value);}}
-          />
+        {gssPath.map((p,i)=>(
+          <div key={i} >
+            gss_{i}:
           <input 
           type='text'
           placeholder="gss-path"
-          value={gssPath}
-          onChange={(e)=>{setGssPath(e.target.value);}}
+          value={gssPath[i]}
+          onChange={(e)=>{setGssPath(gssPath.map((c,index)=>{if(i==index){return e.target.value;}return c;}));}}
           />
+          {i==0&&(<button type='button' onClick={(e)=>setGssPath([...gssPath,''])} >+</button>)}
+          {i!==0&&(<button type='button' onClick={(e)=>setGssPath(gssPath.filter((_, index) => index !== i))} >-</button>)}
+          </div>
+        ))}
+        {csvPath.map((p,i)=>(
+          <div key={i} >
+            csv_{i}:
+          <input
+          type='text'
+          placeholder="csv/path"
+          value={csvPath[i]}
+          onChange={(e)=>{setCsvPath(csvPath.map((c,index)=>{if(i==index){return e.target.value;}return c;}));}}
+          />
+          {i==0&&(<button type='button' onClick={(e)=>setCsvPath([...csvPath,''])} >+</button>)}
+          {i!==0&&(<button type='button' onClick={(e)=>setCsvPath(csvPath.filter((_, index) => index !== i))} >-</button>)}
+          </div>
+        ))}
+        
+          
         <button
           type="submit"
           className="px-4 py-2 rounded-lg bg-gray-200 text-gray-800 hover:bg-gray-300 transition"
@@ -77,6 +96,7 @@ const App: React.FC = () => {
         </button>
       </form>
       <MainWindowComponent result={result} />
+      <SubWindowComponent subResult={subResult} />
     </div>
   );
 };
