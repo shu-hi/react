@@ -9,39 +9,11 @@ nohup: ignoring input
    - Environments: .env
 
  ✓ Starting...
- ✓ Ready in 5.1s
- ○ Compiling / ...
- ✓ Compiled / in 8s
- GET / 200 in 8727ms
- ○ Compiling /favicon.ico ...
- ✓ Compiled /favicon.ico in 674ms
- GET /favicon.ico?favicon.0b3bf435.ico 200 in 1008ms
- ○ Compiling /stats ...
- ✓ Compiled /stats in 1963ms
- GET /stats 200 in 2234ms
- GET /favicon.ico?favicon.0b3bf435.ico 200 in 383ms
-Each child in a list should have a unique "key" prop.
-
-Check the render method of `App`. See https://react.dev/link/warning-keys for more information.
- GET /stats 200 in 1652ms
- GET /favicon.ico?favicon.0b3bf435.ico 200 in 402ms
- ✓ Compiled in 143ms
- GET /stats 200 in 323ms
- GET /favicon.ico?favicon.0b3bf435.ico 200 in 331ms
- ✓ Compiled in 147ms
- GET /stats 200 in 342ms
- GET /favicon.ico?favicon.0b3bf435.ico 200 in 289ms
- ✓ Compiled in 164ms
- GET /stats 200 in 351ms
- GET /favicon.ico?favicon.0b3bf435.ico 200 in 306ms
- ✓ Compiled in 144ms
- GET /stats 200 in 334ms
- GET /favicon.ico?favicon.0b3bf435.ico 200 in 328ms
- GET /stats 200 in 1913ms
- GET /favicon.ico?favicon.0b3bf435.ico 200 in 379ms
- GET /stats 200 in 121ms
- GET /favicon.ico?favicon.0b3bf435.ico 200 in 272ms
- GET /stats 200 in 654ms
- GET /favicon.ico?favicon.0b3bf435.ico 200 in 345ms
- GET /stats 200 in 2549ms
- GET /favicon.ico?favicon.0b3bf435.ico 200 in 373ms
+ ✓ Ready in 1638ms
+ ○ Compiling /mcp ...
+ ✓ Compiled /mcp in 3.8s
+ GET /mcp 200 in 4205ms
+ ✓ Compiled /favicon.ico in 488ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 872ms
+ GET /mcp 200 in 221ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 363ms

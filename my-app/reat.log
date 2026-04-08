@@ -1,0 +1,49 @@
+nohup: ignoring input
+
+> my-app@0.1.0 dev
+> next dev --turbopack -H 0.0.0.0 -p 4000
+
+   ▲ Next.js 15.5.9 (Turbopack)
+   - Local:        http://localhost:4000
+   - Network:      http://0.0.0.0:4000
+   - Environments: .env
+
+ ✓ Starting...
+ ✓ Ready in 5.7s
+ ○ Compiling / ...
+ ✓ Compiled / in 14.5s
+ GET / 200 in 15512ms
+ ○ Compiling /favicon.ico ...
+ ✓ Compiled /favicon.ico in 930ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 1398ms
+ ✓ Compiled /stats in 445ms
+ GET /stats 200 in 583ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 257ms
+ ✓ Compiled /_not-found/page in 285ms
+ GET /stats/er 404 in 409ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 251ms
+ GET /stats 200 in 115ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 252ms
+ ✓ Compiled in 210ms
+ ✓ Compiled in 179ms
+ ✓ Compiled /stats in 51ms
+ GET /stats 200 in 197ms
+ GET /stats 200 in 83ms
+ GET /stats 200 in 85ms
+ ✓ Compiled /_not-found/page in 33ms
+ GET /stats/er 404 in 283ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 277ms
+ ✓ Compiled in 150ms
+ ✓ Compiled in 136ms
+ GET /stats/er 404 in 297ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 258ms
+ GET /stats 200 in 135ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 270ms
+ GET /stats/er 404 in 113ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 256ms
+ ✓ Compiled in 155ms
+ ✓ Compiled in 145ms
+ GET /stats/er 404 in 292ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 276ms
+ GET /stats 200 in 113ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 251ms
