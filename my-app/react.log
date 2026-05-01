@@ -9,11 +9,75 @@ nohup: ignoring input
    - Environments: .env
 
  ✓ Starting...
- ✓ Ready in 1638ms
- ○ Compiling /mcp ...
- ✓ Compiled /mcp in 3.8s
- GET /mcp 200 in 4205ms
- ✓ Compiled /favicon.ico in 488ms
- GET /favicon.ico?favicon.0b3bf435.ico 200 in 872ms
- GET /mcp 200 in 221ms
+ ✓ Ready in 15.9s
+ ○ Compiling /stats ...
+ ✓ Compiled /stats in 14.5s
+undefined
+ GET /stats 200 in 16606ms
+ ○ Compiling /favicon.ico ...
+ ✓ Compiled /favicon.ico in 1091ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 1550ms
+ ✓ Compiled in 259ms
+ ✓ Compiled in 1867ms
+ ○ Compiling /stats ...
+ ✓ Compiled /stats in 814ms
+undefined
+ GET /stats 200 in 4562ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 414ms
+ ✓ Compiled in 132ms
+ ✓ Compiled in 102ms
+undefined
+Error: Too many re-renders. React limits the number of renders to prevent an infinite loop.
+    at execInit (src/app/stats/page.tsx:22:5)
+    at App (src/app/stats/page.tsx:94:30)
+  20 |   const [expectation,setExpectation]=useState<number>(0);
+  21 |   const execInit=async()=>{
+> 22 |     setSpinner(true);
+     |     ^
+  23 |     try{
+  24 |       const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/stats/init`, {
+  25 |       method: "POST",
+ ⨯ unhandledRejection: Error: Too many re-renders. React limits the number of renders to prevent an infinite loop.
+    at execInit (src/app/stats/page.tsx:22:5)
+    at App (src/app/stats/page.tsx:94:30)
+  20 |   const [expectation,setExpectation]=useState<number>(0);
+  21 |   const execInit=async()=>{
+> 22 |     setSpinner(true);
+     |     ^
+  23 |     try{
+  24 |       const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/stats/init`, {
+  25 |       method: "POST",
+ ⨯ unhandledRejection:  Error: Too many re-renders. React limits the number of renders to prevent an infinite loop.
+    at execInit (src/app/stats/page.tsx:22:5)
+    at App (src/app/stats/page.tsx:94:30)
+  20 |   const [expectation,setExpectation]=useState<number>(0);
+  21 |   const execInit=async()=>{
+> 22 |     setSpinner(true);
+     |     ^
+  23 |     try{
+  24 |       const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/stats/init`, {
+  25 |       method: "POST",
+ GET /stats 200 in 2615ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 400ms
+ GET /favicon.ico 200 in 445ms
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ✓ Compiled in 159ms
+undefined
+ GET /stats 200 in 425ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 381ms
+ ✓ Compiled in 162ms
+undefined
+ GET /stats 200 in 325ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 384ms
+undefined
+ GET /stats 200 in 1543ms
  GET /favicon.ico?favicon.0b3bf435.ico 200 in 363ms
+undefined
+ GET /stats 200 in 340ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 370ms
+undefined
+ GET /stats 200 in 2506ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 450ms
+undefined
+ GET /stats 200 in 1870ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 287ms

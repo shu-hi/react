@@ -3,7 +3,7 @@ import React, {useEffect, useState } from 'react';
 import { ApiResult } from './commonTypes';
 function MainWindowComponent({result}:{result:ApiResult<any[]>|null}){
     return (
-        <div>
+        <div className='grid-item'>
         {result && (result.status === 'ok'||result.status==='fallback') && result.data?.length > 0 && (
           <div className="mt-8 p-4 border rounded w-5/5">
             <h2 className="text-2xl font-semibold mb-2">result(~100)</h2>
